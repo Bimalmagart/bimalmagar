@@ -1,272 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chef Bimal Thapa Magar – Premium Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Bimal Thapa Magar | Sous Chef</title>
 
-<style>
-    /* GENERAL */
-    body {margin:0; font-family:'Poppins',sans-serif; background:#0a0a0a; color:white; scroll-behavior:smooth;}
-    h1,h2,h3,h4 {margin:0;}
-    a{text-decoration:none;}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    /* HEADER */
-    header{
-        position:fixed; top:0; width:100%; padding:15px 25px;
-        display:flex; justify-content:space-between; align-items:center;
-        background:rgba(0,0,0,0.6); backdrop-filter:blur(6px);
-        z-index:1000;
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      scroll-behavior: smooth;
     }
-    .logo{font-size:28px; color:#e6b800; font-weight:700;}
-    nav a{color:#fff; margin-left:20px;}
-    nav a:hover{color:#e6b800;}
 
-    /* HERO VIDEO SECTION */
-    .hero{
-        position:relative; height:100vh; overflow:hidden;
-        display:flex; align-items:center; justify-content:flex-start;
-        padding-left:50px;
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 100;
     }
-    .hero video{
-        position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;
-        filter:brightness(0.45);
-    }
-    .hero-content{
-        position:relative; z-index:5; max-width:500px; animation:fadeIn 2s ease;
-    }
-    @keyframes fadeIn {from{opacity:0; transform:translateY(40px);} to{opacity:1; transform:translateY(0);}}
-    .btn{display:inline-block; background:#e6b800; color:black; padding:14px 24px; border-radius:6px; margin-top:20px; font-weight:600;}
 
-    /* SECTION GENERAL */
-    .section{padding:80px 20px; text-align:center;}
-    .section-title{font-size:36px; color:#e6b800; margin-bottom:25px;}
+    header h1 {
+      color: #ffbe33;
+      letter-spacing: 1.5px;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #ffbe33;
+    }
+
+    /* Video Background */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(40%);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #ffbe33;
+      text-shadow: 0 0 15px #ffbe33;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 25px;
+      background: #ffbe33;
+      padding: 12px 28px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 700;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2.section-title {
+      color: #ffbe33;
+      font-size: 34px;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
 
     /* ABOUT */
-    .about-container{display:flex; flex-wrap:wrap; justify-content:center; gap:40px;}
-    .about-img{
-        width:330px; height:430px; border-radius:10px;
-        background:url('https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg') center/cover no-repeat;
-    }
-    .about-text{max-width:450px; text-align:left;}
-
-    /* AWARDS */
-    .awards{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; padding:20px;}
-    .award{
-        background:#1a1a1a; padding:20px; border-left:4px solid #e6b800; border-radius:8px;
+    .about-img {
+      width: 260px;
+      height: 260px;
+      border-radius: 14px;
+      border: 3px solid #ffbe33;
+      object-fit: cover;
+      display: block;
+      margin: 20px auto;
     }
 
-    /* STATS */
-    .stats{display:flex; flex-wrap:wrap; justify-content:center; gap:40px; margin-top:40px;}
-    .stat-box{text-align:center;}
-    .stat-number{font-size:40px; color:#e6b800; font-weight:700;}
+    /* SPECIALTIES */
+    .specialties {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 20px;
+    }
+
+    .special-box {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      transition: .3s;
+    }
+
+    .special-box:hover {
+      border-color: #ffbe33;
+      transform: translateY(-5px);
+    }
 
     /* TIMELINE */
-    .timeline{max-width:700px; margin:auto; text-align:left;}
-    .timeline-item{
-        background:#1a1a1a; padding:20px; margin:20px 0; border-left:4px solid #e6b800; border-radius:6px;
+    .timeline {
+      border-left: 3px solid #ffbe33;
+      padding-left: 20px;
     }
 
-    /* MENU GRID */
-    .menu-grid{
-        display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; padding:20px;
+    .timeline div {
+      margin-bottom: 20px;
     }
-    .menu-item{
-        background:#161616; padding:18px; border-radius:10px;
-        transition:0.3s; border:1px solid transparent;
-    }
-    .menu-item:hover{transform:scale(1.06); border-color:#e6b800;}
 
     /* GALLERY */
-    .gallery{
-        display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;
-    }
-    .gallery img{
-        width:100%; height:250px; object-fit:cover; border-radius:10px; transition:0.3s;
-    }
-    .gallery img:hover{transform:scale(1.05);}
-
-    /* TESTIMONIAL SLIDER */
-    .testimonials{max-width:700px; margin:auto; position:relative;}
-    .testimonial{
-        display:none; padding:25px; background:#1a1a1a; border-left:4px solid #e6b800; border-radius:10px;
-        font-size:18px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 15px;
     }
 
-    /* FLOATING WHATSAPP */
-    .whatsapp-float{
-        position:fixed; bottom:20px; right:20px; padding:15px 22px;
-        background:#25D366; color:white; border-radius:50px; font-weight:bold;
-        box-shadow:0 0 12px rgba(0,0,0,0.4);
-        z-index:999;
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #222;
+      transition: .3s;
     }
 
-    /* SOCIAL SIDEBAR */
-    .social-sidebar{
-        position:fixed; top:40%; left:10px; display:flex; flex-direction:column; gap:10px;
-        z-index:999;
-    }
-    .social-sidebar a{
-        padding:10px 12px; background:#1a1a1a; border-radius:8px; color:#e6b800;
+    .gallery img:hover {
+      transform: scale(1.05);
+      border-color: #ffbe33;
     }
 
-    /* CONTACT FORM */
-    .contact-form{max-width:550px; margin:auto; text-align:left;}
-    .contact-form input, .contact-form textarea{
-        width:100%; padding:12px; margin:10px 0; border-radius:6px; border:none; outline:none;
-        background:#1a1a1a; color:white;
-    }
-    .contact-form button{
-        background:#e6b800; color:black; padding:12px 20px; border:none;
-        border-radius:6px; font-weight:600;
+    /* CONTACT */
+    .social a {
+      display: inline-block;
+      border: 1px solid #ffbe33;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin: 10px;
+      color: #ffbe33;
+      text-decoration: none;
+      transition: .3s;
     }
 
-    footer{background:#000; padding:20px; text-align:center; margin-top:40px;}
-</style>
+    .social a:hover {
+      background: #ffbe33;
+      color: #000;
+    }
 
+    /* Floating WhatsApp */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 14px 18px;
+      border-radius: 50px;
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #000;
+      z-index: 20;
+    }
+
+    /* Footer */
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #111;
+      color: #777;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">Chef Bimal</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#awards">Awards</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<!-- SOCIAL SIDEBAR -->
-<div class="social-sidebar">
-    <a href="https://www.instagram.com/magar.bimal369">IG</a>
-    <a href="https://www.facebook.com/share/16rLwdByZL">FB</a>
-    <a href="https://www.linkedin.com/in/bimal-thapa-magar-3b1337165">IN</a>
-</div>
-
-<!-- HERO VIDEO -->
-<section class="hero">
-    <video autoplay muted loop>
-        <source src="https://videos.pexels.com/video-files/3348870/3348870-hd_1280_720_25fps.mp4" type="video/mp4">
+  <!-- VIDEO BACKGROUND -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="https://cdn.coverr.co/videos/coverr-chef-preparing-food-8857/1080p.mp4" type="video/mp4">
     </video>
+  </div>
 
-    <div class="hero-content">
-        <h1>Bimal Thapa Magar</h1>
-        <h2>Sous Chef | Steak • Grill • Mediterranean • Turkish • Arabic Cuisine</h2>
-        <a href="https://wa.me/971569241552" class="btn">WhatsApp Me</a>
-    </div>
-</section>
+  <!-- HEADER -->
+  <header>
+    <h1>Chef Bimal</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#timeline">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- ABOUT -->
-<section id="about" class="section">
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Bimal Thapa Magar</h2>
+    <p>Sous Chef • Steak Specialist • Turkish & Arabic Cuisine • 11+ Years of Expertise</p>
+    <a href="#about" class="btn">Explore My Work</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
     <h2 class="section-title">About Me</h2>
-    <div class="about-container">
-        <div class="about-img"></div>
-        <div class="about-text">
-            <p>
-                I am a Sous Chef with 11+ years of experience in Dubai, specializing in Ribeye Steak, Kebabs,
-                Mediterranean dishes, Turkish and Arabic cuisine. Passionate about HACCP, quality, and leadership.
-            </p>
-        </div>
-    </div>
-</section>
 
-<!-- AWARDS -->
-<section id="awards" class="section">
-    <h2 class="section-title">Achievements & Awards</h2>
-    <div class="awards">
-        <div class="award">🏆 11+ Years Culinary Experience</div>
-        <div class="award">🔥 Grill & Steak Specialist</div>
-        <div class="award">👨‍🍳 Trained 30+ Chefs</div>
-        <div class="award">📜 HACCP & Food Safety Certified</div>
-    </div>
-</section>
+    <img class="about-img"
+      src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
 
-<!-- STATS -->
-<div class="stats">
-    <div class="stat-box">
-        <div class="stat-number">11+</div>
-        Years Experience
-    </div>
-    <div class="stat-box">
-        <div class="stat-number">40+</div>
-        Signature Dishes
-    </div>
-    <div class="stat-box">
-        <div class="stat-number">30+</div>
-        Chefs Trained
-    </div>
-</div>
+    <p style="text-align:center; font-size:18px; line-height:1.8;">
+      I am a passionate <strong>Sous Chef</strong> with 11+ years of experience specializing in
+      <strong>Steak, Kabab, Turkish Cuisine, Mediterranean dishes, and Arabic Cuisine</strong>.
+      <br><br>
+      Currently working at <strong>Bosporus Restaurant, Dubai</strong>, I focus on premium quality,
+      HACCP standards, team leadership, and exceptional culinary experience.
+    </p>
+  </section>
 
-<!-- TIMELINE -->
-<section id="timeline" class="section">
-    <h2 class="section-title">Career Timeline</h2>
+  <!-- SPECIALTIES -->
+  <section id="specialties">
+    <h2 class="section-title">My Specialties</h2>
+
+    <div class="specialties">
+
+      <div class="special-box">
+        <h3 style="color:#ffbe33;">🔥 Ribeye Steak</h3>
+        <p>Perfect grill marks, juicy finish, premium seasoning.</p>
+      </div>
+
+      <div class="special-box">
+        <h3 style="color:#ffbe33;">🔥 Kabab & Grill</h3>
+        <p>Adana, Urfa, Kofta, Lamb Chops, Shish.</p>
+      </div>
+
+      <div class="special-box">
+        <h3 style="color:#ffbe33;">🔥 Turkish & Arabic Cuisine</h3>
+        <p>Doner, Shawarma, Mezzes, Grills.</p>
+      </div>
+
+      <div class="special-box">
+        <h3 style="color:#ffbe33;">🔥 Mediterranean Dishes</h3>
+        <p>Seafood, Mixed Grill, Authentic flavors.</p>
+      </div>
+
+      <div class="special-box">
+        <h3 style="color:#ffbe33;">🔥 HACCP Leader</h3>
+        <p>Food safety, Hygiene control, QC audits.</p>
+      </div>
+
+      <div class="special-box">
+        <h3 style="color:#ffbe33;">🔥 Butchery Skills</h3>
+        <p>Perfect cuts, temperature control, trimming.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <h2 class="section-title">Experience Timeline</h2>
+
     <div class="timeline">
-        <div class="timeline-item">2013 – Started culinary career</div>
-        <div class="timeline-item">2016 – Grill Chef</div>
-        <div class="timeline-item">2018 – Doner Specialist</div>
-        <div class="timeline-item">2020 – Bosporus Restaurant Dubai</div>
-        <div class="timeline-item">2024 – Senior Sous Chef</div>
+      <div><strong>2022 – Present:</strong> Sous Chef at Bosporus Restaurant, Dubai</div>
+      <div><strong>2018 – 2022:</strong> Grill Chef • Steak & Kabab Specialist</div>
+      <div><strong>2015 – 2018:</strong> Doner Chef • Turkish Cuisine</div>
+      <div><strong>2013 – 2015:</strong> Commis Chef • Mediterranean Cuisine</div>
     </div>
-</section>
+  </section>
 
-<!-- MENU -->
-<section id="menu" class="section">
-    <h2 class="section-title">Premium Menu</h2>
-    <div class="menu-grid">
-        <div class="menu-item">🥩 Ribeye Steak</div>
-        <div class="menu-item">🔥 Adana Kebab</div>
-        <div class="menu-item">🍖 Lamb Chops</div>
-        <div class="menu-item">🍢 Mixed Grill</div>
-        <div class="menu-item">🍽 Mediterranean Plate</div>
-        <div class="menu-item">🔥 Chef’s Special Grill</div>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="section">
+  <!-- GALLERY -->
+  <section id="gallery">
     <h2 class="section-title">Gallery</h2>
+
     <div class="gallery">
-        <!-- ADD MORE IMAGES HERE -->
-        <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
-        <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg">
+      <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
+      <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg">
+      <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
     </div>
-</section>
+  </section>
 
-<!-- TESTIMONIALS -->
-<section id="reviews" class="section">
-    <h2 class="section-title">Testimonials</h2>
-    <div class="testimonials">
-        <div class="testimonial" style="display:block;">⭐⭐⭐⭐⭐ “One of the best grill chefs in Dubai.”</div>
-        <div class="testimonial">⭐⭐⭐⭐⭐ “Amazing Ribeye! Perfect cooking every time.”</div>
-        <div class="testimonial">⭐⭐⭐⭐⭐ “Professional, disciplined, talented chef.”</div>
-    </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section id="contact" class="section">
+  <!-- CONTACT -->
+  <section id="contact">
     <h2 class="section-title">Contact Me</h2>
-    <div class="contact-form">
-        <form action="mailto:bimalchef369@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+
+    <div class="social" style="text-align:center;">
+
+      <a href="https://wa.me/971569241552" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/magar.bimal369" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/share/16rLwdByZL/" target="_blank">Facebook</a>
+      <a href="https://www.linkedin.com/in/bimal-thapa-magar-3b1337165" target="_blank">LinkedIn</a>
+      <a href="tel:+971569241552">Call Me</a>
+
     </div>
-</section>
+  </section>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/971569241552" class="whatsapp-float">WhatsApp</a>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/971569241552" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-<footer>
-    © 2025 Chef Bimal Thapa Magar – Premium Portfolio
-</footer>
+  <footer>
+    © 2025 Bimal Thapa Magar • Premium Sous Chef Portfolio
+  </footer>
 
 </body>
 </html>
