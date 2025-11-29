@@ -5,18 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bimal Thapa Magar – Sous Chef</title>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
+/* GLOBAL */
 body {
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#111;
+  font-family: 'Poppins', sans-serif;
+  background:#0e0e0e;
+  color:#fff;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GOLD SHINE TEXT EFFECT */
+.shine {
+  position: relative;
+  overflow: hidden;
+  display:inline-block;
+}
+.shine:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,204,0,0.6), transparent);
+  animation: shine 2.5s infinite;
+}
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  border-left: 6px solid #ffb400;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 12px 20px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  display:flex;
+  justify-content:center;
+  z-index:999;
+}
+nav a {
+  color:#ffb400;
+  margin: 0 18px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:18px;
+  transition:0.3s;
+}
+nav a:hover {
   color:#fff;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
-  background: url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg") center/cover no-repeat;
   height: 90vh;
+  background: url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg") 
+    center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -24,233 +102,232 @@ body {
   padding:20px;
 }
 .hero h1 {
-  font-size: 64px;
-  font-weight: 900;
+  font-size:70px;
+  font-weight:900;
   text-shadow:0 0 25px black;
 }
 .hero p {
   font-size:26px;
   text-shadow:0 0 15px black;
-  margin-top:10px;
 }
 
-/* SECTIONS */
-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  border-left: 6px solid #ffb400;
-  padding-left: 15px;
-}
-
-/* SUBTITLES */
-.subtitle {
+/* BUTTON */
+.btn {
+  display:inline-block;
+  background:#ffb400;
+  padding:14px 28px;
+  color:#000;
   font-size:20px;
-  opacity:0.8;
-  margin-bottom:20px;
+  font-weight:700;
+  border-radius:8px;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+}
+.btn:after {
+  content:"";
+  position:absolute;
+  background:white;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  transform:scale(1);
+  opacity:0;
+  transition:0.5s;
+}
+.btn:active:after {
+  transform:scale(20);
+  opacity:0.2;
 }
 
-/* GALLERY GRID */
+/* GALLERY */
 .gallery {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap:15px;
+  gap:18px;
 }
 .gallery img {
   width:100%;
   height:260px;
   object-fit:cover;
-  border-radius:10px;
-  transition:0.3s;
+  border-radius:12px;
+  transition:0.35s;
+  box-shadow:0 0 10px black;
 }
 .gallery img:hover {
-  transform:scale(1.06);
-  box-shadow:0 0 15px #ffb400;
-}
-
-/* CONTACT */
-.contact a {
-  color:#ffb400;
-  text-decoration:none;
-  font-size:20px;
-  display:block;
-  margin-bottom:8px;
+  transform:scale(1.08);
+  box-shadow:0 0 25px #ffb400;
 }
 
 /* TIMELINE */
 .timeline {
-  border-left: 4px solid #ffb400;
-  padding-left:20px;
+  border-left:4px solid #ffb400;
+  padding-left:25px;
 }
 .timeline div {
-  margin-bottom:20px;
+  margin-bottom:30px;
 }
 .timeline h3 {
   color:#ffb400;
-  margin-bottom:5px;
-}
-.timeline p {
-  opacity:0.8;
 }
 
-/* FOOTER */
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 15px black;
+  z-index:1000;
+}
+.whatsapp-float img {
+  width:40px;
+}
+
+/* BACK TO TOP BUTTON */
+#backToTop {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  background:#ffb400;
+  color:#000;
+  padding:12px 18px;
+  border-radius:50px;
+  font-size:20px;
+  text-decoration:none;
+  box-shadow:0 0 10px black;
+  display:none;
+  z-index:999;
+}
+#backToTop:hover { transform: scale(1.1); }
+
 footer {
   text-align:center;
   padding:20px;
   background:#000;
-  margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
-<div class="hero">
+<!-- NAVBAR -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#timeline">Experience</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero reveal">
   <div>
     <h1>Bimal Thapa Magar</h1>
-    <p>Sous Chef • Steak Specialist • Turkish, Arabic & Mediterranean Cuisine</p>
+    <p>Sous Chef • Steak & Grill Specialist • Turkish & Arabic Cuisine</p>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about">
-  <h2>About Chef Bimal</h2>
+<section id="about" class="reveal">
+  <h2 class="shine">About Chef Bimal</h2>
 
-  <div style="display:flex; flex-wrap:wrap; gap:30px; align-items:center;">
+  <div style="display:flex; gap:30px; flex-wrap:wrap; align-items:center;">
+    
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg"
-      style="width:300px; height:350px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px black;">
+         style="width:300px; height:350px; border-radius:12px; box-shadow:0 0 25px black; object-fit:cover;">
 
     <div style="flex:1; min-width:260px;">
-
-      <!-- Short Summary -->
-      <p style="font-size:18px; line-height:1.8; opacity:0.9; margin-bottom:20px;">
-        A highly skilled <strong>Sous Chef with 11+ years of international experience</strong>,
-        specializing in <strong>steak, grill, Turkish cuisine, Arabic cuisine, and Mediterranean dishes</strong>.
-      </p>
-
-      <!-- Medium Summary -->
-      <p style="font-size:18px; line-height:1.8; opacity:0.9; margin-bottom:20px;">
-        Strong culinary background across UAE & Asia with deep expertise in <strong>team leadership, 
-        HACCP, PIC Level 3, GHP Level 3, menu development, and cost control</strong>.
-      </p>
-
-      <!-- Executive Summary -->
-      <p style="font-size:18px; line-height:1.8; opacity:0.9; margin-bottom:20px;">
-        Mastery in <strong>ribeye, tenderloin, tomahawk, kabab, adana, lamb chops, grills</strong>
-        and high-pressure kitchen operations.
-      </p>
-
-      <!-- Inspirational -->
-      <p style="font-size:18px; line-height:1.8; opacity:0.9;">
-        My philosophy: <strong>Every plate tells a story — every guest deserves excellence.</strong>
-      </p>
-
+      <p>A highly skilled <strong>Sous Chef with 11+ years of international experience</strong> in UAE & Malaysia, specializing in <strong>steak, grill, Turkish, Arabic and Mediterranean cuisine</strong>.</p>
+      <p>Expert in <strong>menu development, HACCP, PIC level 3, team leadership, cost control and high-pressure kitchen management</strong>.</p>
+      <p>Known for mastery in <strong>ribeye, tenderloin, tomahawk, kabab, adana, lamb chops</strong> and premium grill techniques.</p>
+      <p>I believe <strong>every plate tells a story — excellence is my signature</strong>.</p>
     </div>
   </div>
+</section>
 
-  <!-- SKILL BOXES -->
-  <div style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
-
-    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
-      <h3 style="color:#ffb400;">🔥 Food Safety Expert</h3>
-      <p style="opacity:0.8;">Certified in HACCP, PIC Level 3 & GHP Level 3.</p>
-    </div>
-
-    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
-      <h3 style="color:#ffb400;">👨‍🍳 Leadership</h3>
-      <p style="opacity:0.8;">Trained and supervised 30+ chefs across hot kitchen & grill.</p>
-    </div>
-
-    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
-      <h3 style="color:#ffb400;">🥩 Steak Specialist</h3>
-      <p style="opacity:0.8;">Perfecting premium steaks, grills & butchery skills.</p>
-    </div>
-
-    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
-      <h3 style="color:#ffb400;">🍽 Menu Creation</h3>
-      <p style="opacity:0.8;">Expert in plating, recipe development & cost control.</p>
-    </div>
-
-  </div>
+<!-- CHEF QUOTE -->
+<section class="reveal" style="text-align:center;">
+  <h2 class="shine" style="font-size:32px;">Chef’s Philosophy</h2>
+  <p style="font-size:24px; font-style:italic; opacity:0.9;">
+    “Every plate tells a story — <strong>excellence is my signature</strong>.”
+  </p>
+  <div style="width:120px; height:4px; background:#ffb400; margin:20px auto; border-radius:2px;"></div>
 </section>
 
 <!-- WHY HIRE ME -->
-<section>
-  <h2>Why Hire Me</h2>
-  <p class="subtitle">A professional chef who brings quality, consistency, discipline, and leadership.</p>
-
-  <ul style="font-size:18px; line-height:1.8;">
-    <li>✔ 14+ years of proven culinary excellence</li>
-    <li>✔ Expertise in steak, grill, Turkish, Arabic & Mediterranean cuisine</li>
-    <li>✔ Strong background in menu development & kitchen operations</li>
-    <li>✔ Handles pressure, volume & quality with precision</li>
-    <li>✔ Passionate about training and guiding kitchen teams</li>
-    <li>✔ Fully certified in food safety and hygiene standards</li>
+<section id="skills" class="reveal">
+  <h2 class="shine">Why Hire Me</h2>
+  <ul style="font-size:18px; line-height:2; opacity:0.9;">
+    <li>✔ 14+ years of fine-dining experience</li>
+    <li>✔ Specialist in steak, grill, Turkish & Arabic cuisines</li>
+    <li>✔ HACCP, PIC 3, GHP Level 3 certified</li>
+    <li>✔ Strong leadership — trained 30+ chefs</li>
+    <li>✔ Expert in menu creation & food cost control</li>
+    <li>✔ High consistency & discipline under pressure</li>
   </ul>
 </section>
 
-<!-- CAREER TIMELINE -->
-<section>
-  <h2>Career Timeline</h2>
+<!-- TIMELINE -->
+<section id="timeline" class="reveal">
+  <h2 class="shine">Career Timeline</h2>
 
   <div class="timeline">
     <div>
-      <h3>2020 – Present • Sous Chef – Bosporus Restaurant, Dubai</h3>
-      <p>Managing grill section, kitchen operations, staff training & food quality.</p>
+      <h3>2020 – Present: Bosporus Restaurant, Dubai</h3>
+      <p>Sous Chef – Grill operations, quality control, training teams.</p>
     </div>
 
     <div>
-      <h3>2018 – 2020 • Sous Chef – Global Catering Services</h3>
-      <p>High-volume catering for VIP events.</p>
+      <h3>2018 – 2020: Global Catering Services LLC</h3>
+      <p>Sous Chef – VIP catering for large events.</p>
     </div>
 
     <div>
-      <h3>2015 – 2017 • Senior CDP – Officers Club Abu Dhabi</h3>
-      <p>Handled hot kitchen & grill sections.</p>
+      <h3>2015 – 2017: Officers Club Abu Dhabi</h3>
+      <p>Senior CDP – Hot kitchen, grills & plating.</p>
     </div>
 
     <div>
-      <h3>2014 – 2015 • Demi Chef – Global Catering Abu Dhabi</h3>
+      <h3>2014 – 2015: Global Catering Abu Dhabi</h3>
+      <p>Demi Chef – Prep & production.</p>
     </div>
 
     <div>
-      <h3>2013 – Malaysia • Commi 1 – Saujana Hotel</h3>
+      <h3>2013: Saujana Hotel, Malaysia</h3>
+      <p>Commis 1 – Culinary foundation.</p>
     </div>
   </div>
 </section>
 
 <!-- SIGNATURE DISHES -->
-<section>
-  <h2>Signature Dishes</h2>
+<section class="reveal">
+  <h2 class="shine">Signature Dishes</h2>
 
-  <ul style="font-size:18px; line-height:1.8;">
-    <li>🥩 Ribeye, Tenderloin, Tomahawk</li>
+  <ul style="font-size:18px; line-height:2; opacity:0.9;">
+    <li>🥩 Ribeye, Tenderloin & Tomahawk</li>
     <li>🔥 Adana, Kabab, Lamb Chops</li>
-    <li>🇹🇷 Turkish Meat Platters & Grills</li>
-    <li>🇦🇪 Arabic Mixed Grill & Specialties</li>
-    <li>🥗 Mediterranean Mezze & Platters</li>
+    <li>🇹🇷 Turkish Grills & Platters</li>
+    <li>🇦🇪 Arabic Mixed Grill</li>
+    <li>🥗 Mediterranean Mezze</li>
   </ul>
 </section>
 
 <!-- GALLERY -->
-<section>
-  <h2>Chef Gallery – Kitchen, Food & Events</h2>
+<section id="gallery" class="reveal">
+  <h2 class="shine">Chef Gallery – Kitchen, Food & Events</h2>
 
   <div class="gallery">
-
-    <!-- NEW IMAGES -->
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/01631c9a-54cf-4738-b5a6-99ff9f2e92ea.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0859.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_2081.jpeg">
 
-    <!-- EXISTING IMAGES -->
     <img src="https://github.com/Bimalmagart/bimalmagar/raw/refs/heads/main/IMG_0362.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1842.jpeg">
@@ -259,7 +336,6 @@ footer {
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1847.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1852.jpeg">
 
-    <!-- FOOD PHOTOS -->
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1891.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1893.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1895.jpeg">
@@ -267,37 +343,67 @@ footer {
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4825.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4826.png">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg">
-
   </div>
 </section>
 
-<!-- DOWNLOAD CV SECTION -->
-<section style="text-align:center; margin: 50px 0; padding: 20px;">
+<!-- CV DOWNLOAD -->
+<section class="reveal" style="text-align:center;">
+  <h2 class="shine">My CV</h2>
   <a href="https://drive.google.com/file/d/1QvRxznooHDAyIw_cHxWujt0CLehp1U9x/view?usp=drivesdk"
-     target="_blank"
-     style="display:inline-block; background:#ffb400; padding:14px 28px;
-            color:#000; font-size:20px; font-weight:bold; border-radius:8px;
-            text-decoration:none; box-shadow: 0 0 15px rgba(255, 186, 0, 0.6);">
-    📄 Download My CV
-  </a>
+     class="btn">📄 Download My CV</a>
 </section>
 
 <!-- CONTACT -->
-<section>
-  <h2>Contact</h2>
-  <div class="contact">
-    <a href="tel:+971569241552">📞 +971 56 924 1552</a>
-    <a href="mailto:magarthapabimal@gmail.com">📧 Email</a>
-    <a href="https://wa.me/971569241552">💬 WhatsApp</a>
-    <a href="https://www.instagram.com/magar.bimal369">📸 Instagram</a>
-    <a href="https://www.facebook.com/share/16rLwdByZL/?mibextid=wwXIfr">📘 Facebook</a>
-    <a href="https://www.linkedin.com/in/bimal-thapa-magar-3b1337165">🔗 LinkedIn</a>
+<section id="contact" class="reveal">
+  <h2 class="shine">Contact</h2>
+
+  <p style="font-size:20px; margin-bottom:20px;">Let’s connect for new opportunities</p>
+
+  <div style="line-height:2;">
+    <a style="color:#ffb400; font-size:20px;" href="tel:+971569241552">📞 +971 56 924 1552</a><br>
+    <a style="color:#ffb400; font-size:20px;" href="mailto:magarthapabimal@gmail.com">📧 magarthapabimal@gmail.com</a><br>
+    <a style="color:#ffb400; font-size:20px;" href="https://wa.me/971569241552">💬 WhatsApp</a><br>
+    <a style="color:#ffb400; font-size:20px;" href="https://www.instagram.com/magar.bimal369">📸 Instagram</a><br>
+    <a style="color:#ffb400; font-size:20px;" href="https://www.facebook.com/share/16rLwdByZL/?mibextid=wwXIfr">📘 Facebook</a><br>
+    <a style="color:#ffb400; font-size:20px;" href="https://www.linkedin.com/in/bimal-thapa-magar-3b1337165">🔗 LinkedIn</a>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2025 Bimal Thapa Magar – All Rights Reserved.
+  © 2025 Bimal Thapa Magar — All Rights Reserved.
 </footer>
+
+<!-- BACK TO TOP -->
+<a href="#" id="backToTop">⬆</a>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/971569241552" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+function revealSections() {
+  const reveals = document.querySelectorAll(".reveal");
+  reveals.forEach((el) => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 120) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
+
+/* BACK TO TOP */
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) backToTop.style.display = "block";
+  else backToTop.style.display = "none";
+});
+</script>
 
 </body>
 </html>
