@@ -15,8 +15,8 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background: url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg") center/cover no-repeat;
-  height: 85vh;
+  background: url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg") center/cover no-repeat;
+  height: 90vh;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -24,20 +24,20 @@ body {
   padding:20px;
 }
 .hero h1 {
-  font-size: 58px;
-  font-weight: 800;
-  text-shadow:0 0 20px black;
+  font-size: 64px;
+  font-weight: 900;
+  text-shadow:0 0 25px black;
 }
 .hero p {
-  font-size:22px;
-  margin-top:10px;
+  font-size:26px;
   text-shadow:0 0 15px black;
+  margin-top:10px;
 }
 
 /* SECTIONS */
 section {
   padding: 60px 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -47,6 +47,13 @@ h2 {
   text-transform: uppercase;
   border-left: 6px solid #ffb400;
   padding-left: 15px;
+}
+
+/* SUBTITLES */
+.subtitle {
+  font-size:20px;
+  opacity:0.8;
+  margin-bottom:20px;
 }
 
 /* GALLERY GRID */
@@ -76,6 +83,22 @@ h2 {
   margin-bottom:8px;
 }
 
+/* TIMELINE */
+.timeline {
+  border-left: 4px solid #ffb400;
+  padding-left:20px;
+}
+.timeline div {
+  margin-bottom:20px;
+}
+.timeline h3 {
+  color:#ffb400;
+  margin-bottom:5px;
+}
+.timeline p {
+  opacity:0.8;
+}
+
 /* FOOTER */
 footer {
   text-align:center;
@@ -92,33 +115,128 @@ footer {
 <div class="hero">
   <div>
     <h1>Bimal Thapa Magar</h1>
-    <p>Sous Chef • Steak Specialist • Turkish & Arabic Cuisine</p>
+    <p>Sous Chef • Steak Specialist • Turkish, Arabic & Mediterranean Cuisine</p>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section>
-  <h2>Professional Summary</h2>
-  <p>
-    Accomplished Sous Chef with over 11 years of experience in high-volume, fine-dining restaurants
-    across UAE and internationally. Specialized in steak, grill, Turkish cuisine, and Arabic cuisine.
-    Strong background in HACCP, team leadership, menu development, and operational excellence.
-  </p>
+<section id="about">
+  <h2>About Chef Bimal</h2>
+
+  <div style="display:flex; flex-wrap:wrap; gap:30px; align-items:center;">
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg"
+      style="width:300px; height:350px; object-fit:cover; border-radius:12px; box-shadow:0 0 20px black;">
+
+    <div style="flex:1; min-width:260px;">
+
+      <!-- Short Summary -->
+      <p style="font-size:18px; line-height:1.8; opacity:0.9; margin-bottom:20px;">
+        A highly skilled <strong>Sous Chef with 11+ years of international experience</strong>,
+        specializing in <strong>steak, grill, Turkish cuisine, Arabic cuisine, and Mediterranean dishes</strong>.
+      </p>
+
+      <!-- Medium Summary -->
+      <p style="font-size:18px; line-height:1.8; opacity:0.9; margin-bottom:20px;">
+        Strong culinary background across UAE & Asia with deep expertise in <strong>team leadership, 
+        HACCP, PIC Level 3, GHP Level 3, menu development, and cost control</strong>.
+      </p>
+
+      <!-- Executive Summary -->
+      <p style="font-size:18px; line-height:1.8; opacity:0.9; margin-bottom:20px;">
+        Mastery in <strong>ribeye, tenderloin, tomahawk, kabab, adana, lamb chops, grills</strong>
+        and high-pressure kitchen operations.
+      </p>
+
+      <!-- Inspirational -->
+      <p style="font-size:18px; line-height:1.8; opacity:0.9;">
+        My philosophy: <strong>Every plate tells a story — every guest deserves excellence.</strong>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- SKILL BOXES -->
+  <div style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+
+    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
+      <h3 style="color:#ffb400;">🔥 Food Safety Expert</h3>
+      <p style="opacity:0.8;">Certified in HACCP, PIC Level 3 & GHP Level 3.</p>
+    </div>
+
+    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
+      <h3 style="color:#ffb400;">👨‍🍳 Leadership</h3>
+      <p style="opacity:0.8;">Trained and supervised 30+ chefs across hot kitchen & grill.</p>
+    </div>
+
+    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
+      <h3 style="color:#ffb400;">🥩 Steak Specialist</h3>
+      <p style="opacity:0.8;">Perfecting premium steaks, grills & butchery skills.</p>
+    </div>
+
+    <div style="background:#1a1a1a; border-left:5px solid #ffb400; padding:20px; border-radius:8px;">
+      <h3 style="color:#ffb400;">🍽 Menu Creation</h3>
+      <p style="opacity:0.8;">Expert in plating, recipe development & cost control.</p>
+    </div>
+
+  </div>
 </section>
 
-<!-- WORK EXPERIENCE -->
+<!-- WHY HIRE ME -->
 <section>
-  <h2>Work Experience</h2>
+  <h2>Why Hire Me</h2>
+  <p class="subtitle">A professional chef who brings quality, consistency, discipline, and leadership.</p>
 
-  <p><strong>Global Catering Services LLC – Sous Chef (2018 – Present)</strong><br>
-  High-volume service, menu development, hygiene compliance, staff supervision.</p>
+  <ul style="font-size:18px; line-height:1.8;">
+    <li>✔ 14+ years of proven culinary excellence</li>
+    <li>✔ Expertise in steak, grill, Turkish, Arabic & Mediterranean cuisine</li>
+    <li>✔ Strong background in menu development & kitchen operations</li>
+    <li>✔ Handles pressure, volume & quality with precision</li>
+    <li>✔ Passionate about training and guiding kitchen teams</li>
+    <li>✔ Fully certified in food safety and hygiene standards</li>
+  </ul>
+</section>
 
-  <p><strong>Armed Forces Officers Club & Hotel – Senior CDP (2015 – 2017)</strong><br>
-  Managed kitchen stations, plating, prep, and quality consistency.</p>
+<!-- CAREER TIMELINE -->
+<section>
+  <h2>Career Timeline</h2>
 
-  <p><strong>Global Catering Services Abu Dhabi – Demi Chef (2014 – 2015)</strong></p>
+  <div class="timeline">
+    <div>
+      <h3>2020 – Present • Sous Chef – Bosporus Restaurant, Dubai</h3>
+      <p>Managing grill section, kitchen operations, staff training & food quality.</p>
+    </div>
 
-  <p><strong>Saujana Hotel, Malaysia – Commi 1</strong></p>
+    <div>
+      <h3>2018 – 2020 • Sous Chef – Global Catering Services</h3>
+      <p>High-volume catering for VIP events.</p>
+    </div>
+
+    <div>
+      <h3>2015 – 2017 • Senior CDP – Officers Club Abu Dhabi</h3>
+      <p>Handled hot kitchen & grill sections.</p>
+    </div>
+
+    <div>
+      <h3>2014 – 2015 • Demi Chef – Global Catering Abu Dhabi</h3>
+    </div>
+
+    <div>
+      <h3>2013 – Malaysia • Commi 1 – Saujana Hotel</h3>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE DISHES -->
+<section>
+  <h2>Signature Dishes</h2>
+
+  <ul style="font-size:18px; line-height:1.8;">
+    <li>🥩 Ribeye, Tenderloin, Tomahawk</li>
+    <li>🔥 Adana, Kabab, Lamb Chops</li>
+    <li>🇹🇷 Turkish Meat Platters & Grills</li>
+    <li>🇦🇪 Arabic Mixed Grill & Specialties</li>
+    <li>🥗 Mediterranean Mezze & Platters</li>
+  </ul>
 </section>
 
 <!-- GALLERY -->
@@ -127,8 +245,14 @@ footer {
 
   <div class="gallery">
 
-    <!-- KITCHEN & TEAM -->
+    <!-- NEW IMAGES -->
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/01631c9a-54cf-4738-b5a6-99ff9f2e92ea.jpeg">
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0859.jpeg">
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_2081.jpeg">
+
+    <!-- EXISTING IMAGES -->
     <img src="https://github.com/Bimalmagart/bimalmagar/raw/refs/heads/main/IMG_0362.jpeg">
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1842.jpeg">
     <img src="https://github.com/Bimalmagart/bimalmagar/raw/refs/heads/main/IMG_1846.jpeg">
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1843.jpeg">
@@ -145,6 +269,17 @@ footer {
     <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg">
 
   </div>
+</section>
+
+<!-- DOWNLOAD CV SECTION -->
+<section style="text-align:center; margin: 50px 0; padding: 20px;">
+  <a href="https://drive.google.com/file/d/1QvRxznooHDAyIw_cHxWujt0CLehp1U9x/view?usp=drivesdk"
+     target="_blank"
+     style="display:inline-block; background:#ffb400; padding:14px 28px;
+            color:#000; font-size:20px; font-weight:bold; border-radius:8px;
+            text-decoration:none; box-shadow: 0 0 15px rgba(255, 186, 0, 0.6);">
+    📄 Download My CV
+  </a>
 </section>
 
 <!-- CONTACT -->
