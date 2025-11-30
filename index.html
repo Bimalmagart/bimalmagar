@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bimal Thapa Magar – Head Chef & Steak Specialist</title>
 
 <!-- Google Fonts -->
@@ -12,10 +12,11 @@
 /* GLOBAL */
 body {
   margin:0;
-  font-family:'Poppins', sans-serif;
+  font-family:"Poppins", sans-serif;
   background:#0d0d0d;
   color:#fff;
   scroll-behavior:smooth;
+  overflow-x:hidden;
 }
 
 section {
@@ -37,38 +38,70 @@ h2 {
 .premium-gold {
   font-size:32px;
   font-weight:800;
-  letter-spacing:0.8px;
-  display:inline-block;
-  padding-bottom:10px;
-  position:relative;
   background:linear-gradient(90deg,#fff4d2,#ffdf85,#ffb400,#e6a300,#ffdf85);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  text-shadow:0px 2px 8px rgba(0,0,0,0.6);
   animation:goldGlow 4s infinite ease-in-out;
 }
-
 @keyframes goldGlow {
   0% { filter:brightness(1); }
-  50% { filter:brightness(1.45); }
+  50% { filter:brightness(1.4); }
   100% { filter:brightness(1); }
 }
 
-/* GOLD LINE */
 .premium-gold-line {
   width:150px;
   height:4px;
-  margin:12px auto 0;
   background:linear-gradient(90deg,#ffdf85,#ffb400,#e6a300,#ffdf85);
+  margin:12px auto;
   border-radius:4px;
-  box-shadow:0 0 15px rgba(255,180,0,0.6);
-  animation:lineShine 4s infinite ease-in-out;
+  box-shadow:0 0 15px rgba(255,180,0,0.5);
 }
 
-@keyframes lineShine {
-  0% { opacity:0.7; transform:scaleX(0.92); }
-  50% { opacity:1; transform:scaleX(1.05); }
-  100% { opacity:0.7; transform:scaleX(0.92); }
+/* 🌌 GALAXY BACKGROUND */
+.galaxy-bg {
+  position:absolute;
+  inset:0;
+  background:url('https://i.imgur.com/o7pZs7A.gif') center/cover no-repeat;
+  opacity:0.25;
+  z-index:-3;
+  animation:galaxyMove 24s infinite linear;
+}
+@keyframes galaxyMove {
+  0% { background-position:0 0; }
+  100% { background-position:1500px 1500px; }
+}
+
+/* 🌿 FLOATING VEGETABLES */
+.veg {
+  position:absolute;
+  width:120px;
+  opacity:0.50;
+  filter:drop-shadow(0 5px 12px rgba(0,0,0,0.7));
+  animation:floatVeg 12s infinite ease-in-out;
+  z-index:-1;
+}
+@keyframes floatVeg {
+  0% { transform:translateY(0) rotate(0deg); opacity:0.6; }
+  50% { transform:translateY(-45px) rotate(6deg); opacity:1; }
+  100% { transform:translateY(0) rotate(0deg); opacity:0.6; }
+}
+
+/* 💧 WATER DROPLETS */
+.droplet {
+  position:absolute;
+  width:8px;
+  height:14px;
+  background:rgba(255,255,255,0.6);
+  border-radius:50%;
+  filter:blur(1px);
+  animation:dropFall 5s infinite ease-in;
+}
+@keyframes dropFall {
+  0% { transform:translateY(-30px) scale(0.8); opacity:0; }
+  20% { opacity:1; }
+  70% { transform:translateY(90px) scale(1); opacity:0.8; }
+  100% { transform:translateY(120px) scale(1.2); opacity:0; }
 }
 
 /* SMOKE */
@@ -80,9 +113,7 @@ h2 {
   height:200px;
   transform:translateX(-50%);
   pointer-events:none;
-  z-index:3;
 }
-
 .smoke span {
   position:absolute;
   bottom:0;
@@ -91,52 +122,37 @@ h2 {
   background:rgba(255,255,255,0.15);
   border-radius:50%;
   opacity:0;
-  animation:smokeUp 6s infinite;
   filter:blur(10px);
+  animation:smokeUp 6s infinite;
 }
-
-.smoke span:nth-child(1){ left:20%; animation-delay:0s;}
-.smoke span:nth-child(2){ left:40%; animation-delay:1s;}
-.smoke span:nth-child(3){ left:60%; animation-delay:2s;}
-.smoke span:nth-child(4){ left:35%; animation-delay:3s;}
-.smoke span:nth-child(5){ left:50%; animation-delay:4s;}
-
 @keyframes smokeUp {
-  0% { transform:translateY(0) scale(1); opacity:0; }
-  30% { opacity:0.4; }
-  60% { opacity:0.2; }
-  100% { transform:translateY(-220px) scale(2.3); opacity:0; }
+  0%{ transform:translateY(0) scale(1); opacity:0; }
+  30%{ opacity:0.4; }
+  60%{ opacity:0.2; }
+  100%{ transform:translateY(-180px) scale(2.3); opacity:0; }
 }
 
 /* HERO */
 .hero {
-  background:url("8a093a16-c6c0-409e-a508-758bde5ce708.jpeg") center/cover no-repeat;
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
   position:relative;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  overflow:hidden;
 }
-
 .hero::after {
   content:"";
   position:absolute;
   inset:0;
   background:rgba(0,0,0,0.55);
+  z-index:-1;
 }
-
-.hero div {
-  position:relative;
-  z-index:4;
-}
-
 .hero h1 {
-  font-size:66px;
+  font-size:62px;
   font-weight:800;
-  margin-bottom:10px;
-  text-shadow:0 0 25px black;
+  text-shadow:0 0 25px #000;
 }
 
 /* ABOUT */
@@ -146,28 +162,26 @@ h2 {
   gap:30px;
   align-items:center;
 }
-
 .about-img {
   width:320px;
   height:380px;
-  object-fit:cover;
   border-radius:15px;
-  box-shadow:0 0 25px rgba(0,0,0,0.8);
+  object-fit:cover;
+  box-shadow:0 0 25px rgba(0,0,0,0.7);
 }
 
-/* HIGHLIGHT BOXES */
+/* HIGHLIGHT BOX */
 .highlight-box {
   background:#151515;
-  border-left:6px solid #ffb400;
   padding:25px;
   border-radius:12px;
+  border-left:6px solid #ffb400;
   transition:0.3s;
 }
 .highlight-box:hover {
   transform:translateY(-6px);
-  box-shadow:0 0 20px rgba(255,180,0,0.3);
+  box-shadow:0 0 20px rgba(255,180,0,0.4);
 }
-
 .highlight-box h3 { color:#ffb400; }
 
 /* GALLERY */
@@ -176,12 +190,11 @@ h2 {
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:18px;
 }
-
 .gallery img {
   width:100%;
   height:260px;
-  object-fit:cover;
   border-radius:12px;
+  object-fit:cover;
   transition:0.3s;
 }
 .gallery img:hover {
@@ -191,22 +204,23 @@ h2 {
 
 /* CONTACT */
 .contact a {
+  display:block;
   color:#ffb400;
   text-decoration:none;
   font-size:20px;
-  display:block;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 .contact a:hover { color:#ffd577; }
 
 /* BUTTON */
 .btn {
   display:inline-block;
-  background:#ffb400;
   padding:12px 25px;
-  border-radius:8px;
+  background:#ffb400;
   color:#000;
   font-weight:700;
+  border-radius:8px;
+  text-decoration:none;
 }
 .btn:hover { background:#ffca4c; }
 
@@ -223,14 +237,29 @@ footer {
 
 <body>
 
-<!-- HERO -->
+<!-- ❤️ HERO WITH GALAXY + VEGETABLES + WATER DROPLETS -->
 <div class="hero">
+
+  <div class="galaxy-bg"></div>
+
+  <!-- FLOATING VEGETABLES (Replace with your own images) -->
+  <img src="veg1.png" class="veg" style="top:10%; left:5%;">
+  <img src="veg2.png" class="veg" style="top:55%; left:80%;">
+  <img src="veg3.png" class="veg" style="top:20%; left:65%;">
+  <img src="veg4.png" class="veg" style="top:70%; left:20%;">
+
+  <!-- WATER DROPLETS -->
+  <div class="droplet" style="top:20%; left:40%; animation-delay:0s;"></div>
+  <div class="droplet" style="top:30%; left:60%; animation-delay:1s;"></div>
+  <div class="droplet" style="top:25%; left:75%; animation-delay:2s;"></div>
+  <div class="droplet" style="top:40%; left:30%; animation-delay:3s;"></div>
+  <div class="droplet" style="top:45%; left:55%; animation-delay:4s;"></div>
+
+  <div class="smoke">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <div>
-
-    <div class="smoke">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-
     <h1>Bimal Thapa Magar</h1>
     <p class="premium-gold">Head Chef • Steak Specialist • Turkish & Arabic Fusion Cuisine</p>
     <div class="premium-gold-line"></div>
@@ -238,43 +267,61 @@ footer {
 </div>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
   <h2>About Chef Bimal</h2>
 
   <div class="about-flex">
     <img src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg" class="about-img">
 
-    <div style="flex:1; min-width:260px;">
-
-      <p style="font-size:18px; opacity:0.9; line-height:1.8;">
-        I am a passionate and disciplined <strong>Head Chef</strong> with over <strong>14 years of experience</strong> specializing in
-        <strong>steak mastery, Turkish cuisine, and modern Arabic fusion gastronomy</strong>.
+    <div style="flex:1;">
+      <p style="font-size:18px; line-height:1.8;">
+        I am a dedicated <strong>Head Chef</strong> with over <strong>14 years</strong> of experience specializing in
+        <strong>steaks, Turkish cuisine, and modern Arabic fusion gastronomy</strong>. My leadership focuses on precision,
+        discipline, innovation, and developing strong culinary teams.
       </p>
 
-      <p style="font-size:18px; opacity:0.9; line-height:1.8;">
-        My philosophy is grounded in <strong>quality, discipline, safety, leadership, and innovation</strong>.  
-        I believe every plate tells a story — and every kitchen team deserves a leader who inspires them to grow.
+      <p style="font-size:18px; line-height:1.8;">
+        I believe in <strong>quality, discipline, and safety</strong> — the pillars of a world-class kitchen.
       </p>
 
       <h3 style="color:#ffb400; margin-top:25px;">🌟 Vision</h3>
-      <p style="font-size:18px; opacity:0.9; line-height:1.8;">
-        To inspire a new generation of chefs and push the boundaries of modern fusion cuisine.
-      </p>
+      <p>To elevate global fusion cuisine and inspire a new generation of chefs.</p>
 
       <h3 style="color:#ffb400; margin-top:25px;">🔥 Mission</h3>
-      <p style="font-size:18px; opacity:0.9; line-height:1.8;">
-        • Deliver premium quality with consistency  
-        • Innovate modern fusion dishes  
-        • Maintain flawless HACCP standards  
-        • Train and empower future chefs  
-        • Create memorable guest experiences  
+      <p>
+        • Premium quality & consistency<br>
+        • HACCP excellence<br>
+        • Modern fusion menu creation<br>
+        • Leadership & mentorship<br>
+        • Guest satisfaction & memorable dining
       </p>
 
-      <a class="btn" href="https://drive.google.com/file/d/1QvRxznooHDAyIw_cHxWujt0CLehp1U9x/view" target="_blank">
-        📄 Download My CV
-      </a>
-
+      <a class="btn" href="#" target="_blank">📄 Download My CV</a>
     </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <h2>Chef Philosophy</h2>
+  <div style="background:#151515; padding:35px; border-radius:15px;">
+    <p style="line-height:1.8; opacity:0.9;">
+      My philosophy is built on <strong>discipline, respect, and innovation</strong>.  
+      A great kitchen is not just a workplace — it is a space of passion, commitment, and growth.
+    </p>
+
+    <ul style="list-style:none; padding:0; margin-top:20px; line-height:1.9;">
+      <li><strong style="color:#ffb400;">🔥 Safety First</strong> — zero compromise with HACCP.</li>
+      <li><strong style="color:#ffb400;">👨‍🍳 Lead by Example</strong> — discipline builds teams.</li>
+      <li><strong style="color:#ffb400;">🥩 Respect Ingredients</strong> — technique reveals flavor.</li>
+      <li><strong style="color:#ffb400;">🤝 Teamwork</strong> — unity creates excellence.</li>
+      <li><strong style="color:#ffb400;">✨ Guest Focus</strong> — every plate carries meaning.</li>
+      <li><strong style="color:#ffb400;">📚 Continuous Growth</strong> — evolve every day.</li>
+    </ul>
+
+    <p style="margin-top:20px; color:#ffb400; text-align:center; font-size:20px;">
+      “Quality, Safety, and Discipline — the three flames that guide my kitchen.”
+    </p>
   </div>
 </section>
 
@@ -290,18 +337,16 @@ footer {
       <ul>
         <li>Lead and supervise the kitchen team for smooth daily operations.</li>
         <li>Maintain food quality, consistency, and premium presentation.</li>
-        <li>Oversee mise en place, preparation, and station readiness.</li>
+        <li>Oversee mise en place and station readiness.</li>
         <li>Control inventory, ordering, and food cost efficiency.</li>
         <li>Ensure strict hygiene, safety, and HACCP compliance.</li>
-        <li>Coordinate with service team for fast and clear communication.</li>
-        <li>Check and maintain all kitchen equipment daily.</li>
-        <li>Train and develop chefs to improve skills and performance.</li>
-        <li>Handle customer feedback and resolve issues professionally.</li>
-        <li>Maintain daily reports, logs, and operational documentation.</li>
+        <li>Coordinate with service team for fast communication.</li>
+        <li>Check and maintain kitchen equipment daily.</li>
+        <li>Train and develop chefs to improve performance.</li>
+        <li>Handle customer feedback professionally.</li>
+        <li>Maintain daily reports and documentation.</li>
       </ul>
-      <p style="margin-top:15px; color:#ffb400; font-size:18px;">
-        ⭐ <em>“As a Head Chef, I lead not just a kitchen — I lead a vision.”</em>
-      </p>
+      <p style="margin-top:15px; color:#ffb400;">⭐ <em>“As a Head Chef, I lead not just a kitchen — I lead a vision.”</em></p>
     </section>
   </div>
 
@@ -311,35 +356,31 @@ footer {
     <section>
       <h2 style="font-size:26px;">Senior CDP</h2>
       <ul>
-        <li>Lead the assigned station and ensure full mise en place readiness.</li>
-        <li>Cook and plate dishes with consistency and premium accuracy.</li>
-        <li>Maintain hygiene, HACCP standards, and proper food handling.</li>
-        <li>Monitor stock levels and control wastage.</li>
-        <li>Train and guide Commis chefs in preparation and hygiene.</li>
-        <li>Communicate effectively with Sous Chef to ensure smooth service.</li>
+        <li>Lead assigned station and ensure mise en place readiness.</li>
+        <li>Cook and plate with accuracy and consistency.</li>
+        <li>Maintain HACCP and hygiene standards.</li>
+        <li>Monitor stock levels and reduce wastage.</li>
+        <li>Train and guide Commis chefs.</li>
+        <li>Ensure smooth communication with Sous Chef.</li>
       </ul>
-      <p style="margin-top:15px; color:#ffb400; font-size:18px;">
-        ⭐ <em>“Consistency is the signature of a great station chef.”</em>
-      </p>
+      <p style="margin-top:15px; color:#ffb400;">⭐ <em>“Consistency is the signature of a great station chef.”</em></p>
     </section>
   </div>
 
   <!-- DCDP -->
   <div class="exp-item">
-    <p><strong>Global Catering Services Abu Dhabi – Demi Chef De Partie (2014 – 2015)</strong></p>
+    <p><strong>Global Catering Services Abu Dhabi – DCDP (2014 – 2015)</strong></p>
     <section>
-      <h2 style="font-size:26px;">DCDP</h2>
+      <h2 style="font-size:26px;">Demi Chef De Partie</h2>
       <ul>
-        <li>Support the CDP and Senior CDP with daily prep and cooking.</li>
-        <li>Maintain mise en place and ensure all ingredients are fresh.</li>
-        <li>Follow recipes, portion sizes, and presentation standards.</li>
-        <li>Ensure hygiene, food safety, and proper labeling.</li>
-        <li>Monitor stock levels and report shortages.</li>
-        <li>Assist in training Commis chefs and support service flow.</li>
+        <li>Support CDP with daily prep, cooking, and plating.</li>
+        <li>Maintain mise en place and product freshness.</li>
+        <li>Follow recipes and presentation standards.</li>
+        <li>Ensure HACCP and hygiene compliance.</li>
+        <li>Monitor stock and report shortages.</li>
+        <li>Assist in training Commis chefs.</li>
       </ul>
-      <p style="margin-top:15px; color:#ffb400; font-size:18px;">
-        ⭐ <em>“Growth begins with discipline and responsibility.”</em>
-      </p>
+      <p style="margin-top:15px; color:#ffb400;">⭐ <em>“Growth starts with discipline.”</em></p>
     </section>
   </div>
 
@@ -349,16 +390,14 @@ footer {
     <section>
       <h2 style="font-size:26px;">Commis 1</h2>
       <ul>
-        <li>Assist CDP and DCDP with daily preparation, cooking, and plating.</li>
-        <li>Prepare mise en place including cutting, marination, and sauces.</li>
-        <li>Follow recipes, portion sizes, and presentation standards.</li>
-        <li>Maintain hygiene and proper food storage at the station.</li>
-        <li>Monitor stock levels and report shortages.</li>
-        <li>Support all stations during busy service periods.</li>
+        <li>Assist CDP with preparation, cooking, and plating.</li>
+        <li>Prepare mise en place including cutting and marination.</li>
+        <li>Follow recipes and portion standards.</li>
+        <li>Maintain hygiene and food storage.</li>
+        <li>Monitor stock and report shortages.</li>
+        <li>Support all stations during service.</li>
       </ul>
-      <p style="margin-top:15px; color:#ffb400; font-size:18px;">
-        ⭐ <em>“Every great chef was once a commis with a dream.”</em>
-      </p>
+      <p style="margin-top:15px; color:#ffb400;">⭐ <em>“Every great chef was once a Commis with a dream.”</em></p>
     </section>
   </div>
 </section>
@@ -366,19 +405,16 @@ footer {
 <!-- GALLERY -->
 <section>
   <h2>Chef Gallery</h2>
-
   <div class="gallery">
-    <img loading="lazy" src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
-    <img loading="lazy" src="IMG_0101.jpeg">
-    <img loading="lazy" src="IMG_0859.jpeg">
-    <img loading="lazy" src="IMG_1842.jpeg">
-    <img loading="lazy" src="IMG_2081.jpeg">
-    <img loading="lazy" src="IMG_4825.jpeg">
-
-    <!-- NEW IMAGES -->
-    <img loading="lazy" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4833.jpeg">
-    <img loading="lazy" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/01631c9a-54cf-4738-b5a6-99ff9f2e92ea.jpeg">
-    <img loading="lazy" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg">
+    <img src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
+    <img src="IMG_0101.jpeg">
+    <img src="IMG_0859.jpeg">
+    <img src="IMG_1842.jpeg">
+    <img src="IMG_2081.jpeg">
+    <img src="IMG_4825.jpeg">
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4833.jpeg">
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/01631c9a-54cf-4738-b5a6-99ff9f2e92ea.jpeg">
+    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg">
   </div>
 </section>
 
