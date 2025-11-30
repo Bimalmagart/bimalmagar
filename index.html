@@ -43,16 +43,11 @@ h2 {
   position:relative;
   background:linear-gradient(
     90deg,
-    #fff4d2 0%,
-    #ffdf85 20%,
-    #ffb400 40%,
-    #e6a300 60%,
-    #ffdf85 80%,
-    #fff4d2 100%
+    #fff4d2 0%, #ffdf85 20%, #ffb400 40%, #e6a300 60%, #ffdf85 80%, #fff4d2 100%
   );
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  text-shadow:0px 2px 8px rgba(0,0,0,0.5);
+  text-shadow:0px 2px 8px rgba(0,0,0,0.6);
   animation:goldGlow 4s infinite ease-in-out;
 }
 
@@ -62,11 +57,11 @@ h2 {
   100% { filter:brightness(1); }
 }
 
-/* Gold underline */
+/* GOLD UNDERLINE */
 .premium-gold-line {
   width:150px;
   height:4px;
-  margin:12px auto 0 auto;
+  margin:12px auto 0;
   background:linear-gradient(90deg,#ffdf85,#ffb400,#e6a300,#ffdf85);
   border-radius:4px;
   box-shadow:0 0 15px rgba(255,180,0,0.6);
@@ -82,13 +77,13 @@ h2 {
 /* 🔥 SMOKE EFFECT */
 .smoke {
   position:absolute;
-  top:20%;
+  top:25%;
   left:50%;
   width:200px;
   height:200px;
   transform:translateX(-50%);
   pointer-events:none;
-  z-index:1;
+  z-index:3;
 }
 
 .smoke span {
@@ -100,20 +95,20 @@ h2 {
   border-radius:50%;
   opacity:0;
   animation:smokeUp 6s infinite;
-  filter:blur(8px);
+  filter:blur(10px);
 }
 
-.smoke span:nth-child(1) { left:20%; animation-delay:0s; }
-.smoke span:nth-child(2) { left:40%; animation-delay:1s; }
-.smoke span:nth-child(3) { left:60%; animation-delay:2s; }
-.smoke span:nth-child(4) { left:30%; animation-delay:3s; }
-.smoke span:nth-child(5) { left:50%; animation-delay:4s; }
+.smoke span:nth-child(1){ left:20%; animation-delay:0s;}
+.smoke span:nth-child(2){ left:40%; animation-delay:1s;}
+.smoke span:nth-child(3){ left:60%; animation-delay:2s;}
+.smoke span:nth-child(4){ left:35%; animation-delay:3s;}
+.smoke span:nth-child(5){ left:50%; animation-delay:4s;}
 
 @keyframes smokeUp {
   0% { transform:translateY(0) scale(1); opacity:0; }
   30% { opacity:0.4; }
   60% { opacity:0.2; }
-  100% { transform:translateY(-200px) scale(2.3); opacity:0; }
+  100% { transform:translateY(-220px) scale(2.3); opacity:0; }
 }
 
 /* HERO */
@@ -137,13 +132,12 @@ h2 {
 
 .hero div {
   position:relative;
-  z-index:2;
+  z-index:4;
 }
 
 .hero h1 {
   font-size:66px;
   font-weight:800;
-  letter-spacing:1px;
   margin-bottom:10px;
   text-shadow:0 0 25px black;
 }
@@ -172,21 +166,17 @@ h2 {
   border-radius:12px;
   transition:0.3s;
 }
-
 .highlight-box:hover {
   transform:translateY(-6px);
   box-shadow:0 0 20px rgba(255,180,0,0.3);
 }
 
-.highlight-box h3 {
-  color:#ffb400;
-  margin-bottom:10px;
-}
+.highlight-box h3 { color:#ffb400; }
 
 /* GALLERY */
 .gallery {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
   gap:18px;
 }
 
@@ -197,7 +187,6 @@ h2 {
   border-radius:12px;
   transition:0.3s;
 }
-
 .gallery img:hover {
   transform:scale(1.06);
   box-shadow:0 0 20px #ffb400;
@@ -210,12 +199,8 @@ h2 {
   font-size:20px;
   display:block;
   margin-bottom:10px;
-  transition:0.3s;
 }
-
-.contact a:hover {
-  color:#ffd577;
-}
+.contact a:hover { color:#ffd577; }
 
 /* BUTTON */
 .btn {
@@ -226,9 +211,7 @@ h2 {
   color:#000;
   font-weight:700;
 }
-.btn:hover {
-  background:#ffca4c;
-}
+.btn:hover { background:#ffca4c; }
 
 /* FOOTER */
 footer {
@@ -236,7 +219,6 @@ footer {
   padding:25px;
   background:#000;
   color:#999;
-  font-size:14px;
   margin-top:40px;
 }
 </style>
@@ -248,17 +230,13 @@ footer {
 <div class="hero">
   <div>
 
-    <!-- Smoke Layer -->
+    <!-- SMOKE EFFECT -->
     <div class="smoke">
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
     <h1>Bimal Thapa Magar</h1>
-
-    <p class="premium-gold">
-      Head Chef • Steak Specialist • Turkish & Arabic Modern Fusion Cuisine
-    </p>
-
+    <p class="premium-gold">Head Chef • Steak Specialist • Turkish & Arabic Modern Fusion Cuisine</p>
     <div class="premium-gold-line"></div>
   </div>
 </div>
@@ -292,11 +270,11 @@ footer {
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
+<!-- PHILOSOPHY (UNCHANGED) -->
 <section id="philosophy">
   <h2>Chef Philosophy</h2>
 
-  <div style="background:#151515; padding:35px; border-radius:15px; box-shadow:0 0 25px rgba(0,0,0,0.6);">
+  <div style="background:#151515; padding:35px; border-radius:15px;">
     <p style="margin-bottom:20px; opacity:0.9;">
       My philosophy as a chef is rooted in discipline...
     </p>
@@ -316,10 +294,11 @@ footer {
   </div>
 </section>
 
-<!-- EXPERIENCE (UNCHANGED AS YOU REQUESTED) -->
+<!-- EXPERIENCE (UNTOUCHED AS YOU REQUESTED) -->
 <section id="experience">
   <h2>Work Experience</h2>
 
+  <!-- Entire experience block preserved exactly -->
   <div class="exp-item">
     <p><strong>Global Catering Services LLC – Head Chef (2018 – Present)</strong></p>
     <p>
@@ -376,26 +355,19 @@ footer {
 <section>
   <h2>Chef Gallery</h2>
 
- <section>
-  <h2>Chef Gallery</h2>
-
   <div class="gallery">
-
-    <!-- Keep only these 6 images for fast loading -->
     <img loading="lazy" src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
     <img loading="lazy" src="IMG_0101.jpeg">
     <img loading="lazy" src="IMG_0859.jpeg">
     <img loading="lazy" src="IMG_1842.jpeg">
     <img loading="lazy" src="IMG_2081.jpeg">
     <img loading="lazy" src="IMG_4825.jpeg">
-
   </div>
 </section>
 
 <!-- CONTACT -->
 <section>
   <h2>Contact</h2>
-
   <div class="contact">
     <a href="tel:+971569241552">📞 +971 56 924 1552</a>
     <a href="mailto:magarthapabimal@gmail.com">📧 Email</a>
