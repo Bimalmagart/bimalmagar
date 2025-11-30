@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-/* ---------------------------- GLOBAL ---------------------------- */
+/* ----------------------------------------------------------- GLOBAL ----------------------------------------------------------- */
 body {
   margin:0;
   font-family:"Poppins", sans-serif;
@@ -32,19 +32,13 @@ h2 {
   letter-spacing:1px;
 }
 
-/* ---------------------------- GOLD TITLE ---------------------------- */
+/* ----------------------------------------------------------- GOLD TITLE ----------------------------------------------------------- */
 .premium-gold {
   font-size:32px;
   font-weight:800;
   background:linear-gradient(90deg,#fff4d2,#ffdf85,#ffb400,#e6a300,#ffdf85);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:goldGlow 4s infinite ease-in-out;
-}
-@keyframes goldGlow {
-  0% { filter:brightness(1); }
-  50% { filter:brightness(1.4); }
-  100% { filter:brightness(1); }
 }
 .premium-gold-line {
   width:160px;
@@ -55,161 +49,35 @@ h2 {
   box-shadow:0 0 15px rgba(255,180,0,0.5);
 }
 
-/* ---------------------------- BACKGROUNDS ---------------------------- */
+/* ----------------------------------------------------------- BACKGROUNDS ----------------------------------------------------------- */
 .kitchen-bg {
   position:absolute;
   inset:0;
-  background:url('kitchenbg.jpg') center/cover no-repeat;
+  background:url('https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg')
+              center/cover no-repeat;
   z-index:-5;
-  filter:brightness(0.35);
+  filter:brightness(0.70) contrast(1.12) saturate(1.18);
 }
+
+/* Soft cinematic overlay */
+.kitchen-bg::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.18);
+  z-index:1;
+}
+
+/* Galaxy cinematic ambience */
 .galaxy-bg {
   position:absolute;
   inset:0;
   background:url('https://i.imgur.com/o7pZs7A.gif') center/cover no-repeat;
-  opacity:0.25;
+  opacity:0.18;
   z-index:-6;
 }
 
-/* ---------------------------- FIRE ---------------------------- */
-.fire {
-  position:absolute;
-  bottom:9%;
-  left:50%;
-  width:240px;
-  height:260px;
-  transform:translateX(-50%);
-  pointer-events:none;
-  z-index:-2;
-}
-.fire span {
-  position:absolute;
-  bottom:0;
-  width:30px;
-  height:60px;
-  background:radial-gradient(circle,#ffefc1,#ff9800,#e65100);
-  border-radius:50%;
-  animation:flame 1.2s infinite ease-in-out;
-  opacity:0.9;
-  filter:blur(2px);
-}
-.fire span:nth-child(1){ left:15px; animation-delay:0s;}
-.fire span:nth-child(2){ left:65px; animation-delay:.2s;}
-.fire span:nth-child(3){ left:115px; animation-delay:.35s;}
-.fire span:nth-child(4){ left:165px; animation-delay:.15s;}
-@keyframes flame {
-  0% { transform:translateY(0) scale(1); opacity:1; }
-  50% { transform:translateY(-50px) scale(1.7); opacity:0.7; }
-  100%{ transform:translateY(-120px) scale(1.2); opacity:0; }
-}
-
-/* ---------------------------- HEAT WAVES ---------------------------- */
-.heat-waves {
-  position:absolute;
-  bottom:165px;
-  left:50%;
-  transform:translateX(-50%);
-  width:320px;
-  height:180px;
-  pointer-events:none;
-  z-index:2;
-}
-.heat-waves span {
-  position:absolute;
-  width:60px;
-  height:120px;
-  background:linear-gradient(to top, rgba(255,190,60,0.25), rgba(255,255,255,0));
-  border-radius:50%;
-  filter:blur(14px);
-  animation:heatWave 2.5s infinite ease-in-out;
-}
-.heat-waves span:nth-child(1){ left:0; animation-delay:0s; }
-.heat-waves span:nth-child(2){ left:65px; animation-delay:.3s; }
-.heat-waves span:nth-child(3){ left:130px; animation-delay:.6s; }
-.heat-waves span:nth-child(4){ left:195px; animation-delay:.9s; }
-.heat-waves span:nth-child(5){ left:260px; animation-delay:1.2s; }
-
-@keyframes heatWave {
-  0% { transform:translateY(0) scale(1); opacity:0.4; }
-  40%{ transform:translateY(-35px) scale(1.1); opacity:0.75; }
-  100%{ transform:translateY(-80px) scale(1.25); opacity:0.1; }
-}
-
-/* ---------------------------- SMOKE ---------------------------- */
-.smoke {
-  position:absolute;
-  top:42%;
-  left:50%;
-  width:200px;
-  height:240px;
-  transform:translateX(-50%);
-  pointer-events:none;
-  z-index:-1;
-}
-.smoke span {
-  position:absolute;
-  bottom:0;
-  width:30px;
-  height:30px;
-  background:rgba(255,255,255,0.15);
-  filter:blur(15px);
-  border-radius:50%;
-  animation:smokeUp 6s infinite;
-  opacity:0;
-}
-@keyframes smokeUp {
-  0% { transform:translateY(0) scale(1); opacity:0; }
-  30% { opacity:0.4; }
-  60% { opacity:0.2; }
-  100%{ transform:translateY(-200px) scale(2.4); opacity:0; }
-}
-
-/* ---------------------------- SPARKS ---------------------------- */
-.sparks {
-  position:absolute;
-  bottom:12%;
-  left:50%;
-  width:300px;
-  height:160px;
-  transform:translateX(-50%);
-  pointer-events:none;
-  z-index:-1;
-}
-.sparks span {
-  position:absolute;
-  width:6px;
-  height:6px;
-  background:#ffb400;
-  border-radius:50%;
-  filter:blur(1px);
-  animation:spark 2s infinite ease-out;
-}
-@keyframes spark {
-  0% { transform:translateY(0) translateX(0); opacity:1; }
-  100%{ transform:translateY(-120px) translateX(40px); opacity:0; }
-}
-
-/* ---------------------------- SIGNATURE ---------------------------- */
-.signature {
-  position:absolute;
-  bottom:45px;
-  right:40px;
-  width:260px;
-  opacity:0.85;
-  animation:signatureFade 5s infinite ease-in-out;
-  z-index:10;
-}
-.signature img {
-  width:100%;
-  filter:drop-shadow(0 0 15px rgba(255,180,0,0.7));
-}
-@keyframes signatureFade {
-  0%{opacity:.4;}
-  50%{opacity:.9;}
-  100%{opacity:.4;}
-}
-
-/* ---------------------------- HERO ---------------------------- */
+/* ----------------------------------------------------------- HERO ----------------------------------------------------------- */
 .hero {
   height:100vh;
   position:relative;
@@ -231,7 +99,7 @@ h2 {
   text-shadow:0 0 25px #000;
 }
 
-/* ---------------------------- ABOUT ---------------------------- */
+/* ----------------------------------------------------------- ABOUT ----------------------------------------------------------- */
 .about-flex { display:flex; flex-wrap:wrap; gap:30px; align-items:center; }
 .about-img {
   width:330px;
@@ -241,21 +109,25 @@ h2 {
   box-shadow:0 0 25px rgba(0,0,0,0.7);
 }
 
-/* ---------------------------- GALLERY ---------------------------- */
+/* ----------------------------------------------------------- GALLERY ----------------------------------------------------------- */
 .gallery {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:18px;
 }
 .gallery img {
-  width:100%; height:260px; border-radius:12px; object-fit:cover; transition:.3s;
+  width:100%;
+  height:260px;
+  border-radius:12px;
+  object-fit:cover;
+  transition:0.3s;
 }
 .gallery img:hover {
   transform:scale(1.06);
   box-shadow:0 0 25px #ffb400;
 }
 
-/* ---------------------------- CONTACT ---------------------------- */
+/* ----------------------------------------------------------- CONTACT ----------------------------------------------------------- */
 .contact a {
   display:block;
   font-size:20px;
@@ -265,7 +137,7 @@ h2 {
 }
 .contact a:hover { color:#ffd577; }
 
-/* ---------------------------- BUTTON ---------------------------- */
+/* ----------------------------------------------------------- BUTTON ----------------------------------------------------------- */
 .btn {
   display:inline-block;
   padding:12px 25px;
@@ -277,7 +149,7 @@ h2 {
 }
 .btn:hover { background:#ffcf5e; }
 
-/* ---------------------------- FOOTER ---------------------------- */
+/* ----------------------------------------------------------- FOOTER ----------------------------------------------------------- */
 footer {
   text-align:center;
   padding:25px;
@@ -295,33 +167,6 @@ footer {
 
 <!-- HERO SECTION -->
 <div class="hero">
-
-  <!-- FIRE -->
-  <div class="fire">
-    <span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- HEAT WAVES -->
-  <div class="heat-waves">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- SMOKE -->
-  <div class="smoke">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- SPARKS -->
-  <div class="sparks">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- SIGNATURE -->
-  <div class="signature">
-    <img src="signaturegold.png" alt="Signature">
-  </div>
-
-  <!-- HERO TEXT -->
   <div>
     <h1>Bimal Thapa Magar</h1>
     <p class="premium-gold">Head Chef • Steak Specialist • Turkish & Arabic Fusion Cuisine</p>
@@ -337,21 +182,20 @@ footer {
     <div style="flex:1;">
       <p style="font-size:18px; line-height:1.8;">
         I am an experienced <strong>Head Chef</strong> with more than <strong>14 years</strong> of culinary expertise specializing in 
-        <strong>premium steaks, Turkish cuisine, and modern Arabic fusion gastronomy</strong>.  
-        My culinary philosophy is built around precision, consistency, safety, and inspiring strong kitchen teams.
+        <strong>premium steaks, Turkish cuisine, and modern Arabic fusion gastronomy</strong>.
       </p>
       <p style="font-size:18px; line-height:1.8;">
-        As a leader, I believe a kitchen should be disciplined, creative, and guest-focused. Every dish must deliver both flavor and emotion.
+        My leadership is built on discipline, consistency, innovation, and creating strong culinary teams that deliver excellence every day.
       </p>
 
       <h3 style="color:#ffb400;">🌟 Vision</h3>
-      <p>To elevate global fusion cuisine through innovation, technique, and leadership.</p>
+      <p>To elevate global fusion cuisine through technique, creativity, and leadership.</p>
 
       <h3 style="color:#ffb400;">🔥 Mission</h3>
       <p>
         • Deliver premium quality & consistency<br>
         • Maintain HACCP excellence & kitchen safety<br>
-        • Lead, mentor & develop next-generation chefs<br>
+        • Lead, mentor & develop strong culinary teams<br>
         • Create memorable guest dining experiences<br>
         • Innovate modern fusion & charcoal grill concepts
       </p>
@@ -366,8 +210,8 @@ footer {
   <h2>Chef Philosophy</h2>
   <div style="background:#151515; padding:35px; border-radius:15px;">
     <p style="line-height:1.8; opacity:0.9;">
-      My philosophy is grounded in <strong>discipline, respect, innovation, and consistency</strong>.  
-      A kitchen is not only a workplace — it is a space where flavor, technique, and passion meet to create extraordinary dining experiences.
+      My philosophy is grounded in <strong>discipline, respect, innovation, and consistency</strong>.
+      A great kitchen blends technique, passion, and teamwork to create extraordinary food.
     </p>
 
     <ul style="list-style:none; padding:0; margin-top:20px; line-height:1.9;">
@@ -380,7 +224,7 @@ footer {
     </ul>
 
     <p style="margin-top:20px; color:#ffb400; text-align:center; font-size:20px;">
-      “Quality, Safety, and Discipline — the three flames of my kitchen.”
+      “Quality, Safety, and Discipline — the foundation of my kitchen.”
     </p>
   </div>
 </section>
@@ -395,16 +239,15 @@ footer {
     <div style="background:#151515; padding:25px; border-radius:12px;">
       <h3 style="color:#ffb400;">HEAD CHEF – KEY RESPONSIBILITIES</h3>
       <ul style="line-height:1.8;">
-        <li>Lead full kitchen operations ensuring quality, consistency, and premium presentation.</li>
+        <li>Lead complete kitchen operations ensuring quality, consistency, and premium presentation.</li>
         <li>Develop modern fusion menus, premium steak cuts, and charcoal grill concepts.</li>
-        <li>Ensure complete HACCP, hygiene, and kitchen safety compliance at all times.</li>
-        <li>Supervise mise en place, workflow, and station readiness for smooth daily service.</li>
-        <li>Train, mentor, and upskill chefs to strengthen team performance and productivity.</li>
-        <li>Control food cost, wastage, ordering, receiving, and inventory management.</li>
-        <li>Conduct daily quality checks, tasting, and equipment maintenance inspections.</li>
-        <li>Collaborate closely with service team for efficient communication during service.</li>
-        <li>Handle guest feedback and resolve operational challenges professionally.</li>
-        <li>Prepare daily kitchen reports, logs, and documentation.</li>
+        <li>Ensure full HACCP, hygiene, and food-safety compliance across all stations.</li>
+        <li>Train and mentor chefs, building strong and effective culinary teams.</li>
+        <li>Control food cost, wastage, ordering, receiving, and inventory.</li>
+        <li>Conduct daily quality checks and equipment inspections.</li>
+        <li>Collaborate with service team for smooth and fast communication.</li>
+        <li>Handle guest feedback professionally and maintain high satisfaction.</li>
+        <li>Manage daily kitchen reports and documentation.</li>
       </ul>
     </div>
   </div>
@@ -415,12 +258,12 @@ footer {
     <div style="background:#151515; padding:25px; border-radius:12px;">
       <h3 style="color:#ffb400;">SENIOR CHEF DE PARTIE</h3>
       <ul style="line-height:1.8;">
-        <li>Led assigned station ensuring precision, consistency, and premium plating.</li>
-        <li>Maintained complete mise en place preparation and ensured product freshness.</li>
-        <li>Held full responsibility for HACCP and hygiene across the hot kitchen.</li>
-        <li>Developed junior chefs through hands-on training and skill development.</li>
-        <li>Coordinated effectively with Sous Chef to maintain smooth operations.</li>
-        <li>Assisted in menu trials, improvements, and new dish execution.</li>
+        <li>Led the assigned station with precision, consistency, and premium plating.</li>
+        <li>Maintained full mise en place and ensured ingredient freshness.</li>
+        <li>Monitored HACCP and hygiene standards in the hot kitchen.</li>
+        <li>Trained and guided Commis chefs to improve discipline and skill.</li>
+        <li>Coordinated with Sous Chef for smooth daily operations.</li>
+        <li>Executed menu trials and contributed to new dish development.</li>
       </ul>
     </div>
   </div>
@@ -431,11 +274,11 @@ footer {
     <div style="background:#151515; padding:25px; border-radius:12px;">
       <h3 style="color:#ffb400;">DEMI CHEF DE PARTIE</h3>
       <ul style="line-height:1.8;">
-        <li>Prepared high-quality dishes following recipes, portioning, and premium presentation.</li>
-        <li>Assisted CDP in daily prep, cutting, marination, and service cooking.</li>
-        <li>Maintained hygiene standards and proper stock rotation.</li>
-        <li>Supported all kitchen stations during peak hours.</li>
-        <li>Ensured consistent mise en place readiness across assigned sections.</li>
+        <li>Prepared high-quality dishes following recipes and plating standards.</li>
+        <li>Supported CDP with prep, marination, grilling, sautéing, and cooking.</li>
+        <li>Maintained strict hygiene and stock rotation.</li>
+        <li>Assisted all sections during peak service hours.</li>
+        <li>Ensured accurate mise en place readiness daily.</li>
       </ul>
     </div>
   </div>
@@ -446,11 +289,11 @@ footer {
     <div style="background:#151515; padding:25px; border-radius:12px;">
       <h3 style="color:#ffb400;">COMMIS 1</h3>
       <ul style="line-height:1.8;">
-        <li>Assisted senior chefs in preparation, cooking, and premium plating.</li>
-        <li>Prepared mise en place for grills, sautés, and cold kitchen items.</li>
-        <li>Followed recipes with accuracy ensuring taste and consistency.</li>
-        <li>Maintained cleanliness, storage, and daily hygiene routines.</li>
-        <li>Supported all stations during high-volume services.</li>
+        <li>Assisted senior chefs with preparation, cooking, and plating.</li>
+        <li>Prepared mise en place for grills, sauté, and cold kitchen.</li>
+        <li>Followed recipes accurately ensuring consistency.</li>
+        <li>Maintained hygiene, storage, and sanitation routines.</li>
+        <li>Supported all kitchen sections during high-volume service.</li>
       </ul>
     </div>
   </div>
