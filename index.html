@@ -29,7 +29,7 @@ h2 {
   letter-spacing:1px;
 }
 
-/* ------------------------------------------------------ PREMIUM BACKGROUNDS ------------------------------------------------------ */
+/* ------------------------------------------------------ BACKGROUNDS ------------------------------------------------------ */
 .kitchen-bg {
   position:fixed;
   inset:0;
@@ -45,7 +45,7 @@ h2 {
   z-index:-9;
 }
 
-/* Animated Galaxy Layer */
+/* Galaxy Layer */
 .galaxy-bg {
   position:fixed;
   inset:0;
@@ -110,7 +110,7 @@ h2 {
   to { opacity:1; transform:translateY(0); }
 }
 
-/* Gold Shine */
+/* Shine */
 .pro-max-box::after {
   content:"";
   position:absolute;
@@ -126,40 +126,9 @@ h2 {
   100% { transform:translateX(200%); }
 }
 
-/* Floating Gold Particles */
-.pro-max-box .gold-particle {
-  position:absolute;
-  width:8px;
-  height:8px;
-  background:radial-gradient(circle,#ffdf85,#ffb400,transparent);
-  border-radius:50%;
-  animation:float 9s linear infinite;
-  opacity:0.8;
-  filter:blur(1px);
-}
-@keyframes float {
-  from { transform:translateY(40px); }
-  to { transform:translateY(-180px); }
-}
-
-/* ------------------------------------------------------ ABOUT ------------------------------------------------------ */
-.about-flex {
-  display:flex;
-  flex-wrap:wrap;
-  gap:30px;
-  align-items:center;
-}
-.about-img {
-  width:330px;
-  height:390px;
-  border-radius:15px;
-  object-fit:cover;
-  box-shadow:0 0 25px rgba(0,0,0,0.7);
-}
-
 /* ------------------------------------------------------ EXPERIENCE BOX ------------------------------------------------------ */
 .exp-box {
-  background:rgba(20,20,20,0.55);
+  background:rgba(20,20,20,0.65);
   border-radius:18px;
   padding:25px;
   border:1.5px solid rgba(255,200,80,0.25);
@@ -169,48 +138,100 @@ h2 {
   margin-bottom:40px;
 }
 
-/* ------------------------------------------------------ BUTTON ------------------------------------------------------ */
-.btn {
-  display:inline-block;
-  padding:12px 25px;
-  background:#ffb400;
+/* ------------------------------------------------------ PREMIUM SLIDER ------------------------------------------------------ */
+.slider-container {
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  margin-top:40px;
+  box-shadow:0 0 35px rgba(255,180,0,0.25);
+}
+
+.slider {
+  position:relative;
+}
+
+.fade-slide {
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform:scale(1.05);
+}
+.fade-slide.active {
+  opacity:1;
+  transform:scale(1);
+}
+
+/* Navigation Arrows */
+.slide-btn {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(255,180,0,0.75);
+  border:none;
+  font-size:32px;
+  padding:10px 16px;
+  cursor:pointer;
+  border-radius:50%;
   color:#000;
-  font-weight:700;
-  border-radius:8px;
-  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 18px rgba(255,180,0,0.8);
+  transition:0.3s;
+  z-index:10;
 }
-.btn:hover { background:#ffcf5e; }
+.slide-btn:hover {
+  background:#ffcc4d;
+}
+.prev { left:18px; }
+.next { right:18px; }
 
-/* ------------------------------------------------------ FOOTER ------------------------------------------------------ */
-footer {
+/* Dots */
+.dots {
+  position:absolute;
+  bottom:15px;
+  width:100%;
   text-align:center;
-  padding:25px;
-  background:#000;
-  color:#888;
+}
+.dot {
+  height:12px;
+  width:12px;
+  background:#ffb400;
+  opacity:0.4;
+  display:inline-block;
+  margin:0 5px;
+  border-radius:50%;
+  transition:0.3s;
+}
+.dot.active {
+  opacity:1;
+  box-shadow:0 0 12px #ffb400;
 }
 
-/* ------------------------------------------------------ MOBILE FIXES ------------------------------------------------------ */
+/* Lightbox */
+.lightbox {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+.lightbox img {
+  width:90%;
+  max-width:700px;
+  border-radius:12px;
+  box-shadow:0 0 30px #ffb400;
+}
+
+/* ------------------------------------------------------ MOBILE ------------------------------------------------------ */
 @media (max-width: 768px) {
-
-  /* Darker, clearer boxes on mobile */
-  .exp-box,
-  .pro-max-box {
-    background: rgba(0,0,0,0.80);
-    backdrop-filter: blur(10px);
-    border:1.5px solid rgba(255,180,0,0.45);
-  }
-
-  /* Add spacing so content never overlaps background image */
-  #experience,
-  #philosophy {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  /* Adjust gallery image height */
-  .gallery img {
-    height: 200px;
-  }
+  .fade-slide { height:260px; }
+  .slide-btn { font-size:26px; padding:6px 10px; }
 }
 
 </style>
@@ -234,8 +255,8 @@ footer {
 <!-- ABOUT -->
 <section id="about">
   <h2>About Chef Bimal</h2>
-  <div class="about-flex">
 
+  <div class="about-flex">
     <img src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg" class="about-img">
 
     <div style="flex:1;">
@@ -270,6 +291,7 @@ footer {
   <h2>Chef Philosophy</h2>
 
   <div class="pro-max-box">
+
     <span class="gold-particle" style="left:20px; bottom:10px;"></span>
     <span class="gold-particle" style="right:30px; bottom:5px;"></span>
     <span class="gold-particle" style="left:50%; bottom:0;"></span>
@@ -327,42 +349,49 @@ footer {
 
   <div class="exp-box">
     <p><strong>Global Catering Services Abu Dhabi – DCDP (2014 – 2015)</strong></p>
-    <ul style="line-height:1.8;">
+    <ul style="line-height:1.8%;">
       <li>Prepare high-quality dishes following recipes & standards.</li>
-      <li>Support station with prep, marination, grilling & sautéing.</li>
+      <li>Support station with prep, grilling & sautéing.</li>
       <li>Maintain hygiene and stock rotation.</li>
-      <li>Assist all sections during peak service hours.</li>
+      <li>Assist all sections during peak service.</li>
       <li>Ensure daily mise en place readiness.</li>
     </ul>
   </div>
 
   <div class="exp-box">
     <p><strong>Saujana Hotel, Malaysia – Commis 1</strong></p>
-    <ul style="line-height:1.8;">
-      <li>Assist senior chefs with preparation, cooking & plating.</li>
-      <li>Prepare mise en place for multiple stations.</li>
+    <ul style="line-height:1.8%;">
+      <li>Assist senior chefs in preparation, cooking & plating.</li>
+      <li>Handle mise en place for grills, sauté & cold stations.</li>
       <li>Follow recipes accurately ensuring consistency.</li>
-      <li>Maintain hygiene, sanitation & storage routines.</li>
-      <li>Support all kitchen sections during high-volume service.</li>
+      <li>Maintain hygiene & sanitation standards.</li>
+      <li>Support all kitchen sections during peak hours.</li>
     </ul>
   </div>
 
 </section>
 
-<!-- GALLERY -->
+<!-- PREMIUM SLIDER GALLERY -->
 <section>
   <h2>Chef Gallery</h2>
-  <div class="gallery">
-    <img src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
-    <img src="IMG_0101.jpeg">
-    <img src="IMG_0859.jpeg">
-    <img src="IMG_1842.jpeg">
-    <img src="IMG_2081.jpeg">
-    <img src="IMG_4825.jpeg">
-    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4833.jpeg">
-    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/01631c9a-54cf-4738-b5a6-99ff9f2e92ea.jpeg">
-    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg">
+
+  <div class="slider-container">
+    <img class="fade-slide active" src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
+    <img class="fade-slide" src="IMG_0101.jpeg">
+    <img class="fade-slide" src="IMG_0859.jpeg">
+    <img class="fade-slide" src="IMG_1842.jpeg">
+    <img class="fade-slide" src="IMG_2081.jpeg">
+    <img class="fade-slide" src="IMG_4825.jpeg">
+    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4833.jpeg">
+    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/01631c9a-54cf-4738-b5a6-99ff9f2e92ea.jpeg">
+    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg">
+
+    <button class="slide-btn prev">❮</button>
+    <button class="slide-btn next">❯</button>
+    
+    <div class="dots"></div>
   </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -381,6 +410,69 @@ footer {
 <footer>
   © 2025 Bimal Thapa Magar – All Rights Reserved.
 </footer>
+
+<!-- ------------------------------------------------------ SLIDER JS ------------------------------------------------------ -->
+<script>
+const slides = document.querySelectorAll(".fade-slide");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+const dotsContainer = document.querySelector(".dots");
+let index = 0;
+
+/* Create dots */
+slides.forEach((_, i)=>{
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  if(i===0) dot.classList.add("active");
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+/* Show Slide */
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+
+  index = (i + slides.length) % slides.length;
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+}
+
+nextBtn.onclick = ()=>showSlide(index+1);
+prevBtn.onclick = ()=>showSlide(index-1);
+
+/* AutoPlay every 3 seconds */
+setInterval(()=>showSlide(index+1), 3000);
+
+/* Lightbox */
+const lightbox = document.createElement("div");
+lightbox.className = "lightbox";
+document.body.appendChild(lightbox);
+
+const lightImg = document.createElement("img");
+lightbox.appendChild(lightImg);
+
+slides.forEach(img=>{
+  img.onclick = ()=>{
+    lightImg.src = img.src;
+    lightbox.style.display="flex";
+  };
+});
+lightbox.onclick = ()=>lightbox.style.display="none";
+
+/* Swipe */
+let startX=0;
+document.addEventListener("touchstart", e=>{
+  startX = e.touches[0].clientX;
+});
+document.addEventListener("touchend", e=>{
+  let endX = e.changedTouches[0].clientX;
+  if(startX-endX>50) showSlide(index+1);
+  if(endX-startX>50) showSlide(index-1);
+});
+</script>
 
 </body>
 </html>
