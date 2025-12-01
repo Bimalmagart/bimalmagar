@@ -5,33 +5,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thank You</title>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
 body {
+  margin:0;
   background:#0d0d0d;
   color:white;
   font-family:'Poppins', sans-serif;
   text-align:center;
-  padding:60px;
+  padding:60px 20px;
+  overflow:hidden;
 }
-a {
-  background:#ffb400;
-  padding:14px 20px;
-  display:inline-block;
-  margin-top:20px;
-  border-radius:8px;
-  color:black;
-  text-decoration:none;
+
+/* GOLD TEXT */
+.premium-gold {
+  font-size:48px;
+  font-weight:800;
+  background:linear-gradient(90deg,#fff4d2,#ffdf85,#ffb400,#e6a300,#ffdf85);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:fadeUp 1.4s ease forwards;
+  opacity:0;
+}
+
+/* Subtitle Text */
+.subtitle {
   font-size:20px;
+  margin-top:20px;
+  color:#ffdd7a;
+  letter-spacing:1px;
+  animation:fadeUp 1.8s ease forwards;
+  opacity:0;
+}
+
+/* Gold Line */
+.gold-line {
+  width:220px;
+  height:4px;
+  margin:25px auto;
+  border-radius:5px;
+  background:linear-gradient(90deg,#ffdf85,#ffb400,#e6a300,#ffdf85);
+  box-shadow:0 0 18px rgba(255,180,0,0.7);
+  animation:fadeUp 2s ease forwards;
+  opacity:0;
+}
+
+/* Button */
+.btn {
+  display:inline-block;
+  margin-top:40px;
+  padding:12px 30px;
+  background:#ffb400;
+  color:#000;
+  text-decoration:none;
+  border-radius:10px;
+  font-size:22px;
+  font-weight:700;
+  transition:0.3s;
+  animation:fadeUp 2.4s ease forwards;
+  opacity:0;
+}
+
+.btn:hover {
+  background:#ffe08a;
+  box-shadow:0 0 15px rgba(255,200,0,0.8);
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+  0% { opacity:0; transform:translateY(35px); }
+  100% { opacity:1; transform:translateY(0); }
 }
 </style>
 </head>
 
 <body>
 
-<h2>Thank You!</h2>
-<p>Your request has been submitted successfully.</p>
+<h1 class="premium-gold">THANK YOU!</h1>
+<div class="gold-line"></div>
+<p class="subtitle">Your request has been submitted successfully.</p>
 
-<a href="https://drive.google.com/file/d/1QvRxznooHDAyIw_cHxWujt0CLehp1U9x/view?usp=sharing">
+<a class="btn" 
+href="https://drive.google.com/file/d/1QvRxznooHDAyIw_cHxWujt0CLehp1U9x/view?usp=sharing">
 Open CV
 </a>
 
