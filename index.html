@@ -91,6 +91,34 @@ h2 {
   box-shadow:0 0 15px rgba(255,180,0,0.6);
 }
 
+/* ------------------------------------------------------ ABOUT IMAGE FIX ------------------------------------------------------ */
+.about-flex {
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  align-items:center;
+}
+
+/* Desktop image size */
+.about-img {
+  width:330px;
+  height:390px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(0,0,0,0.7);
+}
+
+/* Mobile image fix */
+@media (max-width: 768px) {
+  .about-img {
+    width:100%;
+    max-width:260px;
+    height:auto;
+    display:block;
+    margin:0 auto;
+  }
+}
+
 /* ------------------------------------------------------ PRO MAX GOLD GLASS BOX ------------------------------------------------------ */
 .pro-max-box {
   position:relative;
@@ -110,7 +138,6 @@ h2 {
   to { opacity:1; transform:translateY(0); }
 }
 
-/* Shine */
 .pro-max-box::after {
   content:"";
   position:absolute;
@@ -126,15 +153,14 @@ h2 {
   100% { transform:translateX(200%); }
 }
 
-/* ------------------------------------------------------ EXPERIENCE BOX ------------------------------------------------------ */
+/* ------------------------------------------------------ EXPERIENCE ------------------------------------------------------ */
 .exp-box {
   background:rgba(20,20,20,0.65);
   border-radius:18px;
   padding:25px;
   border:1.5px solid rgba(255,200,80,0.25);
-  box-shadow:
-    0 0 22px rgba(255,200,80,0.10),
-    inset 0 0 18px rgba(255,200,80,0.08);
+  box-shadow:0 0 22px rgba(255,200,80,0.10),
+             inset 0 0 18px rgba(255,200,80,0.08);
   margin-bottom:40px;
 }
 
@@ -147,10 +173,6 @@ h2 {
   box-shadow:0 0 35px rgba(255,180,0,0.25);
 }
 
-.slider {
-  position:relative;
-}
-
 .fade-slide {
   width:100%;
   height:360px;
@@ -161,12 +183,8 @@ h2 {
   transition:opacity 1s ease-in-out, transform 1s ease-in-out;
   transform:scale(1.05);
 }
-.fade-slide.active {
-  opacity:1;
-  transform:scale(1);
-}
+.fade-slide.active { opacity:1; transform:scale(1); }
 
-/* Navigation Arrows */
 .slide-btn {
   position:absolute;
   top:50%;
@@ -179,17 +197,11 @@ h2 {
   border-radius:50%;
   color:#000;
   font-weight:bold;
-  box-shadow:0 0 18px rgba(255,180,0,0.8);
-  transition:0.3s;
   z-index:10;
-}
-.slide-btn:hover {
-  background:#ffcc4d;
 }
 .prev { left:18px; }
 .next { right:18px; }
 
-/* Dots */
 .dots {
   position:absolute;
   bottom:15px;
@@ -199,39 +211,21 @@ h2 {
 .dot {
   height:12px;
   width:12px;
+  display:inline-block;
   background:#ffb400;
   opacity:0.4;
-  display:inline-block;
   margin:0 5px;
   border-radius:50%;
-  transition:0.3s;
 }
 .dot.active {
   opacity:1;
   box-shadow:0 0 12px #ffb400;
 }
 
-/* Lightbox */
-.lightbox {
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.9);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999;
-}
-.lightbox img {
-  width:90%;
-  max-width:700px;
-  border-radius:12px;
-  box-shadow:0 0 30px #ffb400;
-}
-
-/* ------------------------------------------------------ MOBILE ------------------------------------------------------ */
-@media (max-width: 768px) {
+/* Mobile slider fix */
+@media (max-width:768px){
   .fade-slide { height:260px; }
-  .slide-btn { font-size:26px; padding:6px 10px; }
+  .slide-btn { font-size:24px; padding:6px 10px; }
 }
 
 </style>
@@ -261,7 +255,7 @@ h2 {
 
     <div style="flex:1;">
       <p style="font-size:18px; line-height:1.8;">
-        I am an experienced <strong>Head Chef</strong> with more than <strong>14 years</strong> of culinary expertise specializing in 
+        I am an experienced <strong>Head Chef</strong> with more than <strong>14 years</strong> of expertise in 
         <strong>premium steaks, Turkish cuisine, and modern Arabic fusion gastronomy</strong>.
       </p>
 
@@ -274,11 +268,11 @@ h2 {
 
       <h3 style="color:#ffb400;">🔥 Mission</h3>
       <p>
-        • Deliver premium quality & consistency<br>
-        • Maintain HACCP excellence & safety<br>
-        • Lead & mentor powerful culinary teams<br>
-        • Create memorable guest dining experiences<br>
-        • Innovate charcoal grill & fusion concepts
+        • Premium quality & consistency<br>
+        • HACCP excellence & safety<br>
+        • Strong culinary team mentoring<br>
+        • Memorable guest experiences<br>
+        • Creative fusion & charcoal grill concepts
       </p>
 
       <a class="btn" href="cv-request.html">📄 Request My CV</a>
@@ -291,10 +285,6 @@ h2 {
   <h2>Chef Philosophy</h2>
 
   <div class="pro-max-box">
-
-    <span class="gold-particle" style="left:20px; bottom:10px;"></span>
-    <span class="gold-particle" style="right:30px; bottom:5px;"></span>
-    <span class="gold-particle" style="left:50%; bottom:0;"></span>
 
     <p style="line-height:1.8; opacity:0.95;">
       My philosophy is grounded in <strong>discipline, respect, innovation, and consistency</strong>.
@@ -324,58 +314,55 @@ h2 {
   <div class="exp-box">
     <p><strong>Global Catering Services LLC – Head Chef (2018 – Present)</strong></p>
     <ul style="line-height:1.8;">
-      <li>Lead complete kitchen operations ensuring quality and consistency.</li>
-      <li>Develop fusion menus, premium steaks, and charcoal grill concepts.</li>
+      <li>Lead kitchen operations ensuring quality and consistency.</li>
+      <li>Develop fusion menus, steaks, and charcoal grill concepts.</li>
       <li>Ensure HACCP, hygiene, and food-safety compliance.</li>
-      <li>Train & mentor chefs; develop strong culinary teams.</li>
-      <li>Control food cost, wastage, ordering, inventory & stock.</li>
-      <li>Conduct equipment inspections & daily quality checks.</li>
-      <li>Collaborate with service team for smooth operation.</li>
-      <li>Manage daily kitchen documentation & reports.</li>
+      <li>Train chefs and build strong culinary teams.</li>
+      <li>Control costing, wastage, and inventory.</li>
+      <li>Conduct daily quality and equipment checks.</li>
+      <li>Coordinate with FOH for smooth guest service.</li>
     </ul>
   </div>
 
   <div class="exp-box">
     <p><strong>Armed Forces Officers Club & Hotel – Senior CDP (2015 – 2017)</strong></p>
     <ul style="line-height:1.8;">
-      <li>Lead assigned station with precision & premium quality.</li>
-      <li>Maintain mise en place and ensure ingredient freshness.</li>
-      <li>Monitor HACCP and kitchen hygiene standards.</li>
-      <li>Train Commis chefs to improve skills & discipline.</li>
-      <li>Coordinate with Sous Chef for smooth operations.</li>
-      <li>Assist in menu trials and dish development.</li>
+      <li>Led assigned station with precision & premium execution.</li>
+      <li>Maintained mise en place and freshness standards.</li>
+      <li>Ensured HACCP and hygiene compliance.</li>
+      <li>Trained Commis chefs for performance improvement.</li>
+      <li>Supported menu trials and new dish development.</li>
     </ul>
   </div>
 
   <div class="exp-box">
     <p><strong>Global Catering Services Abu Dhabi – DCDP (2014 – 2015)</strong></p>
-    <ul style="line-height:1.8%;">
-      <li>Prepare high-quality dishes following recipes & standards.</li>
-      <li>Support station with prep, grilling & sautéing.</li>
-      <li>Maintain hygiene and stock rotation.</li>
-      <li>Assist all sections during peak service.</li>
-      <li>Ensure daily mise en place readiness.</li>
+    <ul style="line-height:1.8;">
+      <li>Prepared dishes following recipes & standards.</li>
+      <li>Supported hot kitchen prep, grilling & sautéing.</li>
+      <li>Maintained hygiene and stock rotation.</li>
+      <li>Assisted all stations during peak hours.</li>
     </ul>
   </div>
 
   <div class="exp-box">
     <p><strong>Saujana Hotel, Malaysia – Commis 1</strong></p>
-    <ul style="line-height:1.8%;">
-      <li>Assist senior chefs in preparation, cooking & plating.</li>
-      <li>Handle mise en place for grills, sauté & cold stations.</li>
-      <li>Follow recipes accurately ensuring consistency.</li>
-      <li>Maintain hygiene & sanitation standards.</li>
-      <li>Support all kitchen sections during peak hours.</li>
+    <ul style="line-height:1.8;">
+      <li>Supported senior chefs in preparation & cooking.</li>
+      <li>Handled mise en place for grill, sauté & cold kitchen.</li>
+      <li>Ensured consistent recipe execution.</li>
+      <li>Maintained hygiene & sanitation routines.</li>
     </ul>
   </div>
 
 </section>
 
-<!-- PREMIUM SLIDER GALLERY -->
+<!-- SLIDER -->
 <section>
   <h2>Chef Gallery</h2>
 
   <div class="slider-container">
+
     <img class="fade-slide active" src="8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
     <img class="fade-slide" src="IMG_0101.jpeg">
     <img class="fade-slide" src="IMG_0859.jpeg">
@@ -388,10 +375,10 @@ h2 {
 
     <button class="slide-btn prev">❮</button>
     <button class="slide-btn next">❯</button>
-    
-    <div class="dots"></div>
-  </div>
 
+    <div class="dots"></div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -426,24 +413,22 @@ slides.forEach((_, i)=>{
   if(i===0) dot.classList.add("active");
   dotsContainer.appendChild(dot);
 });
-
 const dots = document.querySelectorAll(".dot");
 
-/* Show Slide */
-function showSlide(i) {
-  slides.forEach(s => s.classList.remove("active"));
-  dots.forEach(d => d.classList.remove("active"));
-
+/* Show slide function */
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove("active"));
+  dots.forEach(d=>d.classList.remove("active"));
   index = (i + slides.length) % slides.length;
-
   slides[index].classList.add("active");
   dots[index].classList.add("active");
 }
 
+/* Buttons */
 nextBtn.onclick = ()=>showSlide(index+1);
 prevBtn.onclick = ()=>showSlide(index-1);
 
-/* AutoPlay every 3 seconds */
+/* Autoplay */
 setInterval(()=>showSlide(index+1), 3000);
 
 /* Lightbox */
