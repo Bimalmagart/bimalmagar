@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request CV – Chef Bimal</title>
+
+<style>
+body {
+  background:#0d0d0d;
+  color:white;
+  font-family:'Poppins', sans-serif;
+  padding:30px;
+}
+form {
+  background:#151515;
+  padding:25px;
+  border-radius:10px;
+  max-width:450px;
+  margin:auto;
+}
+input {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:6px;
+  background:#222;
+  color:white;
+}
+button {
+  background:#ffb400;
+  padding:12px 20px;
+  border:none;
+  border-radius:8px;
+  font-size:18px;
+  cursor:pointer;
+  width:100%;
+}
+button:hover {
+  background:#ffaa00;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Request Chef Bimal's CV</h2>
+<p>Please fill the details below:</p>
+
+<form action="https://formsubmit.co/magarthapabimal@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://bimalmagar.com.np/cv-thankyou.html">
+
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="text" name="Company" placeholder="Company / Organization" required>
+<input type="text" name="Purpose" placeholder="Purpose" required>
+
+<button type="submit">Submit Request</button>
+</form>
+
+</body>
+</html>
