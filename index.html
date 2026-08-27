@@ -1,341 +1,552 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Bimal Thapa Magar | Head Chef & Steak Specialist</title>
+<title>Bimal Thapa Magar – Head Chef & Steak Specialist</title>
 
 <meta name="description"
-content="Official portfolio of Bimal Thapa Magar — Head Chef, Steak Specialist, Turkish & Arabic Fusion Cuisine professional with more than 14 years of international culinary experience.">
+content="Bimal Thapa Magar – Head Chef, Steak Specialist, Turkish & Arabic Fusion Cuisine professional with more than 14 years of culinary experience.">
 
-<meta name="keywords"
-content="Bimal Thapa Magar, Head Chef UAE, Steak Specialist UAE, Turkish Cuisine Chef, Arabic Fusion Chef, HACCP Chef, Kitchen Operations, Chef Portfolio UAE">
+<meta name="author" content="Bimal Thapa Magar">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#020202">
 
-<meta name="author"
-content="Bimal Thapa Magar">
-
-<meta name="robots"
-content="index, follow">
-
-<meta name="theme-color"
-content="#070707">
-
-<link rel="canonical"
-href="https://bimalmagar.com.np/">
-
-<!-- SOCIAL SHARE -->
+<link rel="canonical" href="https://bimalmagar.com.np/">
 
 <meta property="og:title"
-content="Bimal Thapa Magar | Head Chef & Steak Specialist">
+content="Bimal Thapa Magar – Head Chef & Steak Specialist">
 
 <meta property="og:description"
 content="Head Chef • Steak Specialist • Turkish & Arabic Fusion Cuisine">
 
-<meta property="og:type"
-content="website">
-
-<meta property="og:url"
-content="https://bimalmagar.com.np/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bimalmagar.com.np/">
 
 <meta property="og:image"
 content="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg">
 
-
-<!-- FONT -->
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@300;400;500;600;700&family=Parisienne&display=swap"
 rel="stylesheet">
 
 
 <style>
 
-/* =====================================================
-   ROOT
-===================================================== */
+/* ==========================================================
+   LUXURY BRAND SYSTEM
+========================================================== */
 
 :root {
 
---black:#050505;
---black2:#0b0b0b;
---black3:#111111;
+--black:#020202;
+--black2:#050505;
+--black3:#090909;
+--card:#0c0c0c;
 
---card:rgba(20,20,20,.82);
+--cream:#f8f1df;
 
---gold:#d4af37;
---gold-light:#ffdf85;
---gold-bright:#ffb400;
+--gold-dark:#8f681d;
+--gold:#cba64f;
+--gold-light:#e8cf8c;
+--gold-bright:#f5dfa3;
 
 --white:#ffffff;
---gray:#b8b8b8;
+--gray:#aaa7a0;
+--gray2:#74716c;
 
---border:rgba(255,190,60,.25);
+--line:rgba(232,207,140,.18);
+--line-strong:rgba(232,207,140,.40);
+
+--shadow:
+0 35px 100px rgba(0,0,0,.72);
 
 }
 
 
-/* =====================================================
+/* ==========================================================
    GLOBAL
-===================================================== */
+========================================================== */
 
 * {
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-
 }
-
 
 html {
-
 scroll-behavior:smooth;
-
 }
-
 
 body {
 
-font-family:"Inter",sans-serif;
-background:#070707;
+font-family:"Manrope",sans-serif;
+
+background:#020202;
+
 color:#fff;
+
+line-height:1.75;
+
 overflow-x:hidden;
-line-height:1.7;
 
 }
 
-
-body.rtl {
-
-direction:rtl;
-
+body.locked {
+overflow:hidden;
 }
-
 
 img {
-
 display:block;
 max-width:100%;
-
 }
-
 
 a {
-
 text-decoration:none;
-
+color:inherit;
 }
-
 
 button,
 input,
 textarea {
-
 font:inherit;
-
 }
 
+::selection {
+background:var(--gold-light);
+color:#000;
+}
 
 .container {
-
-width:min(1180px,90%);
+width:min(1240px,90%);
 margin:auto;
-
 }
-
 
 .section {
-
-padding:100px 0;
-
+padding:125px 0;
+position:relative;
 }
 
 
-.dark-section {
-
-background:rgba(5,5,5,.88);
-
-}
-
-
-.gold {
-
-color:var(--gold);
-
-}
-
-
-/* =====================================================
-   BACKGROUND
-===================================================== */
+/* ==========================================================
+   CINEMATIC SITE BACKGROUND
+========================================================== */
 
 .site-background {
 
 position:fixed;
+
 inset:0;
+
+z-index:-20;
 
 background:
 
 linear-gradient(
-rgba(0,0,0,.64),
-rgba(0,0,0,.82)
+rgba(0,0,0,.80),
+rgba(0,0,0,.94)
 ),
 
-url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
-z-index:-10;
-
-filter:
-contrast(1.08)
-saturate(1.05);
+url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg")
+center/cover no-repeat;
 
 }
-
 
 .site-background::after {
 
 content:"";
+
 position:absolute;
+
 inset:0;
 
 background:
+
 radial-gradient(
-circle at center,
-rgba(255,180,0,.05),
-rgba(0,0,0,.4)
+circle at 75% 20%,
+rgba(203,166,79,.14),
+transparent 31%
+),
+
+radial-gradient(
+circle at 8% 75%,
+rgba(232,207,140,.05),
+transparent 30%
 );
 
 }
 
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
+/* ==========================================================
+   FILM GRAIN
+========================================================== */
+
+.noise {
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:99999;
+
+opacity:.022;
+
+background-image:
+
+url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.55'/%3E%3C/svg%3E");
+
+}
+
+
+/* ==========================================================
+   SCROLL PROGRESS
+========================================================== */
+
+.scroll-progress {
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:0;
+height:2px;
+
+z-index:10001;
+
+background:
+
+linear-gradient(
+90deg,
+var(--gold-dark),
+var(--gold-bright),
+var(--gold)
+);
+
+box-shadow:
+0 0 15px rgba(232,207,140,.6);
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
 
 header {
 
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
-z-index:9999;
-transition:.3s ease;
+
+z-index:9000;
+
+transition:.4s ease;
 
 }
-
 
 header.scrolled {
 
-background:rgba(3,3,3,.96);
+background:
+rgba(2,2,2,.91);
 
-backdrop-filter:blur(16px);
+backdrop-filter:
+blur(24px)
+saturate(130%);
 
-border-bottom:1px solid rgba(212,175,55,.2);
+border-bottom:
+1px solid var(--line);
 
 box-shadow:
-0 10px 35px rgba(0,0,0,.55);
+0 20px 60px rgba(0,0,0,.48);
 
 }
 
-
 .navbar {
 
-width:min(1280px,94%);
-height:90px;
+width:min(1340px,94%);
+
+height:102px;
 
 margin:auto;
 
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
 
-gap:20px;
+gap:25px;
 
 }
 
 
-.logo {
+/* ==========================================================
+   BRAND LOGO
+========================================================== */
 
-font-family:"Playfair Display",serif;
-
-font-size:22px;
-font-weight:800;
-
-color:var(--gold);
-
-line-height:1;
-
-white-space:nowrap;
-
-}
-
-
-.logo span {
-
-display:block;
-
-font-family:"Inter",sans-serif;
-
-font-size:9px;
-
-letter-spacing:5px;
-
-color:#fff;
-
-margin-top:9px;
-
-}
-
-
-.nav-links {
+.brand {
 
 display:flex;
 
 align-items:center;
 
-gap:24px;
+gap:16px;
 
-list-style:none;
+min-width:max-content;
 
 }
 
 
-.nav-links a {
+/* brand circle */
 
-color:#fff;
+.brand-circle {
 
-font-size:13px;
+position:relative;
+
+width:70px;
+height:70px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+flex-shrink:0;
+
+}
+
+
+/* animated gold ring */
+
+.brand-circle::before {
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:50%;
+
+background:
+
+conic-gradient(
+from 0deg,
+var(--gold-dark),
+var(--gold-light),
+var(--gold),
+var(--gold-bright),
+var(--gold-dark)
+);
+
+animation:
+rotateBrand 14s linear infinite;
+
+box-shadow:
+
+0 0 0 1px rgba(232,207,140,.10),
+
+0 0 24px rgba(203,166,79,.17),
+
+0 12px 35px rgba(0,0,0,.55);
+
+}
+
+@keyframes rotateBrand {
+
+to {
+transform:rotate(360deg);
+}
+
+}
+
+
+/* dark space between photo and ring */
+
+.brand-circle::after {
+
+content:"";
+
+position:absolute;
+
+inset:3px;
+
+background:#030303;
+
+border-radius:50%;
+
+z-index:1;
+
+}
+
+
+/* actual picture */
+
+.brand-picture {
+
+position:relative;
+
+z-index:2;
+
+width:59px;
+height:59px;
+
+border-radius:50%;
+
+overflow:hidden;
+
+border:
+1px solid rgba(245,223,163,.55);
+
+background:#040404;
+
+box-shadow:
+inset 0 0 15px rgba(0,0,0,.35);
+
+transition:.4s ease;
+
+}
+
+.brand-picture img {
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+object-position:center 20%;
+
+transition:.45s ease;
+
+}
+
+.brand:hover .brand-picture {
+
+transform:scale(1.05);
+
+}
+
+.brand:hover .brand-picture img {
+
+transform:scale(1.07);
+
+}
+
+
+/* brand text */
+
+.brand-copy {
+line-height:1;
+}
+
+.brand-name {
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:25px;
+
+font-weight:700;
+
+color:var(--cream);
+
+letter-spacing:.3px;
+
+}
+
+.brand-role {
+
+display:block;
+
+margin-top:10px;
+
+font-size:7px;
 
 font-weight:600;
+
+letter-spacing:5px;
+
+color:var(--gold);
+
+}
+
+
+/* ==========================================================
+   NAVIGATION LINKS
+========================================================== */
+
+.nav-links {
+
+list-style:none;
+
+display:flex;
+
+align-items:center;
+
+gap:29px;
+
+}
+
+.nav-links a {
+
+position:relative;
+
+font-size:10px;
+
+font-weight:600;
+
+letter-spacing:1.8px;
+
+text-transform:uppercase;
+
+color:#cccccc;
 
 transition:.3s;
 
 }
 
+.nav-links a::after {
 
-.nav-links a:hover {
+content:"";
 
-color:var(--gold);
+position:absolute;
+
+left:0;
+bottom:-9px;
+
+width:0;
+height:1px;
+
+background:var(--gold-light);
+
+transition:.35s;
 
 }
 
+.nav-links a:hover {
+color:var(--gold-light);
+}
 
-.nav-actions {
+.nav-links a:hover::after {
+width:100%;
+}
+
+.header-actions {
 
 display:flex;
 
@@ -345,35 +556,15 @@ gap:10px;
 
 }
 
-
-.language-btn {
-
-border:1px solid var(--border);
-
-background:#111;
-
-color:white;
-
-padding:11px 15px;
-
-border-radius:5px;
-
-font-weight:700;
-
-cursor:pointer;
-
-}
-
-
 .menu-btn {
 
 display:none;
 
-border:none;
-
 background:none;
 
-color:white;
+border:none;
+
+color:#fff;
 
 font-size:30px;
 
@@ -382,115 +573,153 @@ cursor:pointer;
 }
 
 
-/* =====================================================
+/* ==========================================================
    BUTTONS
-===================================================== */
+========================================================== */
 
 .btn {
+
+position:relative;
 
 display:inline-flex;
 
 align-items:center;
+
 justify-content:center;
 
-gap:8px;
+min-height:52px;
 
-padding:14px 26px;
+padding:0 29px;
 
-border-radius:5px;
+overflow:hidden;
 
-font-size:14px;
+font-size:10px;
 
 font-weight:700;
 
-transition:.3s ease;
+letter-spacing:1.6px;
 
-cursor:pointer;
+text-transform:uppercase;
+
+transition:.35s ease;
 
 }
-
 
 .btn-gold {
 
 background:
+
 linear-gradient(
-90deg,
-#ffe29a,
-#ffb400,
-#d49b00
+120deg,
+#91691e,
+#f2daa0,
+#c69d40
 );
 
-color:#050505;
+color:#020202;
 
 box-shadow:
-0 7px 25px rgba(255,180,0,.18);
+0 12px 35px rgba(203,166,79,.22);
 
 }
 
+.btn-gold::after {
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-130%;
+
+width:60%;
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.55),
+transparent
+);
+
+transform:skewX(-25deg);
+
+transition:.8s;
+
+}
+
+.btn-gold:hover::after {
+left:150%;
+}
 
 .btn-gold:hover {
 
 transform:translateY(-3px);
 
 box-shadow:
-0 10px 30px rgba(255,180,0,.4);
+0 15px 45px rgba(203,166,79,.38);
 
 }
-
 
 .btn-outline {
 
-border:1px solid var(--gold);
+background:
+rgba(0,0,0,.30);
+
+border:
+1px solid rgba(232,207,140,.48);
 
 color:#fff;
 
-background:rgba(0,0,0,.3);
+backdrop-filter:blur(10px);
 
 }
-
 
 .btn-outline:hover {
 
-background:var(--gold);
+background:var(--gold-light);
 
-color:#050505;
+color:#020202;
+
+transform:translateY(-3px);
 
 }
 
 
-/* =====================================================
+/* ==========================================================
    HERO
-===================================================== */
+========================================================== */
 
 .hero {
 
-min-height:100vh;
+min-height:100svh;
+
+position:relative;
 
 display:flex;
 
 align-items:center;
 
-position:relative;
+overflow:hidden;
 
 background:
 
 linear-gradient(
 90deg,
-rgba(0,0,0,.97) 0%,
-rgba(0,0,0,.82) 46%,
-rgba(0,0,0,.25) 100%
+rgba(0,0,0,.99) 0%,
+rgba(0,0,0,.92) 38%,
+rgba(0,0,0,.52) 68%,
+rgba(0,0,0,.16) 100%
 ),
 
-url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg");
-
-background-size:cover;
-
-background-position:center;
+url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg")
+center/cover no-repeat;
 
 }
 
-
-.hero::after {
+.hero::before {
 
 content:"";
 
@@ -502,577 +731,994 @@ background:
 
 linear-gradient(
 0deg,
-#070707 0%,
-transparent 27%
-);
+#020202 0%,
+transparent 32%
+),
 
-pointer-events:none;
+radial-gradient(
+circle at 73% 43%,
+rgba(232,207,140,.12),
+transparent 35%
+);
 
 }
 
+.hero::after {
+
+content:"";
+
+position:absolute;
+
+right:5%;
+top:19%;
+
+width:360px;
+height:360px;
+
+border-radius:50%;
+
+border:
+1px solid rgba(232,207,140,.10);
+
+box-shadow:
+
+0 0 0 40px rgba(232,207,140,.018),
+
+0 0 0 80px rgba(232,207,140,.01);
+
+}
 
 .hero-content {
 
 position:relative;
 
-z-index:2;
+z-index:3;
 
-width:min(1180px,90%);
+width:min(1240px,90%);
 
 margin:auto;
 
-padding-top:100px;
+padding-top:110px;
 
 }
-
 
 .hero-inner {
 
-max-width:780px;
+max-width:830px;
 
 }
 
+.hero-kicker {
 
-.hero-label {
+display:flex;
 
-font-size:12px;
+align-items:center;
 
-font-weight:800;
+gap:15px;
+
+margin-bottom:28px;
+
+font-size:8px;
+
+font-weight:700;
 
 letter-spacing:5px;
 
 color:var(--gold-light);
 
-margin-bottom:20px;
+}
+
+.hero-kicker::before {
+
+content:"";
+
+width:55px;
+height:1px;
+
+background:var(--gold);
 
 }
 
+.signature {
+
+font-family:"Parisienne",cursive;
+
+font-size:44px;
+
+color:var(--gold);
+
+margin-bottom:7px;
+
+}
 
 .hero h1 {
 
-font-family:"Playfair Display",serif;
+font-family:
+"Cormorant Garamond",
+serif;
 
-font-size:clamp(55px,8vw,94px);
-
-line-height:.95;
-
-margin-bottom:25px;
-
-text-shadow:
-0 10px 40px #000;
-
-}
-
-
-.hero h2 {
-
-font-size:clamp(16px,2.2vw,23px);
-
-line-height:1.5;
+font-size:
+clamp(72px,10vw,132px);
 
 font-weight:600;
 
-background:
-linear-gradient(
-90deg,
-#fff0c0,
-#ffdf85,
-#ffb400
-);
+line-height:.77;
 
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+letter-spacing:-3px;
+
+margin-bottom:38px;
+
+text-shadow:
+0 30px 80px rgba(0,0,0,.80);
+
+}
+
+.hero h1 span {
+
+display:block;
+
+font-style:italic;
+
+color:var(--cream);
+
+}
+
+.hero-role {
+
+max-width:780px;
+
+font-size:13px;
+
+font-weight:600;
+
+line-height:1.9;
+
+letter-spacing:2.4px;
+
+text-transform:uppercase;
+
+color:var(--gold-bright);
 
 margin-bottom:25px;
 
 }
-
 
 .hero-description {
 
 max-width:690px;
 
-font-size:16px;
+font-size:15px;
 
-color:#ddd;
+color:#bbbbbb;
 
-margin-bottom:35px;
+margin-bottom:40px;
 
 }
 
-
-.hero-buttons {
+.hero-actions {
 
 display:flex;
 
+flex-wrap:wrap;
+
 gap:12px;
 
-flex-wrap:wrap;
+}
+
+.hero-side {
+
+position:absolute;
+
+right:22px;
+bottom:105px;
+
+z-index:5;
+
+writing-mode:vertical-rl;
+
+transform:rotate(180deg);
+
+font-size:7px;
+
+letter-spacing:5px;
+
+color:#777;
+
+}
+
+.hero-scroll {
+
+position:absolute;
+
+left:50%;
+bottom:28px;
+
+z-index:5;
+
+transform:translateX(-50%);
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:8px;
+
+font-size:7px;
+
+letter-spacing:3px;
+
+color:#777;
+
+}
+
+.hero-scroll-line {
+
+width:1px;
+height:50px;
+
+background:
+
+linear-gradient(
+var(--gold),
+transparent
+);
+
+animation:
+scrollPulse 1.8s infinite;
+
+}
+
+@keyframes scrollPulse {
+
+0% {
+opacity:.2;
+transform:scaleY(.45);
+}
+
+50% {
+opacity:1;
+transform:scaleY(1);
+}
+
+100% {
+opacity:.2;
+transform:scaleY(.45);
+}
 
 }
 
 
-/* =====================================================
+/* ==========================================================
    STATS
-===================================================== */
+========================================================== */
 
 .stats {
 
-background:#090909;
+background:#030303;
 
-border-top:1px solid var(--border);
+border-top:
+1px solid var(--line);
 
-border-bottom:1px solid var(--border);
+border-bottom:
+1px solid var(--line);
 
 }
-
 
 .stats-grid {
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:
+repeat(4,1fr);
 
 }
-
 
 .stat {
 
+position:relative;
+
 text-align:center;
 
-padding:45px 20px;
-
-border-right:1px solid var(--border);
+padding:48px 20px;
 
 }
 
+.stat:not(:last-child)::after {
 
-.stat:last-child {
+content:"";
 
-border-right:none;
+position:absolute;
+
+right:0;
+top:25%;
+
+width:1px;
+height:50%;
+
+background:var(--line);
 
 }
-
 
 .stat strong {
 
 display:block;
 
-font-family:"Playfair Display",serif;
+font-family:
+"Cormorant Garamond",
+serif;
 
-font-size:43px;
+font-size:47px;
 
-color:var(--gold);
+font-weight:600;
+
+line-height:1;
+
+color:var(--gold-light);
 
 }
-
 
 .stat span {
 
-font-size:13px;
+display:block;
 
-color:var(--gray);
+margin-top:14px;
 
-}
+font-size:8px;
 
+letter-spacing:2.5px;
 
-/* =====================================================
-   SECTION HEADER
-===================================================== */
+text-transform:uppercase;
 
-.section-header {
-
-text-align:center;
-
-max-width:760px;
-
-margin:0 auto 55px;
+color:#777;
 
 }
 
 
-.section-label {
+/* ==========================================================
+   SECTION TITLES
+========================================================== */
 
-display:inline-block;
-
-color:var(--gold);
-
-font-size:12px;
-
-font-weight:800;
-
-letter-spacing:4px;
-
-margin-bottom:10px;
-
-}
-
-
-.section-header h2 {
-
-font-family:"Playfair Display",serif;
-
-font-size:clamp(36px,5vw,52px);
-
-line-height:1.15;
-
-margin-bottom:17px;
-
-}
-
-
-.section-header p {
-
-color:var(--gray);
-
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about-grid {
+.section-head {
 
 display:grid;
 
-grid-template-columns:.85fr 1.15fr;
+grid-template-columns:
+120px
+1fr;
 
-gap:70px;
+gap:40px;
 
-align-items:center;
+align-items:start;
 
-}
-
-
-.about-image {
-
-position:relative;
+margin-bottom:70px;
 
 }
 
+.section-number {
 
-.about-image img {
+font-family:
+"Cormorant Garamond",
+serif;
 
-width:100%;
+font-size:57px;
 
-height:590px;
+font-style:italic;
 
-object-fit:cover;
+line-height:1;
 
-object-position:center;
-
-border-radius:10px;
-
-box-shadow:
-0 20px 60px rgba(0,0,0,.7);
-
-}
-
-
-.about-image::before {
-
-content:"";
-
-position:absolute;
-
-top:30px;
-
-left:-25px;
-
-width:90%;
-
-height:90%;
-
-border:1px solid var(--gold);
-
-z-index:-1;
+color:
+rgba(232,207,140,.18);
 
 }
 
+.eyebrow {
 
-.about-content {
+font-size:9px;
 
-background:
-rgba(8,8,8,.65);
+font-weight:700;
 
-backdrop-filter:blur(7px);
+letter-spacing:5px;
 
-padding:20px;
-
-border-radius:10px;
-
-}
-
-
-.about-content h2 {
-
-font-family:"Playfair Display",serif;
-
-font-size:clamp(38px,5vw,54px);
-
-margin:8px 0 25px;
-
-}
-
-
-.about-content p {
-
-color:#ccc;
-
-margin-bottom:18px;
-
-}
-
-
-.vision {
-
-margin:28px 0 15px;
+text-transform:uppercase;
 
 color:var(--gold);
 
-font-family:"Playfair Display",serif;
-
-font-size:23px;
+margin-bottom:13px;
 
 }
 
+.section-title {
 
-.mission-list {
+font-family:
+"Cormorant Garamond",
+serif;
 
-list-style:none;
+font-size:
+clamp(48px,6vw,70px);
 
-color:#ccc;
+font-weight:600;
 
-margin-bottom:28px;
+line-height:.96;
 
-}
-
-
-.mission-list li {
-
-margin-bottom:8px;
-
-}
-
-
-.quote {
-
-margin:30px 0;
-
-padding-left:22px;
-
-border-left:3px solid var(--gold);
-
-font-family:"Playfair Display",serif;
-
-font-size:21px;
-
-color:white;
-
-}
-
-
-.rtl .quote {
-
-border-left:none;
-
-border-right:3px solid var(--gold);
-
-padding-left:0;
-
-padding-right:22px;
-
-}
-
-
-/* =====================================================
-   SPECIALITIES
-===================================================== */
-
-.cards {
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:24px;
-
-}
-
-
-.card {
-
-background:
-rgba(16,16,16,.83);
-
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,200,80,.12);
-
-border-radius:10px;
-
-padding:35px;
-
-transition:.35s;
-
-}
-
-
-.card:hover {
-
-transform:translateY(-8px);
-
-border-color:var(--gold);
-
-box-shadow:
-0 15px 40px rgba(0,0,0,.45);
-
-}
-
-
-.card-icon {
-
-font-size:31px;
+color:var(--cream);
 
 margin-bottom:20px;
 
 }
 
+.section-description {
 
-.card h3 {
-
-font-family:"Playfair Display",serif;
-
-font-size:23px;
-
-margin-bottom:12px;
-
-}
-
-
-.card p {
-
-color:var(--gray);
+max-width:680px;
 
 font-size:14px;
 
+color:#969696;
+
 }
 
 
-/* =====================================================
-   PHILOSOPHY
-===================================================== */
+/* ==========================================================
+   ABOUT
+========================================================== */
 
-.philosophy-box {
+.about-section {
+
+background:
+rgba(3,3,3,.92);
+
+border-bottom:
+1px solid var(--line);
+
+}
+
+.about-grid {
+
+display:grid;
+
+grid-template-columns:
+.9fr
+1.1fr;
+
+gap:95px;
+
+align-items:center;
+
+}
+
+.about-photo {
 
 position:relative;
 
-padding:42px;
+}
 
-border-radius:18px;
+.about-frame {
+
+padding:14px;
 
 background:
-rgba(10,10,10,.75);
-
-backdrop-filter:blur(14px);
+rgba(255,255,255,.015);
 
 border:
-1px solid rgba(255,200,80,.3);
-
-box-shadow:
-0 0 35px rgba(255,180,0,.08);
-
-overflow:hidden;
+1px solid rgba(232,207,140,.13);
 
 }
 
+.about-photo img {
 
-.philosophy-box::before {
+width:100%;
+
+height:650px;
+
+object-fit:cover;
+
+filter:
+contrast(1.04)
+saturate(.90);
+
+box-shadow:var(--shadow);
+
+}
+
+.about-photo::before {
 
 content:"";
 
 position:absolute;
 
-top:0;
-left:-100%;
+left:-18px;
+top:-18px;
 
-width:80%;
-height:2px;
+width:80px;
+height:80px;
+
+border-left:
+1px solid var(--gold-light);
+
+border-top:
+1px solid var(--gold-light);
+
+}
+
+.about-photo::after {
+
+content:"";
+
+position:absolute;
+
+right:-18px;
+bottom:-18px;
+
+width:80px;
+height:80px;
+
+border-right:
+1px solid var(--gold-light);
+
+border-bottom:
+1px solid var(--gold-light);
+
+}
+
+.about-tag {
+
+position:absolute;
+
+left:-43px;
+bottom:95px;
+
+z-index:4;
+
+padding:10px 22px;
+
+background:var(--gold-light);
+
+color:#020202;
+
+font-size:8px;
+
+font-weight:800;
+
+letter-spacing:3px;
+
+transform:rotate(-90deg);
+
+}
+
+.about-content p {
+
+font-size:15px;
+
+color:#aaa;
+
+margin-bottom:18px;
+
+}
+
+.about-content strong {
+
+color:var(--cream);
+
+}
+
+.quote {
+
+position:relative;
+
+margin:38px 0;
+
+padding:
+5px 0
+5px 35px;
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:30px;
+
+font-style:italic;
+
+line-height:1.35;
+
+color:var(--gold-light);
+
+}
+
+.quote::before {
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:5px;
+
+width:2px;
+
+height:
+calc(100% - 10px);
+
+background:var(--gold);
+
+}
+
+.vm-grid {
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:16px;
+
+margin:35px 0;
+
+}
+
+.vm-card {
+
+position:relative;
+
+padding:28px;
+
+background:#080808;
+
+border:
+1px solid rgba(255,255,255,.055);
+
+overflow:hidden;
+
+}
+
+.vm-card::before {
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:2px;
+height:100%;
 
 background:
+
 linear-gradient(
-90deg,
-transparent,
 var(--gold),
 transparent
 );
 
-animation:goldLine 5s linear infinite;
+}
+
+.vm-card h3 {
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:27px;
+
+color:var(--gold-light);
+
+margin-bottom:8px;
+
+}
+
+.vm-card p {
+
+font-size:12px;
+
+margin:0;
 
 }
 
 
-@keyframes goldLine {
+/* ==========================================================
+   EXPERTISE
+========================================================== */
 
-to {
+.expertise-section {
 
-left:140%;
+background:#060606;
 
 }
 
-}
-
-
-.philosophy-list {
-
-list-style:none;
+.expertise-grid {
 
 display:grid;
 
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:
+repeat(3,1fr);
 
-gap:20px;
+gap:1px;
 
-margin-top:25px;
+background:var(--line);
 
-}
-
-
-.philosophy-list li {
-
-background:rgba(255,255,255,.025);
-
-padding:20px;
-
-border-radius:7px;
-
-color:#ccc;
+border:
+1px solid var(--line);
 
 }
 
-
-.philosophy-list strong {
-
-color:var(--gold);
-
-}
-
-
-/* =====================================================
-   EXPERIENCE
-===================================================== */
-
-.timeline {
-
-max-width:950px;
-
-margin:auto;
+.expertise-card {
 
 position:relative;
 
+min-height:325px;
+
+padding:42px;
+
+background:#0a0a0a;
+
+overflow:hidden;
+
+transition:.45s;
+
 }
 
+.expertise-card:hover {
+
+background:#101010;
+
+transform:translateY(-7px);
+
+z-index:2;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.5);
+
+}
+
+.expertise-card::after {
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:0;
+
+width:0;
+height:2px;
+
+background:var(--gold);
+
+transition:.5s;
+
+}
+
+.expertise-card:hover::after {
+width:100%;
+}
+
+.expertise-number {
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:50px;
+
+font-style:italic;
+
+color:
+rgba(232,207,140,.13);
+
+}
+
+.expertise-icon {
+
+font-size:30px;
+
+margin:18px 0;
+
+}
+
+.expertise-card h3 {
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:31px;
+
+color:var(--cream);
+
+margin-bottom:15px;
+
+}
+
+.expertise-card p {
+
+font-size:13px;
+
+color:#8e8e8e;
+
+}
+
+
+/* ==========================================================
+   PHILOSOPHY
+========================================================== */
+
+.philosophy {
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.83),
+rgba(0,0,0,.95)
+),
+
+url("https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg")
+center/cover no-repeat;
+
+background-attachment:fixed;
+
+}
+
+.philosophy-panel {
+
+position:relative;
+
+max-width:1040px;
+
+margin:auto;
+
+padding:72px;
+
+background:
+rgba(3,3,3,.81);
+
+border:
+1px solid var(--line);
+
+backdrop-filter:blur(20px);
+
+}
+
+.philosophy-panel::before {
+
+content:"";
+
+position:absolute;
+
+left:-1px;
+top:-1px;
+
+width:100px;
+height:100px;
+
+border-left:
+2px solid var(--gold-light);
+
+border-top:
+2px solid var(--gold-light);
+
+}
+
+.philosophy-panel::after {
+
+content:"";
+
+position:absolute;
+
+right:-1px;
+bottom:-1px;
+
+width:100px;
+height:100px;
+
+border-right:
+2px solid var(--gold-light);
+
+border-bottom:
+2px solid var(--gold-light);
+
+}
+
+.philosophy-lead {
+
+max-width:750px;
+
+margin:
+0 auto 45px;
+
+text-align:center;
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:35px;
+
+font-style:italic;
+
+line-height:1.25;
+
+color:var(--gold-light);
+
+}
+
+.philosophy-grid {
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:15px;
+
+}
+
+.principle {
+
+padding:28px 20px;
+
+text-align:center;
+
+background:
+rgba(255,255,255,.025);
+
+border:
+1px solid rgba(255,255,255,.05);
+
+transition:.3s;
+
+}
+
+.principle:hover {
+
+border-color:
+rgba(232,207,140,.40);
+
+background:
+rgba(232,207,140,.035);
+
+}
+
+.principle strong {
+
+display:block;
+
+font-size:13px;
+
+color:var(--gold-bright);
+
+margin-bottom:6px;
+
+}
+
+.principle span {
+
+font-size:11px;
+
+color:#969696;
+
+}
+
+
+/* ==========================================================
+   EXPERIENCE
+========================================================== */
+
+.experience-section {
+
+background:#030303;
+
+}
+
+.timeline {
+
+position:relative;
+
+max-width:1050px;
+
+margin:auto;
+
+}
 
 .timeline::before {
 
@@ -1080,170 +1726,207 @@ content:"";
 
 position:absolute;
 
+left:50%;
 top:0;
 
-left:21px;
-
-width:2px;
-
+width:1px;
 height:100%;
 
 background:
+
 linear-gradient(
-var(--gold),
-rgba(212,175,55,.05)
+transparent,
+var(--gold-light),
+transparent
 );
 
 }
-
 
 .timeline-item {
 
 position:relative;
 
-padding-left:75px;
+width:50%;
 
-margin-bottom:42px;
+padding:
+0 55px 70px 0;
 
 }
 
+.timeline-item:nth-child(even) {
+
+margin-left:50%;
+
+padding:
+0 0 70px 55px;
+
+}
 
 .timeline-dot {
 
 position:absolute;
 
-left:11px;
+top:13px;
+right:-7px;
 
-top:5px;
-
-width:22px;
-
-height:22px;
+width:14px;
+height:14px;
 
 border-radius:50%;
 
-background:var(--gold);
-
-border:5px solid #090909;
+background:var(--gold-light);
 
 box-shadow:
-0 0 15px rgba(212,175,55,.45);
+
+0 0 0 7px #030303,
+
+0 0 0 8px rgba(232,207,140,.28);
 
 }
 
+.timeline-item:nth-child(even)
+.timeline-dot {
 
-.exp-card {
-
-padding:30px;
-
-border-radius:12px;
-
-background:
-rgba(15,15,15,.85);
-
-backdrop-filter:blur(9px);
-
-border:1px solid var(--border);
+right:auto;
+left:-7px;
 
 }
-
 
 .exp-date {
 
+font-size:9px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
 color:var(--gold);
 
-font-weight:800;
+}
 
-font-size:12px;
+.exp-role {
 
-letter-spacing:1px;
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:36px;
+
+line-height:1;
+
+color:var(--cream);
+
+margin:8px 0;
 
 }
 
+.exp-company {
 
-.exp-card h3 {
+font-size:11px;
 
-font-family:"Playfair Display",serif;
+letter-spacing:1.5px;
 
-font-size:26px;
+color:#aaa;
 
-margin:5px 0;
-
-}
-
-
-.exp-card h4 {
-
-color:#ddd;
-
-margin-bottom:17px;
+margin-bottom:20px;
 
 }
 
-
-.exp-card ul {
-
-padding-left:20px;
-
-color:#bbb;
-
-}
-
-
-.exp-card li {
-
-margin-bottom:7px;
-
-}
-
-
-.rtl .timeline::before {
-
-left:auto;
-right:21px;
-
-}
-
-
-.rtl .timeline-item {
-
-padding-left:0;
-padding-right:75px;
-
-}
-
-
-.rtl .timeline-dot {
-
-left:auto;
-right:11px;
-
-}
-
-
-/* =====================================================
-   GALLERY SLIDER
-===================================================== */
-
-.gallery-slider {
+.exp-card {
 
 position:relative;
 
-height:580px;
+padding:30px;
 
-overflow:hidden;
+background:#0a0a0a;
 
-border-radius:15px;
-
-background:#050505;
-
-border:1px solid var(--border);
-
-box-shadow:
-0 25px 70px rgba(0,0,0,.65);
+border:
+1px solid rgba(255,255,255,.055);
 
 }
 
+.exp-card::before {
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:45px;
+height:1px;
+
+background:var(--gold);
+
+}
+
+.exp-card ul {
+
+padding-left:18px;
+
+}
+
+.exp-card li {
+
+font-size:12px;
+
+color:#8f8f8f;
+
+margin-bottom:8px;
+
+}
+
+
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+.gallery-section {
+
+background:
+
+linear-gradient(
+180deg,
+#060606,
+#020202
+);
+
+}
+
+.gallery-stage {
+
+position:relative;
+
+height:700px;
+
+overflow:hidden;
+
+border:
+1px solid var(--line);
+
+background:#020202;
+
+box-shadow:var(--shadow);
+
+}
+
+.gallery-stage::before {
+
+content:"";
+
+position:absolute;
+
+inset:12px;
+
+z-index:5;
+
+pointer-events:none;
+
+border:
+1px solid rgba(232,207,140,.07);
+
+}
 
 .gallery-slide {
 
@@ -1256,20 +1939,19 @@ height:100%;
 
 object-fit:contain;
 
-background:#050505;
+background:#020202;
 
 opacity:0;
 
-transform:scale(1.03);
+transform:scale(1.04);
 
 transition:
-opacity .9s ease,
-transform .9s ease;
+opacity 1s ease,
+transform 1.3s ease;
 
-cursor:pointer;
+cursor:zoom-in;
 
 }
-
 
 .gallery-slide.active {
 
@@ -1279,6 +1961,69 @@ transform:scale(1);
 
 }
 
+.gallery-brand {
+
+position:absolute;
+
+left:32px;
+top:30px;
+
+z-index:20;
+
+font-size:8px;
+
+letter-spacing:4px;
+
+color:var(--gold);
+
+}
+
+.gallery-count {
+
+position:absolute;
+
+right:32px;
+top:25px;
+
+z-index:20;
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:27px;
+
+color:var(--gold-light);
+
+}
+
+.gallery-overlay {
+
+position:absolute;
+
+inset:0;
+
+z-index:4;
+
+pointer-events:none;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.38),
+transparent 25%,
+transparent 75%,
+rgba(0,0,0,.38)
+),
+
+linear-gradient(
+0deg,
+rgba(0,0,0,.40),
+transparent 35%
+);
+
+}
 
 .gallery-arrow {
 
@@ -1288,436 +2033,437 @@ top:50%;
 
 transform:translateY(-50%);
 
-z-index:20;
+z-index:30;
 
-width:52px;
-height:52px;
+width:58px;
+height:58px;
 
-border:none;
+border:
+1px solid rgba(232,207,140,.45);
 
-border-radius:50%;
+background:
+rgba(0,0,0,.53);
 
-background:rgba(212,175,55,.87);
+backdrop-filter:blur(10px);
 
-color:#000;
+color:var(--gold-light);
 
-font-size:25px;
-
-font-weight:900;
+font-size:27px;
 
 cursor:pointer;
 
+transition:.35s;
+
 }
 
+.gallery-arrow:hover {
+
+background:var(--gold-light);
+
+color:#000;
+
+}
 
 .gallery-prev {
-
-left:20px;
-
+left:24px;
 }
-
 
 .gallery-next {
-
-right:20px;
-
+right:24px;
 }
-
 
 .gallery-dots {
 
 position:absolute;
 
-bottom:18px;
+left:50%;
+bottom:28px;
 
-left:0;
-
-width:100%;
+transform:translateX(-50%);
 
 display:flex;
 
-justify-content:center;
-
 gap:8px;
 
-z-index:20;
+z-index:30;
 
 }
-
 
 .gallery-dot {
 
-width:9px;
-height:9px;
+width:24px;
+height:2px;
 
-border-radius:50%;
+background:#555;
 
-background:#fff;
-
-opacity:.35;
+transition:.35s;
 
 cursor:pointer;
 
-transition:.3s;
-
 }
-
 
 .gallery-dot.active {
 
-background:var(--gold);
+width:48px;
 
-opacity:1;
-
-transform:scale(1.35);
+background:var(--gold-light);
 
 }
 
 
-/* LIGHTBOX */
-
-.lightbox {
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.96);
-
-display:none;
-
-align-items:center;
-
-justify-content:center;
-
-z-index:20000;
-
-padding:30px;
-
-}
-
-
-.lightbox img {
-
-max-width:95vw;
-
-max-height:90vh;
-
-object-fit:contain;
-
-border-radius:8px;
-
-}
-
-
-.lightbox-close {
-
-position:absolute;
-
-right:25px;
-
-top:20px;
-
-font-size:38px;
-
-color:white;
-
-cursor:pointer;
-
-}
-
-
-/* =====================================================
-   KNOWLEDGE HUB
-===================================================== */
-
-.blog-grid {
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:24px;
-
-}
-
-
-.blog-card {
-
-padding:32px;
-
-border-radius:10px;
-
-background:
-rgba(15,15,15,.82);
-
-border:
-1px solid rgba(255,255,255,.07);
-
-transition:.3s;
-
-}
-
-
-.blog-card:hover {
-
-border-color:var(--gold);
-
-transform:translateY(-6px);
-
-}
-
-
-.blog-tag {
-
-color:var(--gold);
-
-font-size:11px;
-
-font-weight:800;
-
-letter-spacing:2px;
-
-}
-
-
-.blog-card h3 {
-
-font-family:"Playfair Display",serif;
-
-font-size:23px;
-
-margin:12px 0 15px;
-
-}
-
-
-.blog-card p {
-
-color:var(--gray);
-
-font-size:14px;
-
-}
-
-
-/* =====================================================
+/* ==========================================================
    CV
-===================================================== */
+========================================================== */
 
 .cv-section {
 
-text-align:center;
+background:
+
+radial-gradient(
+circle at center,
+rgba(203,166,79,.09),
+transparent 48%
+),
+
+#040404;
 
 }
-
 
 .cv-box {
 
-padding:70px 35px;
+max-width:1100px;
 
-background:
-linear-gradient(
-135deg,
-rgba(212,175,55,.09),
-rgba(0,0,0,.75)
-);
+margin:auto;
 
-border:1px solid var(--border);
+position:relative;
 
-border-radius:12px;
+text-align:center;
+
+padding:95px 40px;
+
+background:#090909;
+
+border:
+1px solid var(--line);
+
+overflow:hidden;
 
 }
 
+.cv-box::before {
+
+content:"BTM";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:
+translate(-50%,-50%);
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:290px;
+
+font-weight:700;
+
+line-height:1;
+
+color:
+rgba(232,207,140,.025);
+
+}
+
+.cv-box > * {
+
+position:relative;
+
+z-index:2;
+
+}
 
 .cv-box h2 {
 
-font-family:"Playfair Display",serif;
+font-family:
+"Cormorant Garamond",
+serif;
 
-font-size:clamp(36px,5vw,50px);
+font-size:
+clamp(48px,6vw,72px);
 
-margin:12px 0 15px;
+line-height:.95;
+
+color:var(--cream);
+
+margin:
+15px 0 22px;
 
 }
-
 
 .cv-box p {
 
-max-width:700px;
+max-width:680px;
 
-margin:0 auto 28px;
+margin:
+0 auto 32px;
 
-color:var(--gray);
+font-size:13px;
+
+color:#969696;
 
 }
 
 
-/* =====================================================
+/* ==========================================================
    CONTACT
-===================================================== */
+========================================================== */
+
+.contact-section {
+
+background:#020202;
+
+}
 
 .contact-grid {
 
 display:grid;
 
-grid-template-columns:.85fr 1.15fr;
+grid-template-columns:
+.85fr
+1.15fr;
 
-gap:55px;
-
-}
-
-
-.contact-left h2 {
-
-font-family:"Playfair Display",serif;
-
-font-size:47px;
-
-margin:10px 0 17px;
+gap:90px;
 
 }
 
+.contact-heading {
 
-.contact-left > p {
+font-family:
+"Cormorant Garamond",
+serif;
 
-color:var(--gray);
+font-size:
+clamp(50px,6vw,68px);
 
-margin-bottom:30px;
+line-height:.9;
+
+color:var(--cream);
+
+margin-bottom:23px;
 
 }
 
+.contact-copy {
 
-.contact-item {
+font-size:13px;
 
-margin-bottom:22px;
+color:#8f8f8f;
+
+margin-bottom:40px;
 
 }
 
+.contact-row {
 
-.contact-item small {
+padding:18px 0;
+
+border-bottom:
+1px solid rgba(255,255,255,.065);
+
+}
+
+.contact-row small {
 
 display:block;
 
+margin-bottom:5px;
+
+font-size:8px;
+
+letter-spacing:3px;
+
 color:var(--gold);
 
-font-size:11px;
+}
 
-font-weight:800;
+.contact-row a,
+.contact-row span {
 
-letter-spacing:2px;
+font-size:14px;
 
-margin-bottom:4px;
+color:#ddd;
+
+transition:.3s;
 
 }
 
-
-.contact-item a {
-
-color:#fff;
-
+.contact-row a:hover {
+color:var(--gold-light);
 }
 
-
-.social-links {
+.social-grid {
 
 display:flex;
 
 flex-wrap:wrap;
 
-gap:10px;
+gap:8px;
 
 margin-top:30px;
 
 }
 
+.social-link {
+
+padding:11px 15px;
+
+border:
+1px solid rgba(232,207,140,.22);
+
+font-size:9px;
+
+letter-spacing:1.4px;
+
+color:#a7a7a7;
+
+transition:.3s;
+
+}
+
+.social-link:hover {
+
+background:
+rgba(232,207,140,.06);
+
+border-color:
+var(--gold-light);
+
+color:var(--gold-light);
+
+}
 
 .contact-form {
 
-background:
-rgba(15,15,15,.9);
+position:relative;
 
-border:1px solid rgba(255,255,255,.06);
+padding:45px;
 
-border-radius:12px;
+background:#080808;
 
-padding:35px;
-
-}
-
-
-.form-group {
-
-margin-bottom:18px;
+border:
+1px solid rgba(255,255,255,.06);
 
 }
 
+.contact-form::before {
+
+content:"";
+
+position:absolute;
+
+left:-1px;
+top:-1px;
+
+width:70px;
+height:70px;
+
+border-left:
+1px solid var(--gold);
+
+border-top:
+1px solid var(--gold);
+
+}
+
+.form-grid {
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:20px;
+
+}
+
+.form-group.full {
+grid-column:1/-1;
+}
 
 .form-group label {
 
 display:block;
 
-margin-bottom:7px;
+margin-bottom:8px;
 
-font-size:13px;
+font-size:8px;
 
-color:#ddd;
+letter-spacing:2.4px;
+
+text-transform:uppercase;
+
+color:#777;
 
 }
-
 
 .form-group input,
 .form-group textarea {
 
 width:100%;
 
-padding:14px 15px;
+padding:13px 0;
 
-border-radius:5px;
+background:transparent;
 
-background:#070707;
+border:none;
 
-border:1px solid #333;
+border-bottom:
+1px solid #333;
 
 color:#fff;
 
 outline:none;
 
-}
+transition:.3s;
 
+}
 
 .form-group input:focus,
 .form-group textarea:focus {
 
-border-color:var(--gold);
+border-color:
+var(--gold-light);
 
 }
-
 
 .form-group textarea {
 
-height:150px;
+height:130px;
 
-resize:vertical;
+resize:none;
 
 }
 
 
-/* =====================================================
+/* ==========================================================
    FOOTER
-===================================================== */
+========================================================== */
 
 footer {
 
-background:#030303;
+padding:48px 0;
 
-border-top:1px solid var(--border);
+background:#010101;
 
-padding:35px 0;
+border-top:
+1px solid var(--line);
 
 }
 
-
-.footer-content {
+.footer-inner {
 
 display:flex;
 
@@ -1727,44 +2473,112 @@ justify-content:space-between;
 
 gap:20px;
 
-color:#888;
+}
 
-font-size:12px;
+.footer-brand {
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
 
 }
 
 
-.footer-logo {
+/* footer new portrait */
 
-font-family:"Playfair Display",serif;
+.footer-photo {
 
-font-size:19px;
+width:46px;
+height:46px;
 
-color:var(--gold);
-
-}
-
-
-/* =====================================================
-   FLOATING WHATSAPP
-===================================================== */
-
-.whatsapp-floating {
-
-position:fixed;
-
-right:23px;
-
-bottom:24px;
-
-width:62px;
-height:62px;
+padding:2px;
 
 border-radius:50%;
 
-background:#25D366;
+background:
 
-color:white;
+linear-gradient(
+135deg,
+var(--gold-dark),
+var(--gold-light),
+var(--gold)
+);
+
+}
+
+.footer-photo-inner {
+
+width:100%;
+height:100%;
+
+border-radius:50%;
+
+overflow:hidden;
+
+border:
+2px solid #030303;
+
+}
+
+.footer-photo img {
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+object-position:center 20%;
+
+}
+
+.footer-name {
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:19px;
+
+color:#ddd;
+
+}
+
+.footer-role {
+
+font-size:7px;
+
+letter-spacing:3px;
+
+color:#555;
+
+}
+
+.footer-copy {
+
+font-size:8px;
+
+letter-spacing:1px;
+
+color:#555;
+
+}
+
+
+/* ==========================================================
+   WHATSAPP
+========================================================== */
+
+.whatsapp {
+
+position:fixed;
+
+right:22px;
+bottom:23px;
+
+width:62px;
+height:62px;
 
 display:flex;
 
@@ -1772,71 +2586,133 @@ align-items:center;
 
 justify-content:center;
 
-font-size:27px;
+border-radius:50%;
 
-font-weight:900;
+background:#25D366;
 
-z-index:9000;
+color:white;
+
+font-size:10px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+z-index:8000;
 
 box-shadow:
-0 10px 35px rgba(0,0,0,.55);
+0 15px 40px rgba(0,0,0,.55);
 
 transition:.3s;
 
 }
 
+.whatsapp:hover {
 
-.whatsapp-floating:hover {
-
-transform:scale(1.08);
+transform:
+translateY(-4px)
+scale(1.05);
 
 }
 
 
-/* =====================================================
-   SCROLL ANIMATION
-===================================================== */
+/* ==========================================================
+   LIGHTBOX
+========================================================== */
+
+.lightbox {
+
+position:fixed;
+
+inset:0;
+
+z-index:20000;
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+padding:30px;
+
+background:
+rgba(0,0,0,.97);
+
+}
+
+.lightbox img {
+
+max-width:95vw;
+
+max-height:90vh;
+
+object-fit:contain;
+
+}
+
+.lightbox-close {
+
+position:absolute;
+
+top:22px;
+right:30px;
+
+font-size:40px;
+
+cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   REVEAL
+========================================================== */
 
 .reveal {
 
 opacity:0;
 
-transform:translateY(35px);
+transform:
+translateY(35px);
 
-transition:.75s ease;
+transition:
+opacity .9s ease,
+transform .9s ease;
 
 }
 
-
-.reveal.show {
+.reveal.visible {
 
 opacity:1;
 
-transform:translateY(0);
+transform:none;
 
 }
 
 
-/* =====================================================
+/* ==========================================================
    TABLET
-===================================================== */
+========================================================== */
 
 @media(max-width:1050px) {
-
 
 .nav-links {
 
 position:fixed;
 
-top:90px;
-
+top:102px;
 left:-100%;
 
 width:100%;
 
-height:calc(100vh - 90px);
+height:
+calc(100svh - 102px);
 
-background:#060606;
+background:
+rgba(2,2,2,.98);
+
+backdrop-filter:blur(25px);
 
 display:flex;
 
@@ -1850,223 +2726,301 @@ transition:.4s;
 
 }
 
-
 .nav-links.open {
-
 left:0;
-
 }
 
+.nav-links a {
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:31px;
+
+text-transform:none;
+
+letter-spacing:0;
+
+}
 
 .menu-btn {
-
 display:block;
-
 }
-
 
 .desktop-cv {
-
 display:none;
-
 }
-
 
 .about-grid,
 .contact-grid {
-
 grid-template-columns:1fr;
-
 }
 
-
-.cards {
-
+.expertise-grid {
 grid-template-columns:repeat(2,1fr);
+}
+
+.timeline::before {
+left:20px;
+}
+
+.timeline-item,
+.timeline-item:nth-child(even) {
+
+width:100%;
+
+margin-left:0;
+
+padding:
+0 0 55px 65px;
+
+}
+
+.timeline-dot,
+.timeline-item:nth-child(even) .timeline-dot {
+
+left:13px;
+right:auto;
+
+}
 
 }
 
 
-.blog-grid {
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-
-}
-
-
-/* =====================================================
+/* ==========================================================
    MOBILE
-===================================================== */
+========================================================== */
 
 @media(max-width:700px) {
 
-
 .section {
-
-padding:75px 0;
-
+padding:90px 0;
 }
-
 
 .navbar {
-
-height:85px;
-
+height:88px;
 }
 
 
-.logo {
+/* mobile brand portrait */
 
+.brand-circle {
+
+width:54px;
+height:54px;
+
+}
+
+.brand-picture {
+
+width:45px;
+height:45px;
+
+}
+
+.brand-name {
 font-size:17px;
-
 }
 
+.brand-role {
 
-.logo span {
+font-size:6px;
 
 letter-spacing:4px;
 
 }
 
-
 .nav-links {
 
-top:85px;
+top:88px;
 
-height:calc(100vh - 85px);
-
-}
-
-
-.language-btn {
-
-padding:10px 13px;
+height:
+calc(100svh - 88px);
 
 }
-
 
 .hero {
-
-min-height:100svh;
-
 background-position:center;
-
 }
-
 
 .hero-content {
-
-padding-top:100px;
-
+padding-top:110px;
 }
-
 
 .hero h1 {
 
-font-size:52px;
+font-size:64px;
+
+letter-spacing:-2px;
 
 }
 
+.signature {
+font-size:32px;
+}
 
-.hero h2 {
+.hero-kicker {
 
-font-size:16px;
+font-size:7px;
+
+letter-spacing:3px;
 
 }
 
+.hero-role {
+
+font-size:11px;
+
+letter-spacing:1.5px;
+
+}
+
+.hero-description {
+font-size:13px;
+}
+
+.hero-side,
+.hero-scroll {
+display:none;
+}
 
 .stats-grid {
-
 grid-template-columns:repeat(2,1fr);
+}
+
+.stat:nth-child(2)::after {
+display:none;
+}
+
+.section-head {
+display:block;
+}
+
+.section-number {
+
+font-size:38px;
+
+margin-bottom:16px;
 
 }
 
-
-.stat {
-
-padding:32px 10px;
-
+.section-title {
+font-size:49px;
 }
 
-
-.stat:nth-child(2) {
-
-border-right:none;
-
+.about-grid {
+gap:65px;
 }
 
-
-.about-image img {
+.about-photo img {
 
 height:auto;
 
-max-height:680px;
+max-height:650px;
 
 object-fit:contain;
 
-background:#090909;
+background:#020202;
 
 }
 
-
-.about-image::before {
-
-left:-12px;
-
+.about-tag {
+display:none;
 }
 
-
-.cards,
-.blog-grid,
-.philosophy-list {
-
+.vm-grid {
 grid-template-columns:1fr;
-
 }
 
-
-.gallery-slider {
-
-height:460px;
-
+.expertise-grid {
+grid-template-columns:1fr;
 }
 
+.expertise-card {
+min-height:auto;
+}
+
+.philosophy {
+background-attachment:scroll;
+}
+
+.philosophy-panel {
+padding:45px 23px;
+}
+
+.philosophy-lead {
+font-size:28px;
+}
+
+.philosophy-grid {
+grid-template-columns:1fr 1fr;
+}
+
+.gallery-stage {
+height:470px;
+}
 
 .gallery-arrow {
 
-width:42px;
-height:42px;
+width:44px;
+height:44px;
 
-font-size:20px;
+font-size:21px;
 
 }
-
 
 .gallery-prev {
-
-left:10px;
-
+left:12px;
 }
-
 
 .gallery-next {
+right:12px;
+}
 
-right:10px;
+.gallery-brand {
+
+left:22px;
+top:22px;
+
+font-size:7px;
 
 }
 
+.gallery-count {
 
-.timeline-item {
+right:22px;
+top:18px;
 
-padding-left:60px;
+font-size:22px;
 
 }
 
+.cv-box {
+padding:70px 22px;
+}
 
-.footer-content {
+.cv-box h2 {
+font-size:48px;
+}
+
+.contact-grid {
+gap:55px;
+}
+
+.contact-form {
+padding:30px 22px;
+}
+
+.form-grid {
+grid-template-columns:1fr;
+}
+
+.form-group.full {
+grid-column:auto;
+}
+
+.footer-inner {
 
 flex-direction:column;
 
@@ -2074,41 +3028,78 @@ text-align:center;
 
 }
 
-
 }
 
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
 
 @media(max-width:430px) {
 
+.brand-copy {
+max-width:155px;
+}
+
+.brand-name {
+font-size:16px;
+}
 
 .hero h1 {
+font-size:54px;
+}
 
-font-size:45px;
+.hero-actions {
+
+display:grid;
+
+grid-template-columns:1fr;
+
+}
+
+.hero-actions .btn {
+width:100%;
+}
+
+.philosophy-grid {
+grid-template-columns:1fr;
+}
+
+.gallery-stage {
+height:400px;
+}
+
+.stat strong {
+font-size:38px;
+}
 
 }
 
 
-.gallery-slider {
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
 
-height:390px;
+@media(prefers-reduced-motion:reduce) {
+
+* {
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
 
 }
 
-
-.about-content {
-
-padding:0;
-
 }
-
-
-}
-
 
 </style>
 
 
-<!-- GOOGLE PERSON DATA -->
+<!-- ==========================================================
+     GOOGLE PERSON DATA
+========================================================== -->
 
 <script type="application/ld+json">
 
@@ -2117,10 +3108,9 @@ padding:0;
 "@type":"Person",
 "name":"Bimal Thapa Magar",
 "url":"https://bimalmagar.com.np/",
-"image":"https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg",
 "jobTitle":"Head Chef",
-"email":"mailto:magarthapabimal@gmail.com",
 "telephone":"+971569241552",
+"email":"magarthapabimal@gmail.com",
 "sameAs":[
 "https://www.instagram.com/magar.bimal369",
 "https://www.facebook.com/share/16rLwdByZL/?mibextid=wwXIfr",
@@ -2138,94 +3128,120 @@ padding:0;
 
 <div class="site-background"></div>
 
+<div class="noise"></div>
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<div
+class="scroll-progress"
+id="scrollProgress">
+</div>
+
+
+
+<!-- ==========================================================
+     HEADER
+========================================================== -->
 
 <header id="header">
+
 
 <nav class="navbar">
 
 
-<a href="#home"
-class="logo">
+<!-- YOUR NEW BRAND PHOTO -->
 
-BIMAL THAPA MAGAR
+<a
+href="#home"
+class="brand">
 
-<span>
+
+<div class="brand-circle">
+
+
+<div class="brand-picture">
+
+
+<img
+src="brand-photo.jpg"
+
+onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg';"
+
+alt="Bimal Thapa Magar">
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="brand-copy">
+
+
+<div class="brand-name">
+
+Bimal Thapa Magar
+
+</div>
+
+
+<span class="brand-role">
+
 HEAD CHEF
+
 </span>
+
+
+</div>
+
 
 </a>
 
 
-<ul class="nav-links"
+
+<ul
+class="nav-links"
 id="navLinks">
 
 
 <li>
-<a href="#home"
-data-en="Home"
-data-ar="الرئيسية">
-
+<a href="#home">
 Home
-
 </a>
 </li>
 
 
 <li>
-<a href="#about"
-data-en="About"
-data-ar="نبذة عني">
-
+<a href="#about">
 About
-
 </a>
 </li>
 
 
 <li>
-<a href="#expertise"
-data-en="Expertise"
-data-ar="الخبرات">
-
+<a href="#expertise">
 Expertise
-
 </a>
 </li>
 
 
 <li>
-<a href="#experience"
-data-en="Experience"
-data-ar="الخبرة">
-
+<a href="#experience">
 Experience
-
 </a>
 </li>
 
 
 <li>
-<a href="#gallery"
-data-en="Gallery"
-data-ar="المعرض">
-
+<a href="#gallery">
 Gallery
-
 </a>
 </li>
 
 
 <li>
-<a href="#contact"
-data-en="Contact"
-data-ar="تواصل">
-
+<a href="#contact">
 Contact
-
 </a>
 </li>
 
@@ -2233,31 +3249,23 @@ Contact
 </ul>
 
 
-<div class="nav-actions">
 
-
-<button
-id="languageBtn"
-class="language-btn">
-
-العربية
-
-</button>
+<div class="header-actions">
 
 
 <a
 href="cv-request.html"
 class="btn btn-gold desktop-cv">
 
-CV
+Request CV
 
 </a>
 
 
 <button
-id="menuBtn"
 class="menu-btn"
-aria-label="Menu">
+id="menuBtn"
+aria-label="Open menu">
 
 ☰
 
@@ -2266,31 +3274,39 @@ aria-label="Menu">
 
 </div>
 
+
 </nav>
+
 
 </header>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      HERO
-===================================================== -->
+========================================================== -->
 
-<section class="hero"
+<section
+class="hero"
 id="home">
 
 
 <div class="hero-content">
 
-<div class="hero-inner">
+
+<div class="hero-inner reveal">
 
 
-<div
-class="hero-label"
-data-en="WELCOME TO MY CULINARY WORLD"
-data-ar="مرحباً بكم في عالمي في فنون الطهي">
+<div class="hero-kicker">
 
-WELCOME TO MY CULINARY WORLD
+THE CULINARY IDENTITY
+
+</div>
+
+
+<div class="signature">
+
+Bimal
 
 </div>
 
@@ -2299,29 +3315,24 @@ WELCOME TO MY CULINARY WORLD
 
 BIMAL
 
-<br>
+<span>
 
-<span class="gold">
 THAPA MAGAR
+
 </span>
 
 </h1>
 
 
-<h2
-data-en="HEAD CHEF • STEAK SPECIALIST • TURKISH & ARABIC FUSION CUISINE"
-data-ar="رئيس طهاة • متخصص في الستيك • المطبخ التركي والعربي المدمج">
+<div class="hero-role">
 
 HEAD CHEF • STEAK SPECIALIST •
 TURKISH & ARABIC FUSION CUISINE
 
-</h2>
+</div>
 
 
-<p
-class="hero-description"
-data-en="A culinary professional with more than 14 years of experience combining premium steaks, Turkish cuisine, modern Arabic fusion, kitchen leadership, HACCP standards and operational excellence."
-data-ar="محترف في فنون الطهي يتمتع بأكثر من 14 عاماً من الخبرة في الستيك الفاخر والمطبخ التركي والمطبخ العربي الحديث وقيادة المطابخ ومعايير الهاسب والتميز التشغيلي.">
+<p class="hero-description">
 
 A culinary professional with more than
 14 years of experience combining premium steaks,
@@ -2332,54 +3343,72 @@ and operational excellence.
 </p>
 
 
-<div class="hero-buttons">
+
+<div class="hero-actions">
 
 
-<a href="#about"
-class="btn btn-gold"
-data-en="Explore My Journey"
-data-ar="اكتشف مسيرتي">
+<a
+href="#about"
+class="btn btn-gold">
 
-Explore My Journey
+Discover My Story
 
 </a>
 
 
-<a href="#gallery"
-class="btn btn-outline"
-data-en="View Gallery"
-data-ar="عرض المعرض">
+<a
+href="#gallery"
+class="btn btn-outline">
 
 View Gallery
 
 </a>
 
 
-<a href="cv-request.html"
-class="btn btn-outline"
-data-en="Request My CV"
-data-ar="طلب السيرة الذاتية">
+<a
+href="cv-request.html"
+class="btn btn-outline">
 
-📄 Request My CV
+Request My CV
 
 </a>
 
 
 </div>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+<div class="hero-side">
+
+BIMAL THAPA MAGAR • UAE
+
+</div>
+
+
+<div class="hero-scroll">
+
+SCROLL
+
+<div class="hero-scroll-line"></div>
+
+</div>
+
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      STATS
-===================================================== -->
+========================================================== -->
 
 <section class="stats">
+
 
 <div class="container stats-grid">
 
@@ -2390,12 +3419,8 @@ data-ar="طلب السيرة الذاتية">
 14+
 </strong>
 
-<span
-data-en="Years Culinary Experience"
-data-ar="سنوات من الخبرة">
-
+<span>
 Years Culinary Experience
-
 </span>
 
 </div>
@@ -2407,12 +3432,8 @@ Years Culinary Experience
 🥩
 </strong>
 
-<span
-data-en="Steak Specialist"
-data-ar="متخصص في الستيك">
-
+<span>
 Steak Specialist
-
 </span>
 
 </div>
@@ -2424,12 +3445,8 @@ Steak Specialist
 HACCP
 </strong>
 
-<span
-data-en="Food Safety Excellence"
-data-ar="التميز في سلامة الغذاء">
-
+<span>
 Food Safety Excellence
-
 </span>
 
 </div>
@@ -2441,12 +3458,8 @@ Food Safety Excellence
 360°
 </strong>
 
-<span
-data-en="Kitchen Leadership"
-data-ar="قيادة المطبخ">
-
+<span>
 Kitchen Leadership
-
 </span>
 
 </div>
@@ -2454,23 +3467,73 @@ Kitchen Leadership
 
 </div>
 
+
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      ABOUT
-===================================================== -->
+========================================================== -->
 
 <section
-class="section"
+class="section about-section"
 id="about">
 
 
-<div class="container about-grid reveal">
+<div class="container">
 
 
-<div class="about-image">
+<div class="section-head reveal">
+
+
+<div class="section-number">
+
+01
+
+</div>
+
+
+<div>
+
+
+<div class="eyebrow">
+
+About Chef Bimal
+
+</div>
+
+
+<h2 class="section-title">
+
+My Culinary Journey
+
+</h2>
+
+
+<p class="section-description">
+
+Experience, discipline,
+creativity and leadership define
+my professional culinary journey.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="about-grid">
+
+
+<div class="about-photo reveal">
+
+
+<div class="about-frame">
 
 
 <img
@@ -2479,148 +3542,180 @@ src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a
 
 alt="Bimal Thapa Magar Head Chef">
 
+
 </div>
 
 
-<div class="about-content">
+<div class="about-tag">
+
+HEAD CHEF
+
+</div>
 
 
-<span
-class="section-label"
-data-en="ABOUT CHEF BIMAL"
-data-ar="عن الشيف بيمال">
-
-ABOUT CHEF BIMAL
-
-</span>
+</div>
 
 
-<h2
-data-en="My Culinary Journey"
-data-ar="رحلتي في عالم الطهي">
 
-My Culinary Journey
-
-</h2>
+<div class="about-content reveal">
 
 
-<p
-data-en="I am an experienced Head Chef with more than 14 years of expertise in premium steaks, Turkish cuisine and modern Arabic fusion gastronomy."
-data-ar="أنا رئيس طهاة ذو خبرة تزيد عن 14 عاماً في الستيك الفاخر والمطبخ التركي وفنون المطبخ العربي الحديث.">
+<p>
 
 I am an experienced
 <strong>Head Chef</strong>
 with more than
 <strong>14 years</strong>
-of expertise in premium steaks,
-Turkish cuisine and modern Arabic fusion gastronomy.
+of expertise in
+
+<strong>
+
+premium steaks,
+Turkish cuisine,
+and modern Arabic fusion gastronomy.
+
+</strong>
 
 </p>
 
 
-<p
-data-en="My leadership focuses on discipline, consistency, food safety, teamwork and developing strong culinary professionals."
-data-ar="تركز قيادتي على الانضباط والثبات وسلامة الغذاء والعمل الجماعي وتطوير الطهاة المحترفين.">
+<p>
 
 My leadership focuses on discipline,
-consistency, food safety, teamwork
-and developing strong culinary professionals.
+consistency, and developing strong culinary teams.
 
 </p>
 
 
-<h3 class="vision">
+
+<blockquote class="quote">
+
+My philosophy is grounded in
+discipline, respect,
+innovation and consistency.
+
+</blockquote>
+
+
+
+<div class="vm-grid">
+
+
+<div class="vm-card">
+
+
+<h3>
+
 🌟 Vision
+
 </h3>
 
 
 <p>
 
-To elevate global fusion cuisine through
-creativity, technique and leadership.
+To elevate global fusion cuisine
+through creativity,
+technique, and leadership.
 
 </p>
 
 
-<h3 class="vision">
+</div>
+
+
+
+<div class="vm-card">
+
+
+<h3>
+
 🔥 Mission
+
 </h3>
 
 
-<ul class="mission-list">
+<p>
 
-<li>
-✓ Premium quality & consistency
-</li>
+Premium quality & consistency,
+HACCP excellence & safety,
+strong chef mentoring & leadership,
+memorable guest experiences,
+creative fusion & charcoal grill innovation.
 
-<li>
-✓ HACCP excellence & safety
-</li>
+</p>
 
-<li>
-✓ Strong chef mentoring & leadership
-</li>
 
-<li>
-✓ Memorable guest experiences
-</li>
+</div>
 
-<li>
-✓ Creative fusion & charcoal grill innovation
-</li>
 
-</ul>
+</div>
+
 
 
 <a
-class="btn btn-gold"
-href="cv-request.html">
+href="cv-request.html"
+class="btn btn-gold">
 
-📄 Request My CV
+Request My CV
 
 </a>
 
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      EXPERTISE
-===================================================== -->
+========================================================== -->
 
 <section
-class="section dark-section"
+class="section expertise-section"
 id="expertise">
 
 
 <div class="container">
 
 
-<div class="section-header reveal">
+<div class="section-head reveal">
 
 
-<span class="section-label">
+<div class="section-number">
 
-CULINARY EXPERTISE
+02
 
-</span>
+</div>
 
 
-<h2
-data-en="Where Passion Meets Precision"
-data-ar="حيث يلتقي الشغف بالدقة">
+<div>
 
-Where Passion Meets Precision
+
+<div class="eyebrow">
+
+Culinary Expertise
+
+</div>
+
+
+<h2 class="section-title">
+
+Craft.
+Precision.
+Leadership.
 
 </h2>
 
 
-<p>
+<p class="section-description">
 
 Professional cuisine,
 leadership and kitchen operations
@@ -2632,18 +3727,32 @@ built around quality and consistency.
 </div>
 
 
-<div class="cards">
+</div>
 
 
-<div class="card reveal">
 
-<div class="card-icon">
+<div class="expertise-grid">
+
+
+<div class="expertise-card reveal">
+
+
+<div class="expertise-number">
+01
+</div>
+
+
+<div class="expertise-icon">
 🥩
 </div>
 
+
 <h3>
+
 Premium Steaks
+
 </h3>
+
 
 <p>
 
@@ -2655,19 +3764,30 @@ and premium presentation.
 
 </p>
 
+
 </div>
 
 
 
-<div class="card reveal">
+<div class="expertise-card reveal">
 
-<div class="card-icon">
+
+<div class="expertise-number">
+02
+</div>
+
+
+<div class="expertise-icon">
 🔥
 </div>
 
+
 <h3>
+
 Turkish Cuisine
+
 </h3>
+
 
 <p>
 
@@ -2678,19 +3798,30 @@ and authentic flavor profiles.
 
 </p>
 
+
 </div>
 
 
 
-<div class="card reveal">
+<div class="expertise-card reveal">
 
-<div class="card-icon">
+
+<div class="expertise-number">
+03
+</div>
+
+
+<div class="expertise-icon">
 🍽
 </div>
 
+
 <h3>
+
 Arabic Fusion
+
 </h3>
+
 
 <p>
 
@@ -2701,19 +3832,30 @@ and international techniques.
 
 </p>
 
+
 </div>
 
 
 
-<div class="card reveal">
+<div class="expertise-card reveal">
 
-<div class="card-icon">
+
+<div class="expertise-number">
+04
+</div>
+
+
+<div class="expertise-icon">
 👨‍🍳
 </div>
 
+
 <h3>
+
 Kitchen Leadership
+
 </h3>
+
 
 <p>
 
@@ -2725,19 +3867,30 @@ professional kitchen culture.
 
 </p>
 
+
 </div>
 
 
 
-<div class="card reveal">
+<div class="expertise-card reveal">
 
-<div class="card-icon">
+
+<div class="expertise-number">
+05
+</div>
+
+
+<div class="expertise-icon">
 ✓
 </div>
 
+
 <h3>
+
 HACCP & Safety
+
 </h3>
+
 
 <p>
 
@@ -2749,19 +3902,30 @@ and HACCP compliance.
 
 </p>
 
+
 </div>
 
 
 
-<div class="card reveal">
+<div class="expertise-card reveal">
 
-<div class="card-icon">
+
+<div class="expertise-number">
+06
+</div>
+
+
+<div class="expertise-icon">
 📊
 </div>
 
+
 <h3>
+
 Cost Control
+
 </h3>
+
 
 <p>
 
@@ -2773,177 +3937,212 @@ and portion control.
 
 </p>
 
+
+</div>
+
+
 </div>
 
 
 </div>
 
-</div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      PHILOSOPHY
-===================================================== -->
+========================================================== -->
 
-<section class="section">
+<section class="section philosophy">
 
 
 <div class="container">
 
 
-<div class="section-header reveal">
+<div class="section-head reveal">
 
 
-<span class="section-label">
-CHEF PHILOSOPHY
-</span>
+<div class="section-number">
+
+03
+
+</div>
 
 
-<h2>
-My Professional Principles
+<div>
+
+
+<div class="eyebrow">
+
+Chef Philosophy
+
+</div>
+
+
+<h2 class="section-title">
+
+Professional Principles
+
 </h2>
 
 
 </div>
 
 
-<div class="philosophy-box reveal">
+</div>
 
 
-<p>
+
+<div class="philosophy-panel reveal">
+
+
+<div class="philosophy-lead">
 
 My philosophy is grounded in
+discipline, respect,
+innovation and consistency.
 
-<strong>
-
-discipline,
-respect,
-innovation
-and consistency.
-
-</strong>
-
-</p>
+</div>
 
 
-<ul class="philosophy-list">
+
+<div class="philosophy-grid">
 
 
-<li>
+<div class="principle">
 
 <strong>
 🔥 Safety First
 </strong>
 
-<br>
-
+<span>
 HACCP is non-negotiable.
+</span>
 
-</li>
+</div>
 
 
-<li>
+<div class="principle">
 
 <strong>
 👨‍🍳 Lead by Example
 </strong>
 
-<br>
-
+<span>
 Discipline builds culture.
+</span>
 
-</li>
+</div>
 
 
-<li>
+<div class="principle">
 
 <strong>
 🥩 Respect Ingredients
 </strong>
 
-<br>
-
+<span>
 Technique unlocks flavor.
+</span>
 
-</li>
+</div>
 
 
-<li>
+<div class="principle">
 
 <strong>
 🤝 Teamwork
 </strong>
 
-<br>
-
+<span>
 Strong teams create excellence.
+</span>
 
-</li>
+</div>
 
 
-<li>
+<div class="principle">
 
 <strong>
 ✨ Guest Focus
 </strong>
 
-<br>
-
+<span>
 Every plate carries meaning.
+</span>
 
-</li>
+</div>
 
 
-<li>
+<div class="principle">
 
 <strong>
 📚 Continuous Growth
 </strong>
 
-<br>
+<span>
+Evolve every day.
+</span>
 
-Learn, improve and evolve every day.
-
-</li>
-
-
-</ul>
+</div>
 
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      EXPERIENCE
-===================================================== -->
+========================================================== -->
 
 <section
-class="section dark-section"
+class="section experience-section"
 id="experience">
 
 
 <div class="container">
 
 
-<div class="section-header reveal">
+<div class="section-head reveal">
 
-<span class="section-label">
 
-CAREER JOURNEY
+<div class="section-number">
 
-</span>
+04
 
-<h2>
+</div>
+
+
+<div>
+
+
+<div class="eyebrow">
+
+Career Journey
+
+</div>
+
+
+<h2 class="section-title">
+
 Work Experience
+
 </h2>
+
+
+</div>
+
 
 </div>
 
@@ -2952,13 +4151,13 @@ Work Experience
 <div class="timeline">
 
 
-<!-- EXPERIENCE 1 -->
+<!-- JOB 1 -->
 
 <div class="timeline-item reveal">
 
+
 <div class="timeline-dot"></div>
 
-<div class="exp-card">
 
 <div class="exp-date">
 
@@ -2966,15 +4165,23 @@ Work Experience
 
 </div>
 
-<h3>
-Head Chef
-</h3>
 
-<h4>
+<div class="exp-role">
+
+Head Chef
+
+</div>
+
+
+<div class="exp-company">
 
 Global Catering Services LLC
 
-</h4>
+</div>
+
+
+<div class="exp-card">
+
 
 <ul>
 
@@ -2983,11 +4190,11 @@ Lead kitchen operations ensuring top quality.
 </li>
 
 <li>
-Develop steaks, fusion menus and grill concepts.
+Develop steaks, fusion menus, grill concepts.
 </li>
 
 <li>
-Ensure HACCP, hygiene and safety compliance.
+Ensure HACCP, hygiene & safety compliance.
 </li>
 
 <li>
@@ -2995,7 +4202,7 @@ Train chefs and build strong teams.
 </li>
 
 <li>
-Control costing, wastage and inventory.
+Control costing, wastage & inventory.
 </li>
 
 <li>
@@ -3004,19 +4211,21 @@ Conduct daily quality checks.
 
 </ul>
 
-</div>
 
 </div>
 
 
+</div>
 
-<!-- EXPERIENCE 2 -->
+
+
+<!-- JOB 2 -->
 
 <div class="timeline-item reveal">
 
+
 <div class="timeline-dot"></div>
 
-<div class="exp-card">
 
 <div class="exp-date">
 
@@ -3024,24 +4233,32 @@ Conduct daily quality checks.
 
 </div>
 
-<h3>
-Senior CDP
-</h3>
 
-<h4>
+<div class="exp-role">
+
+Senior CDP
+
+</div>
+
+
+<div class="exp-company">
 
 Armed Forces Officers Club
 
-</h4>
+</div>
+
+
+<div class="exp-card">
+
 
 <ul>
 
 <li>
-Led station with precision and premium execution.
+Led station with precision & premium execution.
 </li>
 
 <li>
-Maintained mise en place and freshness.
+Maintained mise en place & freshness.
 </li>
 
 <li>
@@ -3049,28 +4266,26 @@ Ensured HACCP compliance.
 </li>
 
 <li>
-Trained commis chefs.
-</li>
-
-<li>
-Supported menu trials.
+Trained commis chefs & supported menu trials.
 </li>
 
 </ul>
 
-</div>
 
 </div>
 
 
+</div>
 
-<!-- EXPERIENCE 3 -->
+
+
+<!-- JOB 3 -->
 
 <div class="timeline-item reveal">
 
+
 <div class="timeline-dot"></div>
 
-<div class="exp-card">
 
 <div class="exp-date">
 
@@ -3078,45 +4293,55 @@ Supported menu trials.
 
 </div>
 
-<h3>
-DCDP
-</h3>
 
-<h4>
+<div class="exp-role">
+
+DCDP
+
+</div>
+
+
+<div class="exp-company">
 
 Global Catering Abu Dhabi
 
-</h4>
+</div>
+
+
+<div class="exp-card">
+
 
 <ul>
 
 <li>
-Prepared dishes following recipes and standards.
+Prepared dishes following recipes & standards.
 </li>
 
 <li>
-Supported grilling, sauté and hot kitchen preparation.
+Supported grilling, sauté, & hot kitchen prep.
 </li>
 
 <li>
-Maintained hygiene and stock rotation.
+Maintained hygiene & stock rotation.
 </li>
 
 </ul>
 
-</div>
 
 </div>
 
 
+</div>
 
-<!-- EXPERIENCE 4 -->
+
+
+<!-- JOB 4 -->
 
 <div class="timeline-item reveal">
 
+
 <div class="timeline-dot"></div>
 
-<div class="exp-card">
 
 <div class="exp-date">
 
@@ -3124,74 +4349,97 @@ EARLIER CAREER
 
 </div>
 
-<h3>
+
+<div class="exp-role">
+
 Commis 1
-</h3>
 
-<h4>
+</div>
 
-Saujana Hotel — Malaysia
 
-</h4>
+<div class="exp-company">
+
+Saujana Hotel, Malaysia
+
+</div>
+
+
+<div class="exp-card">
+
 
 <ul>
 
 <li>
-Assisted chefs in preparation, cooking and plating.
+Assisted chefs in prep, cooking & plating.
 </li>
 
 <li>
-Handled mise en place for grill, sauté and cold kitchen.
+Handled mise en place for grill, sauté & cold kitchen.
 </li>
 
 <li>
-Maintained hygiene and sanitation standards.
+Maintained hygiene & sanitation.
 </li>
 
 </ul>
 
-</div>
 
 </div>
 
 
 </div>
 
+
 </div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      GALLERY
-===================================================== -->
+========================================================== -->
 
 <section
-class="section"
+class="section gallery-section"
 id="gallery">
 
 
 <div class="container">
 
 
-<div class="section-header reveal">
+<div class="section-head reveal">
 
 
-<span class="section-label">
+<div class="section-number">
 
-CHEF GALLERY
+05
 
-</span>
+</div>
 
 
-<h2>
-Crafting Flavors.
-Creating Memories.
+<div>
+
+
+<div class="eyebrow">
+
+Culinary Portfolio
+
+</div>
+
+
+<h2 class="section-title">
+
+Chef Gallery
+
 </h2>
 
 
-<p>
+<p class="section-description">
 
 A collection of my culinary work
 and professional kitchen journey.
@@ -3202,86 +4450,115 @@ and professional kitchen journey.
 </div>
 
 
+</div>
 
-<div class="gallery-slider reveal"
-id="gallerySlider">
+
+
+<div
+class="gallery-stage reveal"
+id="galleryStage">
+
+
+<div class="gallery-brand">
+
+BTM • CULINARY PORTFOLIO
+
+</div>
+
+
+<div class="gallery-count">
+
+<span id="currentSlide">
+01
+</span>
+
+/
+
+<span id="totalSlides">
+10
+</span>
+
+</div>
+
 
 
 <img
 class="gallery-slide active"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg"
-alt="Bimal Chef Gallery 1">
+alt="Bimal Thapa Magar Gallery 1">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0859.jpeg"
-alt="Bimal Chef Gallery 2">
+alt="Bimal Thapa Magar Gallery 2">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1846.jpeg"
-alt="Bimal Chef Gallery 3">
+alt="Bimal Thapa Magar Gallery 3">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1852.jpeg"
-alt="Bimal Chef Gallery 4">
+alt="Bimal Thapa Magar Gallery 4">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1891.jpeg"
-alt="Bimal Chef Gallery 5">
+alt="Bimal Thapa Magar Gallery 5">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1895.jpeg"
-alt="Bimal Chef Gallery 6">
+alt="Bimal Thapa Magar Gallery 6">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4825.jpeg"
-alt="Bimal Chef Gallery 7">
+alt="Bimal Thapa Magar Gallery 7">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg"
-alt="Bimal Chef Gallery 8">
+alt="Bimal Thapa Magar Gallery 8">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4833.jpeg"
-alt="Bimal Chef Gallery 9">
+alt="Bimal Thapa Magar Gallery 9">
 
 
 <img
 class="gallery-slide"
 src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/a13baa63-5832-4b03-a3ff-47c8f46b7ab3.jpeg"
-alt="Bimal Chef Gallery 10">
+alt="Bimal Thapa Magar Gallery 10">
 
+
+<div class="gallery-overlay"></div>
 
 
 <button
 class="gallery-arrow gallery-prev"
-aria-label="Previous">
+aria-label="Previous image">
 
-❮
+‹
 
 </button>
 
 
 <button
 class="gallery-arrow gallery-next"
-aria-label="Next">
+aria-label="Next image">
 
-❯
+›
 
 </button>
 
@@ -3295,135 +4572,17 @@ id="galleryDots">
 
 </div>
 
+
 </div>
+
 
 </section>
 
 
 
-<!-- =====================================================
-     KNOWLEDGE
-===================================================== -->
-
-<section class="section dark-section">
-
-
-<div class="container">
-
-
-<div class="section-header reveal">
-
-<span class="section-label">
-
-CHEF KNOWLEDGE
-
-</span>
-
-<h2>
-Beyond the Plate
-</h2>
-
-<p>
-
-Leadership,
-food safety and operational
-excellence are essential parts
-of professional cooking.
-
-</p>
-
-</div>
-
-
-<div class="blog-grid">
-
-
-<div class="blog-card reveal">
-
-<div class="blog-tag">
-FOOD SAFETY
-</div>
-
-<h3>
-
-HACCP Is a Daily Culture
-
-</h3>
-
-<p>
-
-Food safety is not simply
-a checklist. It protects guests,
-the team and the reputation
-of the restaurant.
-
-</p>
-
-</div>
-
-
-
-<div class="blog-card reveal">
-
-<div class="blog-tag">
-COST CONTROL
-</div>
-
-<h3>
-
-Control Waste Before It Controls Cost
-
-</h3>
-
-<p>
-
-Accurate weighing,
-yield monitoring,
-FIFO, portion control
-and daily wastage tracking
-protect profitability.
-
-</p>
-
-</div>
-
-
-
-<div class="blog-card reveal">
-
-<div class="blog-tag">
-LEADERSHIP
-</div>
-
-<h3>
-
-Build Chefs, Not Only Dishes
-
-</h3>
-
-<p>
-
-Strong leadership comes
-from clear expectations,
-respect, coaching,
-communication and accountability.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
+<!-- ==========================================================
      CV
-===================================================== -->
+========================================================== -->
 
 <section
 class="section cv-section"
@@ -3436,22 +4595,24 @@ id="cv">
 <div class="cv-box reveal">
 
 
-<span class="section-label">
+<div class="eyebrow">
 
-PROFESSIONAL PROFILE
+Professional Profile
 
-</span>
+</div>
 
 
 <h2>
+
 Interested in My Career Profile?
+
 </h2>
 
 
 <p>
 
-View the CV request page
-for professional opportunities,
+View the CV request page for
+professional opportunities,
 culinary collaborations
 and career discussions.
 
@@ -3469,44 +4630,75 @@ class="btn btn-gold">
 
 </div>
 
+
 </div>
+
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      CONTACT
-===================================================== -->
+========================================================== -->
 
 <section
-class="section dark-section"
+class="section contact-section"
 id="contact">
 
 
-<div class="container contact-grid">
+<div class="container">
 
 
-<div class="contact-left reveal">
+<div class="section-head reveal">
 
 
-<span class="section-label">
+<div class="section-number">
 
-CONTACT
+06
 
-</span>
+</div>
 
 
-<h2
-data-en="Let's Connect"
-data-ar="لنبقَ على تواصل">
+<div>
+
+
+<div class="eyebrow">
+
+Contact
+
+</div>
+
+
+<h2 class="section-title">
 
 Let's Connect
 
 </h2>
 
 
-<p>
+</div>
+
+
+</div>
+
+
+
+<div class="contact-grid">
+
+
+<div class="reveal">
+
+
+<h3 class="contact-heading">
+
+Professional
+Connections.
+
+</h3>
+
+
+<p class="contact-copy">
 
 Available for professional networking,
 culinary collaborations,
@@ -3517,7 +4709,7 @@ and leadership discussions.
 
 
 
-<div class="contact-item">
+<div class="contact-row">
 
 <small>
 PHONE
@@ -3533,13 +4725,14 @@ PHONE
 
 
 
-<div class="contact-item">
+<div class="contact-row">
 
 <small>
 EMAIL
 </small>
 
-<a href="mailto:magarthapabimal@gmail.com">
+<a
+href="mailto:magarthapabimal@gmail.com">
 
 magarthapabimal@gmail.com
 
@@ -3549,7 +4742,7 @@ magarthapabimal@gmail.com
 
 
 
-<div class="contact-item">
+<div class="contact-row">
 
 <small>
 LOCATION
@@ -3565,14 +4758,14 @@ United Arab Emirates
 
 
 
-<div class="social-links">
+<div class="social-grid">
 
 
 <a
 href="tel:+971569241552"
-class="btn btn-outline">
+class="social-link">
 
-📞 Call
+CALL
 
 </a>
 
@@ -3581,20 +4774,9 @@ class="btn btn-outline">
 href="https://wa.me/971569241552"
 target="_blank"
 rel="noopener"
-class="btn btn-gold">
+class="social-link">
 
-💬 WhatsApp
-
-</a>
-
-
-<a
-href="https://www.linkedin.com/in/bimal-thapa-magar-3b1337165"
-target="_blank"
-rel="noopener"
-class="btn btn-outline">
-
-LinkedIn
+WHATSAPP
 
 </a>
 
@@ -3603,9 +4785,9 @@ LinkedIn
 href="https://www.instagram.com/magar.bimal369"
 target="_blank"
 rel="noopener"
-class="btn btn-outline">
+class="social-link">
 
-Instagram
+INSTAGRAM
 
 </a>
 
@@ -3614,20 +4796,29 @@ Instagram
 href="https://www.facebook.com/share/16rLwdByZL/?mibextid=wwXIfr"
 target="_blank"
 rel="noopener"
-class="btn btn-outline">
+class="social-link">
 
-Facebook
+FACEBOOK
+
+</a>
+
+
+<a
+href="https://www.linkedin.com/in/bimal-thapa-magar-3b1337165"
+target="_blank"
+rel="noopener"
+class="social-link">
+
+LINKEDIN
 
 </a>
 
 
 </div>
 
+
 </div>
 
-
-
-<!-- CONTACT FORM -->
 
 
 <form
@@ -3635,7 +4826,11 @@ class="contact-form reveal"
 id="contactForm">
 
 
+<div class="form-grid">
+
+
 <div class="form-group">
+
 
 <label for="name">
 
@@ -3643,15 +4838,19 @@ Your Name
 
 </label>
 
+
 <input
 type="text"
 id="name"
 required>
 
+
 </div>
 
 
+
 <div class="form-group">
+
 
 <label for="senderEmail">
 
@@ -3659,15 +4858,19 @@ Your Email
 
 </label>
 
+
 <input
 type="email"
 id="senderEmail"
 required>
 
+
 </div>
 
 
-<div class="form-group">
+
+<div class="form-group full">
+
 
 <label for="subject">
 
@@ -3675,15 +4878,19 @@ Subject
 
 </label>
 
+
 <input
 type="text"
 id="subject"
 required>
 
+
 </div>
 
 
-<div class="form-group">
+
+<div class="form-group full">
+
 
 <label for="message">
 
@@ -3691,11 +4898,17 @@ Your Message
 
 </label>
 
+
 <textarea
 id="message"
 required></textarea>
 
+
 </div>
+
+
+
+<div class="form-group full">
 
 
 <button
@@ -3707,40 +4920,91 @@ Send Message
 </button>
 
 
+</div>
+
+
+</div>
+
+
 </form>
 
 
 </div>
 
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-
-<div class="container footer-content">
-
-
-<div class="footer-logo">
-
-BIMAL THAPA MAGAR
 
 </div>
 
 
-<p>
+</section>
+
+
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+
+<footer>
+
+
+<div class="container footer-inner">
+
+
+<div class="footer-brand">
+
+
+<div class="footer-photo">
+
+
+<div class="footer-photo-inner">
+
+
+<img
+src="brand-photo.jpg"
+
+onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg';"
+
+alt="Bimal Thapa Magar">
+
+
+</div>
+
+
+</div>
+
+
+
+<div>
+
+
+<div class="footer-name">
+
+Bimal Thapa Magar
+
+</div>
+
+
+<div class="footer-role">
+
+HEAD CHEF • CULINARY PROFESSIONAL
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer-copy">
 
 ©
 <span id="year"></span>
 Bimal Thapa Magar —
 All Rights Reserved.
 
-</p>
+</div>
 
 
 </div>
@@ -3750,44 +5014,43 @@ All Rights Reserved.
 
 
 
-<!-- =====================================================
-     WHATSAPP
-===================================================== -->
+<!-- ==========================================================
+     FLOATING WHATSAPP
+========================================================== -->
 
 <a
 href="https://wa.me/971569241552"
 target="_blank"
 rel="noopener"
-class="whatsapp-floating"
-aria-label="WhatsApp">
+class="whatsapp">
 
-W
+CHAT
 
 </a>
 
 
 
-<!-- =====================================================
+<!-- ==========================================================
      LIGHTBOX
-===================================================== -->
+========================================================== -->
 
 <div
 class="lightbox"
 id="lightbox">
 
 
-<span
+<div
 class="lightbox-close"
 id="lightboxClose">
 
 ×
 
-</span>
+</div>
 
 
 <img
 id="lightboxImage"
-alt="Gallery Preview">
+alt="Gallery image">
 
 
 </div>
@@ -3796,81 +5059,147 @@ alt="Gallery Preview">
 
 <script>
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* ==========================================================
+   HEADER + SCROLL PROGRESS
+========================================================== */
 
 const header =
-document.getElementById("header");
+document.getElementById(
+"header"
+);
+
+const progress =
+document.getElementById(
+"scrollProgress"
+);
 
 
 window.addEventListener(
 "scroll",
 ()=>{
 
-if(window.scrollY > 40){
 
-header.classList.add(
-"scrolled"
+header.classList.toggle(
+"scrolled",
+window.scrollY > 40
 );
+
+
+const scrollTop =
+document.documentElement.scrollTop;
+
+const pageHeight =
+
+document.documentElement.scrollHeight
+-
+document.documentElement.clientHeight;
+
+
+if(pageHeight > 0){
+
+progress.style.width =
+
+(
+scrollTop /
+pageHeight *
+100
+)
+
++
+"%";
 
 }
 
-else {
-
-header.classList.remove(
-"scrolled"
-);
 
 }
+);
 
-});
 
-
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+/* ==========================================================
+   MOBILE NAVIGATION
+========================================================== */
 
 const menuBtn =
-document.getElementById("menuBtn");
+document.getElementById(
+"menuBtn"
+);
 
 const navLinks =
-document.getElementById("navLinks");
+document.getElementById(
+"navLinks"
+);
 
 
 menuBtn.addEventListener(
 "click",
 ()=>{
 
+
 navLinks.classList.toggle(
 "open"
 );
 
-});
+
+document.body.classList.toggle(
+"locked"
+);
+
+
+menuBtn.textContent =
+
+navLinks.classList.contains(
+"open"
+)
+
+? "×"
+
+: "☰";
+
+
+}
+);
 
 
 document
-.querySelectorAll(".nav-links a")
-.forEach(link=>{
+.querySelectorAll(
+".nav-links a"
+)
+.forEach(
+link=>{
+
 
 link.addEventListener(
 "click",
 ()=>{
 
+
 navLinks.classList.remove(
 "open"
 );
 
-});
 
-});
+document.body.classList.remove(
+"locked"
+);
 
 
-/* =====================================================
-   REVEAL
-===================================================== */
+menuBtn.textContent =
+"☰";
 
-const revealItems =
+
+}
+);
+
+
+}
+);
+
+
+/* ==========================================================
+   SCROLL REVEAL
+========================================================== */
+
+const revealElements =
 document.querySelectorAll(
 ".reveal"
 );
@@ -3881,142 +5210,70 @@ new IntersectionObserver(
 
 entries=>{
 
-entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+entries.forEach(
+entry=>{
 
-entry.target
-.classList
-.add("show");
 
-revealObserver
-.unobserve(
+if(
+entry.isIntersecting
+){
+
+
+entry.target.classList.add(
+"visible"
+);
+
+
+revealObserver.unobserve(
 entry.target
 );
 
+
 }
 
-});
+
+}
+);
+
 
 },
 
 {
-threshold:.12
+threshold:.10
 }
 
 );
 
 
-revealItems.forEach(item=>{
-
-revealObserver.observe(item);
-
-});
+revealElements.forEach(
+element=>{
 
 
-/* =====================================================
-   LANGUAGE
-===================================================== */
-
-const languageBtn =
-document.getElementById(
-"languageBtn"
+revealObserver.observe(
+element
 );
 
-
-let language =
-localStorage.getItem(
-"bimal-language"
-) || "en";
-
-
-function applyLanguage(){
-
-document.documentElement.lang =
-language;
-
-
-document.documentElement.dir =
-language === "ar"
-? "rtl"
-: "ltr";
-
-
-document.body.classList.toggle(
-"rtl",
-language === "ar"
-);
-
-
-document
-.querySelectorAll("[data-en]")
-.forEach(element=>{
-
-const translation =
-
-language === "ar"
-? element.dataset.ar
-: element.dataset.en;
-
-
-if(translation){
-
-element.textContent =
-translation;
 
 }
-
-});
-
-
-languageBtn.textContent =
-
-language === "en"
-? "العربية"
-: "English";
-
-}
-
-
-languageBtn.addEventListener(
-"click",
-()=>{
-
-language =
-language === "en"
-? "ar"
-: "en";
-
-
-localStorage.setItem(
-"bimal-language",
-language
 );
 
 
-applyLanguage();
-
-});
-
-
-applyLanguage();
-
-
-/* =====================================================
+/* ==========================================================
    GALLERY
-===================================================== */
+========================================================== */
 
 const slides =
 document.querySelectorAll(
 ".gallery-slide"
 );
 
-const previousBtn =
+const previousButton =
 document.querySelector(
 ".gallery-prev"
 );
 
-const nextBtn =
+const nextButton =
 document.querySelector(
 ".gallery-next"
 );
@@ -4026,23 +5283,55 @@ document.getElementById(
 "galleryDots"
 );
 
+const currentSlide =
+document.getElementById(
+"currentSlide"
+);
+
+const totalSlides =
+document.getElementById(
+"totalSlides"
+);
+
+const galleryStage =
+document.getElementById(
+"galleryStage"
+);
+
 
 let galleryIndex = 0;
+
+let galleryTimer;
+
+
+totalSlides.textContent =
+
+String(
+slides.length
+)
+.padStart(
+2,
+"0"
+);
 
 
 slides.forEach(
 (_,index)=>{
+
 
 const dot =
 document.createElement(
 "span"
 );
 
+
 dot.className =
 "gallery-dot";
 
 
-if(index === 0){
+if(
+index === 0
+){
 
 dot.classList.add(
 "active"
@@ -4055,17 +5344,26 @@ dot.addEventListener(
 "click",
 ()=>{
 
+
 showGallerySlide(
 index
 );
 
-});
+
+restartGallery();
 
 
-dotsContainer
-.appendChild(dot);
+}
+);
 
-});
+
+dotsContainer.appendChild(
+dot
+);
+
+
+}
+);
 
 
 const galleryDots =
@@ -4075,29 +5373,40 @@ document.querySelectorAll(
 
 
 function showGallerySlide(
-newIndex
+index
 ){
 
+
 slides.forEach(
-slide=>
+slide=>{
+
+
 slide.classList.remove(
 "active"
-)
+);
+
+
+}
 );
 
 
 galleryDots.forEach(
-dot=>
+dot=>{
+
+
 dot.classList.remove(
 "active"
-)
+);
+
+
+}
 );
 
 
 galleryIndex =
 
 (
-newIndex +
+index +
 slides.length
 )
 
@@ -4121,98 +5430,108 @@ galleryIndex
 "active"
 );
 
+
+currentSlide.textContent =
+
+String(
+galleryIndex + 1
+)
+.padStart(
+2,
+"0"
+);
+
+
 }
 
 
-nextBtn.addEventListener(
+nextButton.addEventListener(
 "click",
 ()=>{
+
 
 showGallerySlide(
 galleryIndex + 1
 );
 
-});
+
+restartGallery();
 
 
-previousBtn.addEventListener(
+}
+);
+
+
+previousButton.addEventListener(
 "click",
 ()=>{
+
 
 showGallerySlide(
 galleryIndex - 1
 );
 
-});
+
+restartGallery();
 
 
-let autoplay =
+}
+);
 
+
+function startGallery(){
+
+
+galleryTimer =
 setInterval(
 ()=>{
+
 
 showGallerySlide(
 galleryIndex + 1
 );
 
+
 },
-4000
+4500
 );
 
 
-/* =====================================================
-   PAUSE SLIDER WHEN USER INTERACTS
-===================================================== */
-
-const gallerySlider =
-document.getElementById(
-"gallerySlider"
-);
+}
 
 
-gallerySlider.addEventListener(
-"mouseenter",
-()=>{
+function restartGallery(){
+
 
 clearInterval(
-autoplay
+galleryTimer
 );
 
-});
+
+startGallery();
 
 
-gallerySlider.addEventListener(
-"mouseleave",
-()=>{
-
-autoplay =
-setInterval(
-()=>{
-
-showGallerySlide(
-galleryIndex + 1
-);
-
-},
-4000
-);
-
-});
+}
 
 
-/* =====================================================
+startGallery();
+
+
+/* ==========================================================
    MOBILE SWIPE
-===================================================== */
+========================================================== */
 
-let touchStartX = 0;
+let touchStart = 0;
 
 
-gallerySlider.addEventListener(
+galleryStage.addEventListener(
 "touchstart",
 event=>{
 
-touchStartX =
+
+touchStart =
 event.touches[0].clientX;
+
 
 },
 {
@@ -4221,38 +5540,50 @@ passive:true
 );
 
 
-gallerySlider.addEventListener(
+galleryStage.addEventListener(
 "touchend",
 event=>{
 
-const touchEndX =
+
+const touchEnd =
 event.changedTouches[0].clientX;
 
 
 if(
-touchStartX -
-touchEndX >
+touchStart -
+touchEnd >
 50
 ){
+
 
 showGallerySlide(
 galleryIndex + 1
 );
 
+
+restartGallery();
+
+
 }
 
 
 if(
-touchEndX -
-touchStartX >
+touchEnd -
+touchStart >
 50
 ){
+
 
 showGallerySlide(
 galleryIndex - 1
 );
 
+
+restartGallery();
+
+
 }
+
 
 },
 {
@@ -4261,9 +5592,9 @@ passive:true
 );
 
 
-/* =====================================================
+/* ==========================================================
    LIGHTBOX
-===================================================== */
+========================================================== */
 
 const lightbox =
 document.getElementById(
@@ -4284,34 +5615,45 @@ document.getElementById(
 slides.forEach(
 image=>{
 
+
 image.addEventListener(
 "click",
 ()=>{
 
+
 lightboxImage.src =
 image.src;
+
 
 lightbox.style.display =
 "flex";
 
-});
 
-});
+}
+);
+
+
+}
+);
 
 
 lightboxClose.addEventListener(
 "click",
 ()=>{
 
+
 lightbox.style.display =
 "none";
 
-});
+
+}
+);
 
 
 lightbox.addEventListener(
 "click",
 event=>{
+
 
 if(
 event.target ===
@@ -4323,12 +5665,34 @@ lightbox.style.display =
 
 }
 
-});
+
+}
+);
 
 
-/* =====================================================
+document.addEventListener(
+"keydown",
+event=>{
+
+
+if(
+event.key ===
+"Escape"
+){
+
+lightbox.style.display =
+"none";
+
+}
+
+
+}
+);
+
+
+/* ==========================================================
    CONTACT FORM
-===================================================== */
+========================================================== */
 
 const CONTACT_EMAIL =
 "magarthapabimal@gmail.com";
@@ -4342,34 +5706,43 @@ document
 "submit",
 event=>{
 
+
 event.preventDefault();
 
 
 const name =
-document.getElementById(
+document
+.getElementById(
 "name"
-).value;
+)
+.value;
 
 
 const senderEmail =
-document.getElementById(
+document
+.getElementById(
 "senderEmail"
-).value;
+)
+.value;
 
 
 const subject =
-document.getElementById(
+document
+.getElementById(
 "subject"
-).value;
+)
+.value;
 
 
 const message =
-document.getElementById(
+document
+.getElementById(
 "message"
-).value;
+)
+.value;
 
 
-const body =
+const emailBody =
 
 `Name: ${name}
 
@@ -4382,26 +5755,29 @@ ${message}`;
 
 window.location.href =
 
-`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-});
+`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
 
-/* =====================================================
-   YEAR
-===================================================== */
+}
+);
+
+
+/* ==========================================================
+   AUTOMATIC YEAR
+========================================================== */
 
 document
 .getElementById(
 "year"
 )
 .textContent =
-new Date().getFullYear();
+
+new Date()
+.getFullYear();
 
 
 </script>
 
 
 </body>
-
 </html>
