@@ -1,500 +1,3219 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bimal Thapa Magar – Head Chef & Steak Specialist</title>
+<html lang="en" dir="ltr">
 
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Bimal Thapa Magar | Sous Chef | Culinary Portfolio</title>
+
+<meta name="description"
+content="Official culinary portfolio of Bimal Thapa Magar — Sous Chef, Turkish Cuisine Specialist, Kitchen Operations Leader, Food Safety Professional and Chef Trainer in the UAE.">
+
+<meta name="keywords"
+content="Bimal Thapa Magar, Sous Chef UAE, Turkish Cuisine Chef UAE, Chef Portfolio, HACCP Chef, Kitchen Operations, Food Safety, Cost Control, Chef Dubai">
+
+<meta name="author"
+content="Bimal Thapa Magar">
+
+<meta name="robots"
+content="index, follow">
+
+<meta name="theme-color"
+content="#080808">
+
+<link rel="canonical"
+href="https://bimalmagar.com.np/">
+
+<meta property="og:title"
+content="Bimal Thapa Magar | Professional Chef Portfolio">
+
+<meta property="og:description"
+content="Sous Chef | Turkish Cuisine Specialist | Kitchen Operations Leader">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://bimalmagar.com.np/">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
 
 <style>
 
-/* ------------------------------------------------------ GLOBAL ------------------------------------------------------ */
-body {
-  margin:0;
-  font-family:"Poppins", sans-serif;
-  background:#0d0d0d;
-  color:#fff;
-  scroll-behavior:smooth;
-  overflow-x:hidden;
-}
-section { padding:80px 20px; max-width:1200px; margin:auto; }
-h2 {
-  font-size:38px;
-  margin-bottom:25px;
-  text-transform:uppercase;
-  border-left:6px solid #ffb400;
-  padding-left:15px;
-  letter-spacing:1px;
+:root{
+
+--black:#070707;
+--black2:#0d0d0d;
+--card:#141414;
+--gold:#d4af37;
+--gold2:#f0d269;
+--white:#ffffff;
+--gray:#b5b5b5;
+--border:rgba(212,175,55,.25);
+
 }
 
-/* ------------------------------------------------------ BACKGROUNDS ------------------------------------------------------ */
-.kitchen-bg {
-  position:fixed;
-  inset:0;
-  background:url('https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg') center/cover no-repeat;
-  z-index:-10;
-  filter:brightness(0.7) contrast(1.12) saturate(1.18);
-}
-.kitchen-bg::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.35);
-  z-index:-9;
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
-.galaxy-bg {
-  position:fixed;
-  inset:0;
-  background:url('https://i.imgur.com/o7pZs7A.gif') center/cover no-repeat;
-  opacity:0.18;
-  z-index:-11;
+html{
+
+scroll-behavior:smooth;
+
 }
 
-/* ------------------------------------------------------ HERO ------------------------------------------------------ */
-.hero {
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  position:relative;
-}
-.hero::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.55);
-}
-.hero h1 {
-  font-size:62px;
-  font-weight:800;
-  text-shadow:0 0 25px #000;
-}
-.premium-gold {
-  font-size:28px;
-  background:linear-gradient(90deg,#fff4d2,#ffdf85,#ffb400,#e6a300,#ffdf85);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-.premium-gold-line {
-  width:160px;
-  height:4px;
-  background:linear-gradient(90deg,#ffdf85,#ffb400,#e6a300,#ffdf85);
-  margin:18px auto;
-  border-radius:4px;
-  box-shadow:0 0 15px rgba(255,180,0,0.6);
+body{
+
+background:var(--black);
+color:var(--white);
+font-family:"Inter",sans-serif;
+line-height:1.7;
+overflow-x:hidden;
+
 }
 
-/* ------------------------------------------------------ ABOUT ------------------------------------------------------ */
-.about-flex {
-  display:flex;
-  flex-wrap:wrap;
-  gap:30px;
-  align-items:center;
-}
-.about-img {
-  width:330px;
-  height:390px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 0 25px rgba(0,0,0,0.7);
-}
-@media (max-width:768px){
-  .about-img {
-    width:100%;
-    max-width:260px;
-    height:auto;
-    margin:0 auto;
-  }
+body.rtl{
+
+direction:rtl;
+
 }
 
-/* ------------------------------------------------------ CV BUTTON ------------------------------------------------------ */
-.btn {
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 28px;
-  font-size:18px;
-  font-weight:600;
-  border-radius:50px;
-  background:linear-gradient(90deg,#ffdf85,#ffb400,#e6a300,#ffb400,#ffdf85);
-  color:#000;
-  text-decoration:none;
-  box-shadow:0 0 18px rgba(255,180,0,0.55);
-  transition:0.3s;
-}
-.btn:hover {
-  box-shadow:0 0 30px rgba(255,200,80,0.9);
-  transform:translateY(-3px);
+img{
+
+max-width:100%;
+display:block;
+
 }
 
-/* ------------------------------------------------------ GOLD GLASS BOX ------------------------------------------------------ */
-.pro-max-box {
-  position:relative;
-  padding:35px;
-  border-radius:20px;
-  background:rgba(10,10,10,0.55);
-  backdrop-filter:blur(14px);
-  border:1.5px solid rgba(255,200,80,0.35);
-  box-shadow:0 0 25px rgba(255,200,80,0.15), inset 0 0 25px rgba(255,200,80,0.10);
-  animation:fadeUp 1.4s ease forwards;
-  opacity:0;
-}
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(30px); }
-  to { opacity:1; transform:translateY(0); }
-}
-.pro-max-box::after {
-  content:"";
-  position:absolute;
-  top:-2px; left:-2px; right:-2px;
-  height:3px;
-  background:linear-gradient(90deg, transparent, #ffb400, transparent);
-  animation:shine 4s linear infinite;
-}
-@keyframes shine {
-  0% { transform:translateX(-100%); }
-  100% { transform:translateX(200%); }
+a{
+
+text-decoration:none;
+
 }
 
-/* ------------------------------------------------------ EXPERIENCE ------------------------------------------------------ */
-.exp-box {
-  background:rgba(20,20,20,0.65);
-  border-radius:18px;
-  padding:25px;
-  border:1.5px solid rgba(255,200,80,0.25);
-  box-shadow:0 0 22px rgba(255,200,80,0.10), inset 0 0 18px rgba(255,200,80,0.08);
-  margin-bottom:40px;
+button,
+input,
+textarea{
+
+font:inherit;
+
 }
 
-/* ------------------------------------------------------ PREMIUM SLIDER ------------------------------------------------------ */
-.slider-container {
-  position:relative;
-  overflow:hidden;
-  border-radius:18px;
-  margin-top:40px;
-  box-shadow:0 0 35px rgba(255,180,0,0.25);
-  height:360px;
+.container{
+
+width:min(1180px,90%);
+margin:auto;
+
 }
 
-.fade-slide {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transform:scale(1.05);
-  transition:opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-.fade-slide.active { opacity:1; transform:scale(1); }
+.section{
 
-/* Navigation */
-.slide-btn {
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(255,180,0,0.75);
-  border:none;
-  font-size:32px;
-  padding:10px 16px;
-  cursor:pointer;
-  border-radius:50%;
-  color:#000;
-  font-weight:bold;
-  z-index:20;
-}
-.prev { left:18px; }
-.next { right:18px; }
+padding:100px 0;
 
-/* Dots */
-.dots {
-  text-align:center;
-  position:absolute;
-  bottom:10px;
-  width:100%;
-}
-.dot {
-  height:12px;
-  width:12px;
-  background:#ffb400;
-  opacity:0.4;
-  display:inline-block;
-  margin:0 5px;
-  border-radius:50%;
-}
-.dot.active { opacity:1; box-shadow:0 0 12px #ffb400; }
-
-/* Lightbox */
-.lightbox {
-  position:fixed; inset:0;
-  background:rgba(0,0,0,0.9);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:999;
-}
-.lightbox img {
-  width:90%;
-  max-width:700px;
-  border-radius:12px;
-  box-shadow:0 0 25px #ffb400;
 }
 
-/* ------------------------------------------------------ CONTACT LINKS ------------------------------------------------------ */
-.contact a {
-  display:inline-block;
-  margin:8px 12px;
-  font-size:20px;
-  color:#ffdf85;
-  text-decoration:none;
-  position:relative;
-  padding-bottom:4px;
-}
-.contact a::after {
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0%;
-  height:2px;
-  background:#ffb400;
-  transition:0.3s;
-}
-.contact a:hover::after {
-  width:100%;
-}
-.contact a:hover {
-  color:#ffffff;
-  text-shadow:0 0 12px #ffb400;
+.dark-section{
+
+background:var(--black2);
+
 }
 
-/* Mobile slider fix */
-@media(max-width:768px){
-  .slider-container { height:260px; }
-  .slide-btn { font-size:25px; padding:6px 10px; }
+.gold{
+
+color:var(--gold);
+
+}
+
+
+/* HEADER */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:9999;
+transition:.3s;
+
+}
+
+header.scrolled{
+
+background:rgba(5,5,5,.96);
+border-bottom:1px solid var(--border);
+backdrop-filter:blur(12px);
+box-shadow:0 10px 40px rgba(0,0,0,.5);
+
+}
+
+.nav{
+
+width:min(1260px,94%);
+height:85px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+
+}
+
+.logo{
+
+font-family:"Playfair Display",serif;
+font-size:21px;
+font-weight:800;
+color:var(--gold);
+line-height:1;
+
+}
+
+.logo span{
+
+display:block;
+font-family:"Inter",sans-serif;
+font-size:9px;
+color:#fff;
+letter-spacing:4px;
+margin-top:8px;
+
+}
+
+.nav-links{
+
+list-style:none;
+display:flex;
+gap:25px;
+align-items:center;
+
+}
+
+.nav-links a{
+
+color:#fff;
+font-size:13px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--gold);
+
+}
+
+.nav-actions{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.language-btn{
+
+border:1px solid var(--border);
+background:#111;
+color:#fff;
+padding:10px 14px;
+border-radius:4px;
+cursor:pointer;
+font-weight:700;
+
+}
+
+.menu-btn{
+
+display:none;
+background:none;
+border:none;
+color:white;
+font-size:29px;
+cursor:pointer;
+
+}
+
+
+/* BUTTONS */
+
+.btn{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 25px;
+border-radius:4px;
+font-size:14px;
+font-weight:700;
+transition:.3s;
+cursor:pointer;
+
+}
+
+.btn-gold{
+
+background:var(--gold);
+color:#050505;
+
+}
+
+.btn-gold:hover{
+
+background:var(--gold2);
+transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+border:1px solid var(--gold);
+color:#fff;
+
+}
+
+.btn-outline:hover{
+
+background:var(--gold);
+color:#050505;
+transform:translateY(-3px);
+
+}
+
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.98) 0%,
+rgba(0,0,0,.88) 43%,
+rgba(0,0,0,.38) 100%
+),
+
+url("https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1800&q=90");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.hero::after{
+
+content:"";
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+0deg,
+#070707 0%,
+transparent 24%
+);
+
+pointer-events:none;
+
+}
+
+.hero-content{
+
+position:relative;
+z-index:2;
+width:min(1180px,90%);
+margin:auto;
+padding-top:90px;
+
+}
+
+.hero-inner{
+
+max-width:750px;
+
+}
+
+.hero-label{
+
+color:var(--gold);
+letter-spacing:5px;
+font-size:12px;
+font-weight:800;
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-family:"Playfair Display",serif;
+font-size:clamp(52px,8vw,90px);
+line-height:.95;
+margin-bottom:25px;
+
+}
+
+.hero h2{
+
+color:var(--gold);
+font-size:clamp(16px,2vw,22px);
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+color:#ddd;
+max-width:690px;
+font-size:16px;
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+
+}
+
+
+/* STATS */
+
+.stats{
+
+background:#0b0b0b;
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+
+}
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.stat{
+
+text-align:center;
+padding:45px 20px;
+border-right:1px solid var(--border);
+
+}
+
+.stat:last-child{
+
+border-right:none;
+
+}
+
+.stat strong{
+
+display:block;
+font-family:"Playfair Display",serif;
+font-size:42px;
+color:var(--gold);
+
+}
+
+.stat span{
+
+font-size:13px;
+color:var(--gray);
+
+}
+
+
+/* HEADINGS */
+
+.section-head{
+
+text-align:center;
+max-width:760px;
+margin:0 auto 55px;
+
+}
+
+.section-label{
+
+color:var(--gold);
+font-size:12px;
+font-weight:800;
+letter-spacing:4px;
+text-transform:uppercase;
+
+}
+
+.section-head h2{
+
+font-family:"Playfair Display",serif;
+font-size:clamp(36px,5vw,52px);
+line-height:1.15;
+margin:10px 0 17px;
+
+}
+
+.section-head p{
+
+color:var(--gray);
+
+}
+
+
+/* ABOUT */
+
+.about-grid{
+
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:70px;
+align-items:center;
+
+}
+
+.about-image{
+
+position:relative;
+
+}
+
+.about-image img{
+
+width:100%;
+height:600px;
+object-fit:cover;
+border-radius:6px;
+
+}
+
+.about-image::before{
+
+content:"";
+position:absolute;
+width:90%;
+height:90%;
+top:35px;
+left:-25px;
+border:1px solid var(--gold);
+z-index:-1;
+
+}
+
+.about h2{
+
+font-family:"Playfair Display",serif;
+font-size:clamp(36px,5vw,52px);
+margin:10px 0 25px;
+
+}
+
+.about p{
+
+color:var(--gray);
+margin-bottom:17px;
+
+}
+
+.quote{
+
+margin:30px 0;
+padding-left:22px;
+border-left:3px solid var(--gold);
+font-family:"Playfair Display",serif;
+font-size:21px;
+color:#fff;
+
+}
+
+.rtl .quote{
+
+padding-left:0;
+padding-right:22px;
+border-left:none;
+border-right:3px solid var(--gold);
+
+}
+
+
+/* CARDS */
+
+.card-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+
+}
+
+.card{
+
+background:var(--card);
+padding:35px;
+border-radius:7px;
+border:1px solid rgba(255,255,255,.06);
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+border-color:var(--gold);
+
+}
+
+.icon{
+
+font-size:30px;
+color:var(--gold);
+margin-bottom:18px;
+
+}
+
+.card h3{
+
+font-family:"Playfair Display",serif;
+font-size:23px;
+margin-bottom:12px;
+
+}
+
+.card p{
+
+color:var(--gray);
+font-size:14px;
+
+}
+
+
+/* EXPERIENCE */
+
+.timeline{
+
+max-width:900px;
+margin:auto;
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+position:absolute;
+left:20px;
+top:0;
+width:2px;
+height:100%;
+background:var(--border);
+
+}
+
+.timeline-item{
+
+position:relative;
+padding-left:70px;
+margin-bottom:42px;
+
+}
+
+.timeline-dot{
+
+position:absolute;
+left:11px;
+top:4px;
+width:20px;
+height:20px;
+background:var(--gold);
+border-radius:50%;
+border:5px solid #0b0b0b;
+
+}
+
+.timeline-box{
+
+background:var(--card);
+border:1px solid rgba(255,255,255,.06);
+padding:28px;
+border-radius:6px;
+
+}
+
+.timeline-box .date{
+
+color:var(--gold);
+font-size:13px;
+font-weight:800;
+
+}
+
+.timeline-box h3{
+
+font-family:"Playfair Display",serif;
+font-size:26px;
+margin-top:5px;
+
+}
+
+.timeline-box h4{
+
+color:#ddd;
+font-size:14px;
+margin-bottom:12px;
+
+}
+
+.timeline-box p{
+
+color:var(--gray);
+font-size:14px;
+
+}
+
+.rtl .timeline::before{
+
+left:auto;
+right:20px;
+
+}
+
+.rtl .timeline-item{
+
+padding-left:0;
+padding-right:70px;
+
+}
+
+.rtl .timeline-dot{
+
+left:auto;
+right:11px;
+
+}
+
+
+/* LEADERSHIP */
+
+.leadership-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+
+}
+
+.leadership-item{
+
+background:var(--card);
+padding:30px 25px;
+border-top:2px solid var(--gold);
+
+}
+
+.leadership-item h3{
+
+font-family:"Playfair Display",serif;
+margin-bottom:10px;
+
+}
+
+.leadership-item p{
+
+color:var(--gray);
+font-size:13px;
+
+}
+
+
+/* GALLERY */
+
+.gallery-grid{
+
+display:grid;
+grid-template-columns:repeat(12,1fr);
+grid-auto-rows:240px;
+gap:15px;
+
+}
+
+.gallery-item{
+
+overflow:hidden;
+position:relative;
+border-radius:5px;
+
+}
+
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(4){
+
+grid-column:span 7;
+
+}
+
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3){
+
+grid-column:span 5;
+
+}
+
+.gallery-item img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+
+}
+
+.gallery-item:hover img{
+
+transform:scale(1.07);
+
+}
+
+.gallery-overlay{
+
+position:absolute;
+inset:0;
+display:flex;
+align-items:flex-end;
+padding:22px;
+background:linear-gradient(transparent,rgba(0,0,0,.9));
+
+}
+
+.gallery-overlay h3{
+
+font-family:"Playfair Display",serif;
+
+}
+
+
+/* DASHBOARD */
+
+.dashboard{
+
+background:linear-gradient(135deg,#171717,#090909);
+border:1px solid var(--border);
+border-radius:8px;
+padding:65px;
+
+}
+
+.dashboard-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.dashboard-item{
+
+text-align:center;
+
+}
+
+.dashboard-item strong{
+
+display:block;
+font-family:"Playfair Display",serif;
+font-size:46px;
+color:var(--gold);
+
+}
+
+.dashboard-item p{
+
+color:var(--gray);
+font-size:13px;
+
+}
+
+
+/* CERTIFICATES */
+
+.cert-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+
+}
+
+.cert-card{
+
+background:var(--card);
+overflow:hidden;
+border-radius:7px;
+border:1px solid rgba(255,255,255,.06);
+
+}
+
+.cert-card img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+
+}
+
+.cert-content{
+
+padding:25px;
+
+}
+
+.cert-content h3{
+
+font-family:"Playfair Display",serif;
+margin-bottom:8px;
+
+}
+
+.cert-content p{
+
+color:var(--gray);
+font-size:14px;
+
+}
+
+
+/* BLOG */
+
+.blog-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+
+}
+
+.blog-card{
+
+background:var(--card);
+padding:30px;
+border-radius:7px;
+border:1px solid rgba(255,255,255,.06);
+transition:.3s;
+
+}
+
+.blog-card:hover{
+
+border-color:var(--gold);
+transform:translateY(-6px);
+
+}
+
+.blog-tag{
+
+color:var(--gold);
+font-size:11px;
+font-weight:800;
+letter-spacing:2px;
+
+}
+
+.blog-card h3{
+
+font-family:"Playfair Display",serif;
+font-size:22px;
+margin:12px 0;
+
+}
+
+.blog-card p{
+
+color:var(--gray);
+font-size:14px;
+
+}
+
+.read-more{
+
+display:inline-block;
+color:var(--gold);
+font-weight:700;
+margin-top:18px;
+
+}
+
+
+/* CV */
+
+.cv-box{
+
+max-width:900px;
+margin:auto;
+text-align:center;
+padding:70px 40px;
+border:1px solid var(--border);
+background:linear-gradient(135deg,rgba(212,175,55,.08),transparent);
+
+}
+
+.cv-box h2{
+
+font-family:"Playfair Display",serif;
+font-size:45px;
+margin:10px 0 15px;
+
+}
+
+.cv-box p{
+
+color:var(--gray);
+margin-bottom:28px;
+
+}
+
+
+/* CONTACT */
+
+.contact-grid{
+
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:55px;
+
+}
+
+.contact-left h2{
+
+font-family:"Playfair Display",serif;
+font-size:45px;
+margin:10px 0 18px;
+
+}
+
+.contact-left > p{
+
+color:var(--gray);
+margin-bottom:30px;
+
+}
+
+.contact-detail{
+
+margin-bottom:21px;
+
+}
+
+.contact-detail small{
+
+display:block;
+color:var(--gold);
+font-weight:800;
+letter-spacing:2px;
+text-transform:uppercase;
+font-size:11px;
+
+}
+
+.contact-detail a,
+.contact-detail span{
+
+color:#fff;
+
+}
+
+.socials{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:28px;
+
+}
+
+.contact-form{
+
+background:var(--card);
+padding:35px;
+border-radius:7px;
+
+}
+
+.form-group{
+
+margin-bottom:18px;
+
+}
+
+.form-group label{
+
+display:block;
+font-size:13px;
+margin-bottom:7px;
+color:#ddd;
+
+}
+
+.form-group input,
+.form-group textarea{
+
+width:100%;
+background:#090909;
+border:1px solid #333;
+color:#fff;
+padding:14px;
+border-radius:4px;
+outline:none;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+border-color:var(--gold);
+
+}
+
+.form-group textarea{
+
+height:150px;
+resize:vertical;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+background:#050505;
+border-top:1px solid var(--border);
+padding:35px 0;
+
+}
+
+.footer-inner{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:12px;
+color:#777;
+
+}
+
+.footer-name{
+
+font-family:"Playfair Display",serif;
+font-size:18px;
+color:var(--gold);
+
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+right:22px;
+bottom:25px;
+width:58px;
+height:58px;
+background:#25d366;
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:900;
+font-size:22px;
+z-index:1000;
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+
+}
+
+
+/* REVEAL */
+
+.reveal{
+
+opacity:0;
+transform:translateY(35px);
+transition:.8s ease;
+
+}
+
+.reveal.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:1050px){
+
+.nav-links{
+
+position:fixed;
+top:85px;
+left:-100%;
+width:100%;
+height:calc(100vh - 85px);
+background:#080808;
+flex-direction:column;
+justify-content:center;
+transition:.4s;
+
+}
+
+.nav-links.open{
+
+left:0;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+.desktop-cv{
+
+display:none;
+
+}
+
+.card-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.about-grid,
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.leadership-grid,
+.dashboard-grid{
+
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+
+}
+
+.cert-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:700px){
+
+.section{
+
+padding:75px 0;
+
+}
+
+.hero{
+
+background-position:65% center;
+
+}
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stat:nth-child(2){
+
+border-right:none;
+
+}
+
+.card-grid,
+.leadership-grid,
+.dashboard-grid,
+.cert-grid,
+.blog-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-image img{
+
+height:440px;
+
+}
+
+.gallery-grid{
+
+display:block;
+
+}
+
+.gallery-item{
+
+height:260px;
+margin-bottom:15px;
+
+}
+
+.dashboard{
+
+padding:35px 25px;
+
+}
+
+.footer-inner{
+
+flex-direction:column;
+gap:10px;
+text-align:center;
+
+}
+
+.logo{
+
+font-size:17px;
+
+}
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- BACKGROUNDS -->
-<div class="kitchen-bg"></div>
-<div class="galaxy-bg"></div>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <h1>Bimal Thapa Magar</h1>
-    <p class="premium-gold">Head Chef • Steak Specialist • Turkish & Arabic Fusion Cuisine</p>
-    <div class="premium-gold-line"></div>
-  </div>
+<header id="header">
+
+<nav class="nav">
+
+<a class="logo"
+href="#home">
+
+BIMAL THAPA MAGAR
+
+<span>SOUS CHEF</span>
+
+</a>
+
+
+<ul class="nav-links"
+id="navLinks">
+
+<li>
+<a href="#home"
+data-en="Home"
+data-ar="الرئيسية">
+Home
+</a>
+</li>
+
+<li>
+<a href="#about"
+data-en="About"
+data-ar="نبذة">
+About
+</a>
+</li>
+
+<li>
+<a href="#experience"
+data-en="Experience"
+data-ar="الخبرة">
+Experience
+</a>
+</li>
+
+<li>
+<a href="#expertise"
+data-en="Expertise"
+data-ar="الخبرات">
+Expertise
+</a>
+</li>
+
+<li>
+<a href="#gallery"
+data-en="Gallery"
+data-ar="المعرض">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="#blog"
+data-en="Knowledge"
+data-ar="المعرفة">
+Knowledge
+</a>
+</li>
+
+<li>
+<a href="#contact"
+data-en="Contact"
+data-ar="تواصل">
+Contact
+</a>
+</li>
+
+</ul>
+
+
+<div class="nav-actions">
+
+<button class="language-btn"
+id="languageBtn">
+
+العربية
+
+</button>
+
+<a href="#cv"
+class="btn btn-gold desktop-cv">
+
+CV
+
+</a>
+
+<button class="menu-btn"
+id="menuBtn">
+
+☰
+
+</button>
+
 </div>
 
+</nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero"
+id="home">
+
+<div class="hero-content">
+
+<div class="hero-inner">
+
+<div class="hero-label"
+data-en="WELCOME TO MY WORLD OF FLAVORS"
+data-ar="مرحباً بكم في عالمي من النكهات">
+
+WELCOME TO MY WORLD OF FLAVORS
+
+</div>
+
+
+<h1>
+
+BIMAL
+
+<br>
+
+<span class="gold">
+THAPA MAGAR
+</span>
+
+</h1>
+
+
+<h2
+data-en="SOUS CHEF | TURKISH CUISINE SPECIALIST | KITCHEN OPERATIONS LEADER"
+data-ar="سو شيف | متخصص في المطبخ التركي | قائد عمليات المطبخ">
+
+SOUS CHEF |
+TURKISH CUISINE SPECIALIST |
+KITCHEN OPERATIONS LEADER
+
+</h2>
+
+
+<p
+data-en="A passionate culinary professional with more than 14 years of international hospitality experience, combining culinary craftsmanship, strong kitchen leadership, food safety, cost control and operational excellence."
+data-ar="طاهٍ محترف يتمتع بأكثر من 14 عاماً من الخبرة الدولية في قطاع الضيافة، ويجمع بين مهارات الطهي والقيادة وسلامة الغذاء والتحكم في التكاليف والتميز التشغيلي.">
+
+A passionate culinary professional with more than 14 years
+of international hospitality experience, combining culinary
+craftsmanship, strong kitchen leadership, food safety,
+cost control and operational excellence.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#about"
+class="btn btn-gold"
+data-en="Explore My Journey"
+data-ar="اكتشف مسيرتي">
+
+Explore My Journey
+
+</a>
+
+<a href="#gallery"
+class="btn btn-outline"
+data-en="View Portfolio"
+data-ar="عرض الأعمال">
+
+View Portfolio
+
+</a>
+
+<a href="#contact"
+class="btn btn-outline"
+data-en="Contact Me"
+data-ar="تواصل معي">
+
+Contact Me
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+
+<strong>14+</strong>
+
+<span
+data-en="Years Experience"
+data-ar="سنوات الخبرة">
+
+Years Experience
+
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>UAE</strong>
+
+<span
+data-en="Hospitality Career"
+data-ar="خبرة الضيافة">
+
+Hospitality Career
+
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>HACCP</strong>
+
+<span
+data-en="Food Safety Focus"
+data-ar="سلامة الغذاء">
+
+Food Safety Focus
+
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>360°</strong>
+
+<span
+data-en="Kitchen Operations"
+data-ar="عمليات المطبخ">
+
+Kitchen Operations
+
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
 <!-- ABOUT -->
-<section id="about">
-  <h2>About Chef Bimal</h2>
 
-  <div class="about-flex">
-    <img src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/8a093a16-c6c0-409e-a508-758bde5ce708.jpeg" class="about-img">
+<section class="section about"
+id="about">
 
-    <div style="flex:1;">
-      <p style="font-size:18px; line-height:1.8;">
-        I am an experienced <strong>Head Chef</strong> with more than <strong>14 years</strong> of expertise in 
-        <strong>premium steaks, Turkish cuisine, and modern Arabic fusion gastronomy</strong>.
-      </p>
+<div class="container about-grid reveal">
 
-      <p style="font-size:18px; line-height:1.8;">
-        My leadership focuses on discipline, consistency, and developing strong culinary teams.
-      </p>
+<div class="about-image">
 
-      <h3 style="color:#ffb400;">🌟 Vision</h3>
-      <p>To elevate global fusion cuisine through creativity, technique, and leadership.</p>
+<img
+src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=1200&q=90"
+alt="Professional chef">
 
-      <h3 style="color:#ffb400;">🔥 Mission</h3>
-      <p>
-        • Premium quality & consistency<br>
-        • HACCP excellence & safety<br>
-        • Strong chef mentoring & leadership<br>
-        • Memorable guest experiences<br>
-        • Creative fusion & charcoal grill innovation
-      </p>
+</div>
 
-      <!-- PREMIUM CV BUTTON -->
-      <a class="btn" href="cv-request.html">📄 Request My CV</a>
 
-    </div>
-  </div>
+<div>
+
+<span class="section-label"
+data-en="ABOUT ME"
+data-ar="نبذة عني">
+
+ABOUT ME
+
+</span>
+
+
+<h2
+data-en="My Culinary Journey"
+data-ar="رحلتي في عالم الطهي">
+
+My Culinary Journey
+
+</h2>
+
+
+<p
+data-en="My journey in professional kitchens has been built through years of experience, continuous learning, discipline and a deep passion for delivering memorable dining experiences."
+data-ar="بُنيت رحلتي المهنية في المطابخ من خلال سنوات من الخبرة والتعلم المستمر والانضباط والشغف بتقديم تجارب طعام مميزة.">
+
+My journey in professional kitchens has been built through
+years of experience, continuous learning, discipline and
+a deep passion for delivering memorable dining experiences.
+
+</p>
+
+
+<p
+data-en="I specialize in Turkish cuisine while focusing strongly on kitchen leadership, food safety, cost control, quality consistency, team development and operational excellence."
+data-ar="أتخصص في المطبخ التركي مع التركيز على قيادة المطبخ وسلامة الغذاء والتحكم في التكاليف وثبات الجودة وتطوير الفريق والتميز التشغيلي.">
+
+I specialize in Turkish cuisine while focusing strongly
+on kitchen leadership, food safety, cost control,
+quality consistency, team development and operational excellence.
+
+</p>
+
+
+<blockquote class="quote"
+data-en="Great food is created through passion, discipline, teamwork and continuous improvement."
+data-ar="يُصنع الطعام الرائع بالشغف والانضباط والعمل الجماعي والتطوير المستمر.">
+
+Great food is created through passion,
+discipline, teamwork and continuous improvement.
+
+</blockquote>
+
+
+<a href="#experience"
+class="btn btn-gold"
+data-en="View My Career"
+data-ar="عرض مسيرتي">
+
+View My Career
+
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- PHILOSOPHY -->
-<section>
-  <h2>Chef Philosophy</h2>
 
-  <div class="pro-max-box">
-    <p style="line-height:1.8;">
-      My philosophy is grounded in <strong>discipline, respect, innovation, and consistency</strong>.
-    </p>
 
-    <ul style="list-style:none; padding:0; margin-top:20px; line-height:1.9;">
-      <li><strong style="color:#ffb400;">🔥 Safety First</strong> — HACCP is non-negotiable.</li>
-      <li><strong style="color:#ffb400;">👨‍🍳 Lead by Example</strong> — discipline builds culture.</li>
-      <li><strong style="color:#ffb400;">🥩 Respect Ingredients</strong> — technique unlocks flavor.</li>
-      <li><strong style="color:#ffb400;">🤝 Teamwork</strong> — strong teams create excellence.</li>
-      <li><strong style="color:#ffb400;">✨ Guest Focus</strong> — every plate carries meaning.</li>
-      <li><strong style="color:#ffb400;">📚 Continuous Growth</strong> — evolve every day.</li>
-    </ul>
-  </div>
+<!-- EXPERTISE -->
+
+<section class="section dark-section"
+id="expertise">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<span class="section-label"
+data-en="EXPERTISE"
+data-ar="الخبرات">
+
+EXPERTISE
+
+</span>
+
+<h2
+data-en="Culinary & Operational Expertise"
+data-ar="الخبرة في الطهي والعمليات">
+
+Culinary & Operational Expertise
+
+</h2>
+
+<p
+data-en="Combining culinary craftsmanship with modern kitchen management and operational discipline."
+data-ar="الجمع بين الحرفية في الطهي وإدارة المطابخ الحديثة والانضباط التشغيلي.">
+
+Combining culinary craftsmanship with modern kitchen
+management and operational discipline.
+
+</p>
+
+</div>
+
+
+<div class="card-grid">
+
+
+<div class="card reveal">
+
+<div class="icon">♨</div>
+
+<h3
+data-en="Turkish Cuisine"
+data-ar="المطبخ التركي">
+
+Turkish Cuisine
+
+</h3>
+
+<p
+data-en="Doner, kebabs, grills, pide, bakery products and traditional Turkish breakfast concepts."
+data-ar="الدونر والكباب والمشاوي والبيدا والمخبوزات ومفاهيم الإفطار التركي التقليدي.">
+
+Doner, kebabs, grills, pide, bakery products and
+traditional Turkish breakfast concepts.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">♛</div>
+
+<h3
+data-en="Kitchen Leadership"
+data-ar="قيادة المطبخ">
+
+Kitchen Leadership
+
+</h3>
+
+<p
+data-en="Building accountable teams, coaching chefs and maintaining strong professional kitchen standards."
+data-ar="بناء فرق مسؤولة وتدريب الطهاة والمحافظة على معايير مهنية قوية.">
+
+Building accountable teams, coaching chefs and
+maintaining strong professional kitchen standards.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">✓</div>
+
+<h3
+data-en="HACCP & Food Safety"
+data-ar="الهاسب وسلامة الغذاء">
+
+HACCP & Food Safety
+
+</h3>
+
+<p
+data-en="Strong focus on hygiene, temperature control, safe food handling, storage and compliance."
+data-ar="التركيز على النظافة والتحكم في درجات الحرارة والتعامل الآمن والتخزين والالتزام بالمعايير.">
+
+Strong focus on hygiene, temperature control,
+safe food handling, storage and compliance.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">↗</div>
+
+<h3
+data-en="Cost & Waste Control"
+data-ar="التحكم في التكلفة والهدر">
+
+Cost & Waste Control
+
+</h3>
+
+<p
+data-en="Yield monitoring, food variance analysis, accurate scaling, portion control and wastage management."
+data-ar="متابعة المردود وتحليل الفروقات والوزن الدقيق والتحكم في الحصص وإدارة الهدر.">
+
+Yield monitoring, food variance analysis,
+accurate scaling, portion control and wastage management.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">⚙</div>
+
+<h3
+data-en="Kitchen Operations"
+data-ar="عمليات المطبخ">
+
+Kitchen Operations
+
+</h3>
+
+<p
+data-en="Daily kitchen operations, SOP implementation, inventory control, productivity and service execution."
+data-ar="العمليات اليومية وتطبيق إجراءات التشغيل والتحكم في المخزون والإنتاجية وتنفيذ الخدمة.">
+
+Daily kitchen operations, SOP implementation,
+inventory control, productivity and service execution.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">★</div>
+
+<h3
+data-en="Training & Development"
+data-ar="التدريب والتطوير">
+
+Training & Development
+
+</h3>
+
+<p
+data-en="Developing chefs through practical training, coaching, clear standards and accountability."
+data-ar="تطوير الطهاة من خلال التدريب العملي والتوجيه والمعايير الواضحة والمساءلة.">
+
+Developing chefs through practical training,
+coaching, clear standards and accountability.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
 
 <!-- EXPERIENCE -->
-<section id="experience">
-  <h2>Work Experience</h2>
 
-  <div class="exp-box">
-    <p><strong>Global Catering Services LLC – Head Chef (2018–Present)</strong></p>
-    <ul style="line-height:1.8;">
-      <li>Lead kitchen operations ensuring top quality.</li>
-      <li>Develop steaks, fusion menus, grill concepts.</li>
-      <li>Ensure HACCP, hygiene & safety compliance.</li>
-      <li>Train chefs and build strong teams.</li>
-      <li>Control costing, wastage & inventory.</li>
-      <li>Conduct daily quality checks.</li>
-    </ul>
-  </div>
+<section class="section"
+id="experience">
 
-  <div class="exp-box">
-    <p><strong>Armed Forces Officers Club – Senior CDP (2015–2017)</strong></p>
-    <ul style="line-height:1.8;">
-      <li>Led station with precision & premium execution.</li>
-      <li>Maintained mise en place & freshness.</li>
-      <li>Ensured HACCP compliance.</li>
-      <li>Trained commis chefs & supported menu trials.</li>
-    </ul>
-  </div>
+<div class="container">
 
-  <div class="exp-box">
-    <p><strong>Global Catering Abu Dhabi – DCDP (2014–2015)</strong></p>
-    <ul style="line-height:1.8;">
-      <li>Prepared dishes following recipes & standards.</li>
-      <li>Supported grilling, sauté, & hot kitchen prep.</li>
-      <li>Maintained hygiene & stock rotation.</li>
-    </ul>
-  </div>
+<div class="section-head reveal">
 
-  <div class="exp-box">
-    <p><strong>Saujana Hotel, Malaysia – Commis 1</strong></p>
-    <ul style="line-height:1.8;">
-      <li>Assisted chefs in prep, cooking & plating.</li>
-      <li>Handled mise en place for grill, sauté & cold kitchen.</li>
-      <li>Maintained hygiene & sanitation.</li>
-    </ul>
-  </div>
+<span class="section-label"
+data-en="CAREER"
+data-ar="المسيرة المهنية">
+
+CAREER
+
+</span>
+
+<h2
+data-en="Professional Experience"
+data-ar="الخبرة المهنية">
+
+Professional Experience
+
+</h2>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<div class="date">
+2017 — PRESENT
+</div>
+
+<h3>
+Sous Chef
+</h3>
+
+<h4>
+Bosporus Turkish Restaurant — UAE
+</h4>
+
+<p
+data-en="Leading kitchen operations, team development, food safety compliance, quality control, wastage management, cost awareness and consistent service standards."
+data-ar="قيادة عمليات المطبخ وتطوير الفريق والالتزام بسلامة الغذاء ومراقبة الجودة وإدارة الهدر والتكاليف وثبات معايير الخدمة.">
+
+Leading kitchen operations, team development,
+food safety compliance, quality control,
+wastage management, cost awareness
+and consistent service standards.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<div class="date">
+2008 — 2016
+</div>
+
+<h3>
+Chef
+</h3>
+
+<h4>
+Maria Restaurant — Saudi Arabia
+</h4>
+
+<p
+data-en="Developed international hospitality experience with a focus on food production, kitchen organization, consistency, quality and teamwork."
+data-ar="اكتساب خبرة دولية في قطاع الضيافة مع التركيز على الإنتاج وتنظيم المطبخ والجودة والعمل الجماعي.">
+
+Developed international hospitality experience
+with a focus on food production, kitchen organization,
+consistency, quality and teamwork.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<div class="date">
+2007 — 2008
+</div>
+
+<h3>
+Chef
+</h3>
+
+<h4>
+Lezzet Döner
+</h4>
+
+<p
+data-en="Beginning of my professional culinary journey with hands-on experience in Turkish cuisine and doner production."
+data-ar="بداية رحلتي المهنية في عالم الطهي مع خبرة عملية في المطبخ التركي وإنتاج الدونر.">
+
+Beginning of my professional culinary journey
+with hands-on experience in Turkish cuisine
+and doner production.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- SLIDER -->
-<section>
-  <h2>Chef Gallery</h2>
 
-  <div class="slider-container">
 
-    <img class="fade-slide active" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0101.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_0859.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1846.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1852.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1891.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_1895.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4825.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4830.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/IMG_4833.jpeg">
-    <img class="fade-slide" src="https://raw.githubusercontent.com/Bimalmagart/bimalmagar/refs/heads/main/a13baa63-5832-4b03-a3ff-47c8f46b7ab3.jpeg">
+<!-- LEADERSHIP -->
 
-    <button class="slide-btn prev">❮</button>
-    <button class="slide-btn next">❯</button>
+<section class="section dark-section">
 
-    <div class="dots"></div>
+<div class="container">
 
-  </div>
+<div class="section-head reveal">
+
+<span class="section-label"
+data-en="LEADERSHIP"
+data-ar="القيادة">
+
+LEADERSHIP
+
+</span>
+
+<h2
+data-en="Beyond Cooking"
+data-ar="أكثر من مجرد طهي">
+
+Beyond Cooking
+
+</h2>
+
+</div>
+
+
+<div class="leadership-grid">
+
+
+<div class="leadership-item reveal">
+
+<h3
+data-en="Team Development"
+data-ar="تطوير الفريق">
+
+Team Development
+
+</h3>
+
+<p
+data-en="Coaching chefs and building responsibility, confidence and consistent performance."
+data-ar="تدريب الطهاة وبناء المسؤولية والثقة والأداء المستمر.">
+
+Coaching chefs and building responsibility,
+confidence and consistent performance.
+
+</p>
+
+</div>
+
+
+<div class="leadership-item reveal">
+
+<h3
+data-en="Quality & Consistency"
+data-ar="الجودة والثبات">
+
+Quality & Consistency
+
+</h3>
+
+<p
+data-en="Maintaining recipe, portion, presentation and production standards across daily operations."
+data-ar="الحفاظ على معايير الوصفات والحصص والتقديم والإنتاج خلال العمليات اليومية.">
+
+Maintaining recipe, portion, presentation
+and production standards.
+
+</p>
+
+</div>
+
+
+<div class="leadership-item reveal">
+
+<h3
+data-en="Operational Excellence"
+data-ar="التميز التشغيلي">
+
+Operational Excellence
+
+</h3>
+
+<p
+data-en="Improving productivity, organization, communication and smooth kitchen execution."
+data-ar="تحسين الإنتاجية والتنظيم والتواصل والتنفيذ السلس لعمليات المطبخ.">
+
+Improving productivity, organization,
+communication and smooth kitchen execution.
+
+</p>
+
+</div>
+
+
+<div class="leadership-item reveal">
+
+<h3
+data-en="Food Safety Culture"
+data-ar="ثقافة سلامة الغذاء">
+
+Food Safety Culture
+
+</h3>
+
+<p
+data-en="Building strong daily habits around hygiene, HACCP, storage and safe food handling."
+data-ar="بناء ممارسات يومية قوية للنظافة والهاسب والتخزين والتعامل الآمن مع الطعام.">
+
+Building strong daily habits around hygiene,
+HACCP, storage and safe food handling.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- GALLERY -->
+
+<section class="section"
+id="gallery">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<span class="section-label"
+data-en="CULINARY PORTFOLIO"
+data-ar="معرض الطهي">
+
+CULINARY PORTFOLIO
+
+</span>
+
+<h2
+data-en="A Passion for Flavor & Presentation"
+data-ar="شغف بالنكهة والتقديم">
+
+A Passion for Flavor & Presentation
+
+</h2>
+
+<p
+data-en="A visual representation of professional kitchen life, Turkish cuisine and culinary craftsmanship."
+data-ar="عرض بصري للحياة المهنية في المطبخ والمطبخ التركي والحرفية في الطهي.">
+
+A visual representation of professional kitchen life,
+Turkish cuisine and culinary craftsmanship.
+
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85"
+alt="Professional food plating"
+loading="lazy">
+
+<div class="gallery-overlay">
+
+<h3
+data-en="Signature Presentation"
+data-ar="التقديم المميز">
+
+Signature Presentation
+
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=85"
+alt="Grill food"
+loading="lazy">
+
+<div class="gallery-overlay">
+
+<h3
+data-en="Grill & Kebab"
+data-ar="المشاوي والكباب">
+
+Grill & Kebab
+
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=85"
+alt="Breakfast"
+loading="lazy">
+
+<div class="gallery-overlay">
+
+<h3
+data-en="Breakfast Concepts"
+data-ar="مفاهيم الإفطار">
+
+Breakfast Concepts
+
+</h3>
+
+</div>
+
+</div>
+
+
+<div class="gallery-item reveal">
+
+<img
+src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=85"
+alt="Professional kitchen"
+loading="lazy">
+
+<div class="gallery-overlay">
+
+<h3
+data-en="Professional Kitchen"
+data-ar="المطبخ الاحترافي">
+
+Professional Kitchen
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- DASHBOARD -->
+
+<section class="section dark-section">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<span class="section-label"
+data-en="PROFESSIONAL PROFILE"
+data-ar="الملف المهني">
+
+PROFESSIONAL PROFILE
+
+</span>
+
+<h2
+data-en="Experience at a Glance"
+data-ar="الخبرة باختصار">
+
+Experience at a Glance
+
+</h2>
+
+</div>
+
+
+<div class="dashboard reveal">
+
+<div class="dashboard-grid">
+
+
+<div class="dashboard-item">
+
+<strong class="counter"
+data-target="14"
+data-suffix="+">
+0
+</strong>
+
+<p
+data-en="Years Experience"
+data-ar="سنوات الخبرة">
+
+Years Experience
+
+</p>
+
+</div>
+
+
+<div class="dashboard-item">
+
+<strong class="counter"
+data-target="3"
+data-suffix="">
+0
+</strong>
+
+<p
+data-en="International Markets"
+data-ar="أسواق دولية">
+
+International Markets
+
+</p>
+
+</div>
+
+
+<div class="dashboard-item">
+
+<strong class="counter"
+data-target="6"
+data-suffix="+">
+0
+</strong>
+
+<p
+data-en="Core Expertise Areas"
+data-ar="مجالات الخبرة">
+
+Core Expertise Areas
+
+</p>
+
+</div>
+
+
+<div class="dashboard-item">
+
+<strong class="counter"
+data-target="100"
+data-suffix="%">
+0
+</strong>
+
+<p
+data-en="Commitment to Excellence"
+data-ar="الالتزام بالتميز">
+
+Commitment to Excellence
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CERTIFICATES -->
+
+<section class="section"
+id="certificates">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<span class="section-label"
+data-en="CERTIFICATES & RECOGNITION"
+data-ar="الشهادات والتقدير">
+
+CERTIFICATES & RECOGNITION
+
+</span>
+
+<h2
+data-en="Professional Development"
+data-ar="التطوير المهني">
+
+Professional Development
+
+</h2>
+
+</div>
+
+
+<div class="cert-grid">
+
+
+<div class="cert-card reveal">
+
+<img
+src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=900&q=80"
+alt="Food safety training">
+
+<div class="cert-content">
+
+<h3
+data-en="Food Safety & HACCP"
+data-ar="سلامة الغذاء والهاسب">
+
+Food Safety & HACCP
+
+</h3>
+
+<p
+data-en="Strong professional focus on food safety, hygiene, HACCP procedures and compliance."
+data-ar="تركيز مهني قوي على سلامة الغذاء والنظافة وإجراءات الهاسب والالتزام بالمعايير.">
+
+Strong professional focus on food safety,
+hygiene, HACCP procedures and compliance.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card reveal">
+
+<img
+src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+alt="Team leadership">
+
+<div class="cert-content">
+
+<h3
+data-en="Leadership"
+data-ar="القيادة">
+
+Leadership
+
+</h3>
+
+<p
+data-en="Experience developing kitchen teams through training, accountability and operational standards."
+data-ar="خبرة في تطوير فرق المطبخ من خلال التدريب والمساءلة والمعايير التشغيلية.">
+
+Experience developing kitchen teams through
+training, accountability and operational standards.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="cert-card reveal">
+
+<img
+src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+alt="Professional recognition">
+
+<div class="cert-content">
+
+<h3
+data-en="Professional Recognition"
+data-ar="التقدير المهني">
+
+Professional Recognition
+
+</h3>
+
+<p
+data-en="Continuous commitment to culinary professionalism, team success and operational improvement."
+data-ar="التزام مستمر بالاحتراف في الطهي ونجاح الفريق وتحسين العمليات.">
+
+Continuous commitment to culinary professionalism,
+team success and operational improvement.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- KNOWLEDGE HUB -->
+
+<section class="section dark-section"
+id="blog">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<span class="section-label"
+data-en="CHEF KNOWLEDGE HUB"
+data-ar="مركز معرفة الشيف">
+
+CHEF KNOWLEDGE HUB
+
+</span>
+
+<h2
+data-en="Lessons From the Kitchen"
+data-ar="دروس من المطبخ">
+
+Lessons From the Kitchen
+
+</h2>
+
+<p
+data-en="Practical ideas about food safety, cost control, leadership and professional kitchen operations."
+data-ar="أفكار عملية حول سلامة الغذاء والتحكم في التكاليف والقيادة وعمليات المطابخ الاحترافية.">
+
+Practical ideas about food safety, cost control,
+leadership and professional kitchen operations.
+
+</p>
+
+</div>
+
+
+<div class="blog-grid">
+
+
+<div class="blog-card reveal">
+
+<div class="blog-tag">
+FOOD SAFETY
+</div>
+
+<h3
+data-en="Why HACCP Matters in Every Professional Kitchen"
+data-ar="لماذا يعتبر الهاسب أساسياً في كل مطبخ محترف؟">
+
+Why HACCP Matters in Every Professional Kitchen
+
+</h3>
+
+<p
+data-en="Food safety is not simply a checklist. It is a daily culture that protects guests, employees and the reputation of the business."
+data-ar="سلامة الغذاء ليست مجرد قائمة فحص، بل ثقافة يومية تحمي الضيوف والموظفين وسمعة المنشأة.">
+
+Food safety is not simply a checklist.
+It is a daily culture that protects guests,
+employees and the reputation of the business.
+
+</p>
+
+<a href="#contact"
+class="read-more"
+data-en="Discuss This Topic →"
+data-ar="ناقش هذا الموضوع ←">
+
+Discuss This Topic →
+
+</a>
+
+</div>
+
+
+<div class="blog-card reveal">
+
+<div class="blog-tag">
+COST CONTROL
+</div>
+
+<h3
+data-en="Reducing Food Waste Through Better Kitchen Control"
+data-ar="تقليل هدر الطعام من خلال التحكم الأفضل">
+
+Reducing Food Waste Through Better Kitchen Control
+
+</h3>
+
+<p
+data-en="Accurate weighing, proper yields, portion control, FIFO and daily wastage recording can significantly improve food-cost performance."
+data-ar="الوزن الدقيق ومتابعة المردود والتحكم في الحصص وتطبيق FIFO وتسجيل الهدر يومياً تحسن أداء تكلفة الطعام.">
+
+Accurate weighing, proper yields, portion control,
+FIFO and daily wastage recording can significantly
+improve food-cost performance.
+
+</p>
+
+<a href="#contact"
+class="read-more"
+data-en="Discuss This Topic →"
+data-ar="ناقش هذا الموضوع ←">
+
+Discuss This Topic →
+
+</a>
+
+</div>
+
+
+<div class="blog-card reveal">
+
+<div class="blog-tag">
+LEADERSHIP
+</div>
+
+<h3
+data-en="Building a Strong and Accountable Kitchen Team"
+data-ar="بناء فريق مطبخ قوي ومسؤول">
+
+Building a Strong and Accountable Kitchen Team
+
+</h3>
+
+<p
+data-en="Strong leadership comes from clear expectations, practical training, respect, communication and consistent accountability."
+data-ar="القيادة القوية تأتي من وضوح التوقعات والتدريب العملي والاحترام والتواصل والمساءلة المستمرة.">
+
+Strong leadership comes from clear expectations,
+practical training, respect, communication
+and consistent accountability.
+
+</p>
+
+<a href="#contact"
+class="read-more"
+data-en="Discuss This Topic →"
+data-ar="ناقش هذا الموضوع ←">
+
+Discuss This Topic →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CV -->
+
+<section class="section"
+id="cv">
+
+<div class="container">
+
+<div class="cv-box reveal">
+
+<span class="section-label"
+data-en="CURRICULUM VITAE"
+data-ar="السيرة الذاتية">
+
+CURRICULUM VITAE
+
+</span>
+
+<h2
+data-en="Interested in My Professional Profile?"
+data-ar="هل ترغب في معرفة المزيد عن ملفي المهني؟">
+
+Interested in My Professional Profile?
+
+</h2>
+
+<p
+data-en="For career opportunities, professional networking or collaborations, please contact me directly and I will be happy to provide my complete CV."
+data-ar="للفرص الوظيفية أو التواصل المهني أو التعاون، يرجى التواصل معي مباشرة وسأكون سعيداً بمشاركة سيرتي الذاتية الكاملة.">
+
+For career opportunities, professional networking
+or collaborations, please contact me directly
+and I will be happy to provide my complete CV.
+
+</p>
+
+<a href="#contact"
+class="btn btn-gold"
+data-en="Request My CV"
+data-ar="طلب السيرة الذاتية">
+
+Request My CV
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
 
 <!-- CONTACT -->
-<section>
-  <h2>Contact</h2>
-  <div class="contact">
-    <a href="tel:+971569241552">📞 Call</a>
-    <a href="mailto:magarthapabimal@gmail.com">📧 Email</a>
-    <a href="https://wa.me/971569241552">💬 WhatsApp</a>
-    <a href="https://www.instagram.com/magar.bimal369">📸 Instagram</a>
-    <a href="https://www.facebook.com/share/16rLwdByZL/?mibextid=wwXIfr">📘 Facebook</a>
-    <a href="https://www.linkedin.com/in/bimal-thapa-magar-3b1337165">🔗 LinkedIn</a>
-  </div>
+
+<section class="section dark-section"
+id="contact">
+
+<div class="container contact-grid">
+
+
+<div class="contact-left reveal">
+
+<span class="section-label"
+data-en="CONTACT"
+data-ar="تواصل">
+
+CONTACT
+
+</span>
+
+<h2
+data-en="Let's Connect"
+data-ar="لنبقَ على تواصل">
+
+Let's Connect
+
+</h2>
+
+<p
+data-en="Available for professional networking, culinary collaborations, leadership opportunities and career discussions."
+data-ar="متاح للتواصل المهني والتعاون في مجال الطهي وفرص القيادة والمناقشات الوظيفية.">
+
+Available for professional networking,
+culinary collaborations, leadership opportunities
+and career discussions.
+
+</p>
+
+
+<div class="contact-detail">
+
+<small
+data-en="Email"
+data-ar="البريد الإلكتروني">
+
+Email
+
+</small>
+
+<a href="mailto:YOUR_EMAIL@gmail.com">
+YOUR_EMAIL@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-detail">
+
+<small
+data-en="Location"
+data-ar="الموقع">
+
+Location
+
+</small>
+
+<span>
+United Arab Emirates
+</span>
+
+</div>
+
+
+<div class="socials">
+
+<a
+href="https://www.linkedin.com/"
+target="_blank"
+class="btn btn-outline">
+
+LinkedIn
+
+</a>
+
+<a
+href="https://wa.me/971500000000"
+target="_blank"
+class="btn btn-gold">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<form class="contact-form reveal"
+id="contactForm">
+
+
+<div class="form-group">
+
+<label
+data-en="Your Name"
+data-ar="الاسم">
+
+Your Name
+
+</label>
+
+<input
+type="text"
+id="name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label
+data-en="Your Email"
+data-ar="البريد الإلكتروني">
+
+Your Email
+
+</label>
+
+<input
+type="email"
+id="email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label
+data-en="Subject"
+data-ar="الموضوع">
+
+Subject
+
+</label>
+
+<input
+type="text"
+id="subject"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label
+data-en="Your Message"
+data-ar="الرسالة">
+
+Your Message
+
+</label>
+
+<textarea
+id="message"
+required></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-gold"
+data-en="Send Message"
+data-ar="إرسال الرسالة">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
 </section>
 
+
+
 <footer>
-  © 2025 Bimal Thapa Magar – All Rights Reserved.
+
+<div class="container footer-inner">
+
+<div class="footer-name">
+BIMAL THAPA MAGAR
+</div>
+
+<div>
+
+© <span id="year"></span>
+Bimal Thapa Magar.
+<span
+data-en="All Rights Reserved."
+data-ar="جميع الحقوق محفوظة.">
+
+All Rights Reserved.
+
+</span>
+
+</div>
+
+</div>
+
 </footer>
 
-<!-- ------------------------------------------------------ SLIDER JS ------------------------------------------------------ -->
+
+
+<a
+href="https://wa.me/971500000000"
+target="_blank"
+class="whatsapp"
+aria-label="WhatsApp">
+
+W
+
+</a>
+
+
+
 <script>
-const slides = document.querySelectorAll(".fade-slide");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
-const dotsContainer = document.querySelector(".dots");
-let index = 0;
 
-/* Create dots */
-slides.forEach((_, i)=>{
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
-  if(i===0) dot.classList.add("active");
-  dotsContainer.appendChild(dot);
-});
-const dots = document.querySelectorAll(".dot");
+/* ======================================================
+   IMPORTANT
+   CHANGE ONLY THESE DETAILS
+====================================================== */
 
-/* Show Slide */
-function showSlide(i){
-  slides.forEach(s=>s.classList.remove("active"));
-  dots.forEach(d=>d.classList.remove("active"));
-  index = (i + slides.length) % slides.length;
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
+const SITE_EMAIL =
+"YOUR_EMAIL@gmail.com";
+
+const WHATSAPP_NUMBER =
+"971500000000";
+
+
+/* HEADER */
+
+const header =
+document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY > 40){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
+
 }
 
-nextBtn.onclick = ()=>showSlide(index+1);
-prevBtn.onclick = ()=>showSlide(index-1);
-
-/* AutoPlay */
-setInterval(()=>showSlide(index+1), 3000);
-
-/* Lightbox */
-const lightbox = document.createElement("div");
-lightbox.className = "lightbox";
-document.body.appendChild(lightbox);
-const lightImg = document.createElement("img");
-lightbox.appendChild(lightImg);
-
-slides.forEach(img=>{
-  img.onclick = ()=>{
-    lightImg.src = img.src;
-    lightbox.style.display="flex";
-  };
 });
-lightbox.onclick = ()=>lightbox.style.display="none";
 
-/* Swipe */
-let startX=0;
-document.addEventListener("touchstart", e=> startX = e.touches[0].clientX);
-document.addEventListener("touchend", e=>{
-  let endX = e.changedTouches[0].clientX;
-  if(startX-endX>50) showSlide(index+1);
-  if(endX-startX>50) showSlide(index-1);
+
+/* MOBILE MENU */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",()=>{
+
+navLinks.classList.toggle("open");
+
 });
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navLinks.classList.remove("open");
+
+});
+
+});
+
+
+/* SCROLL REVEAL */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const revealObserver =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+revealObserver.unobserve(entry.target);
+
+}
+
+});
+
+},{
+threshold:.12
+});
+
+revealElements.forEach(el=>{
+
+revealObserver.observe(el);
+
+});
+
+
+/* COUNTERS */
+
+const counters =
+document.querySelectorAll(".counter");
+
+const counterObserver =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(!entry.isIntersecting) return;
+
+const counter = entry.target;
+
+const target =
+Number(counter.dataset.target);
+
+const suffix =
+counter.dataset.suffix || "";
+
+let current = 0;
+
+const step =
+Math.max(1,Math.ceil(target/45));
+
+const timer =
+setInterval(()=>{
+
+current += step;
+
+if(current >= target){
+
+current = target;
+
+clearInterval(timer);
+
+}
+
+counter.textContent =
+current + suffix;
+
+},35);
+
+counterObserver.unobserve(counter);
+
+});
+
+},{
+threshold:.5
+});
+
+counters.forEach(counter=>{
+
+counterObserver.observe(counter);
+
+});
+
+
+/* LANGUAGE */
+
+const languageBtn =
+document.getElementById("languageBtn");
+
+let language = "en";
+
+languageBtn.addEventListener("click",()=>{
+
+language =
+language === "en"
+? "ar"
+: "en";
+
+document.documentElement.lang =
+language;
+
+document.documentElement.dir =
+language === "ar"
+? "rtl"
+: "ltr";
+
+document.body.classList.toggle(
+"rtl",
+language === "ar"
+);
+
+document
+.querySelectorAll("[data-en]")
+.forEach(element=>{
+
+element.textContent =
+language === "en"
+? element.dataset.en
+: element.dataset.ar;
+
+});
+
+languageBtn.textContent =
+language === "en"
+? "العربية"
+: "English";
+
+localStorage.setItem(
+"bimalLanguage",
+language
+);
+
+});
+
+
+const savedLanguage =
+localStorage.getItem(
+"bimalLanguage"
+);
+
+if(savedLanguage === "ar"){
+
+languageBtn.click();
+
+}
+
+
+/* CONTACT FORM */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const sender =
+document.getElementById("email").value;
+
+const subject =
+document.getElementById("subject").value;
+
+const message =
+document.getElementById("message").value;
+
+const emailBody =
+
+`Name: ${name}
+
+Email: ${sender}
+
+Message:
+${message}`;
+
+window.location.href =
+
+`mailto:${SITE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+});
+
+
+/* AUTO YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
 </script>
 
 </body>
+
 </html>
